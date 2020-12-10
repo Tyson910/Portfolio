@@ -1,0 +1,30 @@
+@charset "utf-8" ;
+
+* {
+    box-sizing: border-box;
+    margin:0 0 0 0;
+  }
+
+     /*mobile layout and styling for all elements*/
+
+/* image settings */
+img{
+    object-fit: contain;
+    width: 100%;
+}
+a{
+    display:inline-block;
+    position: relative;
+    z-index: 1;
+}
+span{
+    display:inline-block;
+}
+object{
+    display: inline-block;
+    position: relative;
+    z-index:-1;
+}
+footer{
+    background-color: blue;
+}
