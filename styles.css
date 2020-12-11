@@ -12,19 +12,29 @@ img{
     object-fit: contain;
     width: 100%;
 }
-a{
+
+nav{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+/* style svg icons */
+
+.link-container{
     display:inline-block;
     position: relative;
     z-index: 1;
 }
-span{
+.span-container{
     display:inline-block;
 }
-object{
+.object-container{
     display: inline-block;
     position: relative;
     z-index:-1;
 }
+
+/* style footer */
 footer{
     background-color: blue;
 }
