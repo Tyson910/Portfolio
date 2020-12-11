@@ -12,6 +12,9 @@ img{
     object-fit: contain;
     width: 100%;
 }
+#self-portrait{
+    height: 500px;
+}
 
 nav{
     background-color: slategray;
@@ -19,10 +22,6 @@ nav{
     justify-content: center;
 }
 /* style svg icons */
-
-#document > svg{
-    color:yellow;
-}
 
 .link-container{
     display:inline-block;
