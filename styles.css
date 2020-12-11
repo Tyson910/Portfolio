@@ -14,11 +14,15 @@ img{
 }
 
 nav{
-    background-color: red;
+    background-color: slategray;
     display: flex;
     justify-content: center;
 }
 /* style svg icons */
+
+#document > svg{
+    color:yellow;
+}
 
 .link-container{
     display:inline-block;
@@ -34,7 +38,10 @@ nav{
     z-index:-1;
 }
 
+.object-container:hover, .span-container:hover, .link-container:hover{
+    transform: scale(1.15, 1.15);
+}
 /* style footer */
 footer{
-    background-color: blue;
+    background-color: grey;
 }
