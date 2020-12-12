@@ -6,7 +6,14 @@
   }
 
      /*mobile layout and styling for all elements*/
-
+/* color palette*/
+body{
+    background-color:#E3E3E3;
+}
+nav , footer {
+    background-color:#727273;
+    
+}
 /* image settings */
 img{
     object-fit: contain;
@@ -22,6 +29,7 @@ img{
     display:inline-block;
     position: relative;
     z-index: 1;
+    margin-left: 1%;
 }
 .span-container{
     display:inline-block;
@@ -46,10 +54,18 @@ button{
 }
 
 nav{
-    background-color: slategray;
-    display: flex;
-    justify-content: center;
+    display:grid;
+    grid-template-columns: 1fr .5fr 1fr;
+    justify-items: center;
+    align-items: center;
 }
+.icons-container{
+    margin: 1%;
+    width: 100%;
+    grid-column: 2 / span 2;
+}
+
+
 /* style tech container */
 
 .tech-container{
@@ -86,6 +102,3 @@ nav{
     grid-row-start: 3;
 }
 /* style footer */
-footer{
-    background-color: grey;
-}
