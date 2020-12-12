@@ -12,9 +12,10 @@ img{
     object-fit: contain;
     width: 100%;
 }
-#self-portrait{
+#img-self{
     height: 500px;
 }
+
 /* style svg icons */
 
 .link-container{
@@ -33,6 +34,15 @@ img{
 
 .object-container:hover, .span-container:hover, .link-container:hover{
     transform: scale(1.15, 1.15);
+}
+
+/* style bio info */
+.bio{
+    display:flex;
+    margin: 2% 2%;
+}
+button{
+    margin-top: 4%;
 }
 
 nav{
