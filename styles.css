@@ -8,7 +8,8 @@
      /*mobile layout and styling for all elements*/
 /* color palette*/
 body{
-    background-color:#E3E3E3;
+    background-color:#F5F5F5 ;
+    color: #444444;
 }
 nav , footer {
     background-color:#727273;
@@ -66,7 +67,7 @@ nav{
 }
 
 
-/* style tech container */
+/* style tech container 
 
 .tech-container{
     display:grid;
@@ -101,4 +102,5 @@ nav{
     grid-column-start: 3;
     grid-row-start: 3;
 }
+*/
 /* style footer */
