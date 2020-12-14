@@ -66,41 +66,42 @@ nav{
     grid-column: 2 / span 2;
 }
 
+/* style tech container */
 
-/* style tech container 
+.tech-display{
+   margin-left: auto;
+   margin-right:auto;
+   margin-bottom: 2%;
+   width: 30%;
+   text-align: center;
 
-.tech-container{
+}
+tbody{
+    margin-top:2%;
+}
+caption{
+    font-size: larger;
+    font-weight:bolder;
+}
+/* styles project container */
+#projects-header{
+    margin: 2% 0;
+    text-align: center;
+}
+.projects-container{
     display:grid;
-    grid-template-rows: 1fr 2fr 2fr;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "  . project1 project2  . "
+     ". project3 project4 .";
 }
-#tech-intro{
-    grid-column-start: 2;
-    grid-row-start: 1;
+
+#pong{
+    grid-area: project1;
+    text-align:center;
 }
-#html-logo{
-    grid-column-start: 1;
-    grid-row-start: 2;
+ul{
+    text-align: left;
+    margin: 2% 0;
 }
-#css-logo{
-    grid-column-start: 2;
-    grid-row-start: 2;
-}
-#js-logo{
-    grid-column-start: 3;
-    grid-row-start: 2;
-}
-#react-logo{
-    grid-column-start: 1;
-    grid-row-start:3;
-}
-#npm-logo{
-    grid-column-start: 2;
-    grid-row-start: 3;
-}
-#python-logo{
-    grid-column-start: 3;
-    grid-row-start: 3;
-}
-*/
 /* style footer */
