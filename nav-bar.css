@@ -170,7 +170,7 @@ a:hover{
   
   .hero {
     position: relative;
-    background: #333 url(http://srdjanpajdic.com/slike/2.jpg) no-repeat center center fixed;
+    background: #333;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
