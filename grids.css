@@ -1,0 +1,20 @@
+.hero{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3%;
+}
+/* image settings */
+img{
+    object-fit: contain;
+    width: 100%;
+}
+#img-self{
+    height: 500px;
+}
+.intro-container{
+    margin-bottom: 10%;
+}
+.col-1{
+    margin-top: 3%;
+    padding-top: 5%;
+}
