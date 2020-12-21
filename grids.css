@@ -27,7 +27,10 @@ img{
 #tools-header{
     flex:1;
 }
-
+.tools-icons{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}  
 @media only screen and (max-width: 830px) {
     .mouse{
         display:none;
@@ -38,8 +41,4 @@ img{
     .tech-container{
         margin-left: 2%;
     }
-    .tools-icons{
-        display:grid;
-        grid-template-columns: repeat(3, 1fr);
-    }  
 }
