@@ -14,7 +14,6 @@
     font-family: "Montserrat", sans-serif;
   }
 
-
   @media only screen and (max-width: 766px) {
     .main_h {
       padding-top: 25px;
@@ -176,9 +175,6 @@ a:hover{
     background-size: cover;
     text-align: center;
     color: #fff;
-    /*
-    padding-top: 110px;
-    */
     padding-top: 2%;
     min-height: 500px;
     letter-spacing: 2px;
@@ -195,7 +191,21 @@ a:hover{
     padding-bottom: 12px;
     line-height: 3;
   }
-  
+
+  #ContactButton{
+    color:#e8f380;
+    border: #e8f380 solid 2px;
+    padding: 5%;
+  }
+  #ContactButton:hover{
+    color:#333;
+    background-color: #e8f380;
+    font-size: large;
+  }
+
+  #contact-container{
+    margin: 10%;
+  }
   .mouse {
     display: block;
     margin: 0 auto;
