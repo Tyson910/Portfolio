@@ -18,3 +18,28 @@ img{
     margin-top: 3%;
     padding-top: 5%;
 }
+
+.tech-container{
+    display:flex;
+    flex-flow: column;
+}
+
+#tools-header{
+    flex:1;
+}
+
+@media only screen and (max-width: 830px) {
+    .mouse{
+        display:none;
+    }
+    .hero{
+        grid-template-columns: 1fr;
+    }
+    .tech-container{
+        margin-left: 2%;
+    }
+    .tools-icons{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+    }  
+}

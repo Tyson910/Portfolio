@@ -30,7 +30,7 @@ svg, .hide-it{
     text-align: center;
   }
   
-  .social-btn:hover {
+  .social-btn:hover{ 
     width: 260px;
     border-radius: 5px;
     box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
@@ -38,5 +38,5 @@ svg, .hide-it{
   
   .social-btn:hover .hide-it {
     padding: 2px;
-    width: max-content;
+    width: fit-content;
   }

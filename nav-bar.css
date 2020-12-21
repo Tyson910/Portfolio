@@ -203,10 +203,12 @@ a:hover{
     height: 46px;
     border-radius: 13px;
     border: 2px solid #e8f380;
+    
     bottom: 40px;
     position: absolute;
     left: 50%;
     margin-left: -14px;
+    
   }
   .mouse span {
     display: block;
