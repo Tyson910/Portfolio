@@ -6,13 +6,17 @@
 /* image settings */
 img{
     object-fit: contain;
-    width: 100%;
+    max-width: 100%;
 }
 #img-self{
+    object-fit: cover;
     height: 500px;
+    border: #333 5px solid;
+    border-radius: 7% ;
 }
 .intro-container{
     margin-bottom: 10%;
+    grid-column-start: 2;
 }
 .col-1{
     margin-top: 3%;
@@ -40,5 +44,8 @@ img{
     }
     .tech-container{
         margin-left: 2%;
+    }
+    .intro-container{
+        grid-column: 1;
     }
 }
