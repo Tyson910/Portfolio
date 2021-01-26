@@ -2,6 +2,11 @@
     display:grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 3%;
+    background: rgba( 51, 51, 51, 0.60 );
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 8.5px );
+    -webkit-backdrop-filter: blur( 8.5px );
+    border-radius: 10px
 }
 /* image settings */
 img{
@@ -18,9 +23,19 @@ img{
     margin-bottom: 10%;
     grid-column-start: 2;
 }
+summary{
+    margin-bottom: 3vh;
+}
 .col-1{
     margin-top: 3%;
     padding-top: 5%;
+}
+.projects{
+    background: rgba( 74, 144, 226, 0.23 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
 }
 
 .tech-container{
@@ -49,3 +64,33 @@ img{
         grid-column: 1;
     }
 }
+/*  snippet from https://codepen.io/knyttneve/pen/LamBMP?editors=1100  */
+@media (min-width: 768px) {
+    
+    details[open] >  p {
+      opacity: 0;
+      -webkit-animation-name: showContent;
+              animation-name: showContent;
+      -webkit-animation-duration: .6s;
+              animation-duration: .6s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+    }
+
+}
+  @-webkit-keyframes showContent {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes showContent {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
