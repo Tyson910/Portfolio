@@ -1,3 +1,7 @@
+body{
+    background: rgb(248,248,255);
+    background: linear-gradient(314deg, rgba(248,248,255,1) 0%, rgba(220,206,212,1) 14%, rgba(192,165,170,1) 27%, rgba(82,0,3,1) 92%);
+}
 .hero{
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -6,7 +10,21 @@
     box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
     backdrop-filter: blur( 8.5px );
     -webkit-backdrop-filter: blur( 8.5px );
-    border-radius: 10px
+    /* border-radius: 10px */
+}
+main{
+    width: 100%;
+    padding: 8vh 17vw 8vh;
+    background: rgba( 248, 248, 255, 0.75 );
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 15.5px );
+    -webkit-backdrop-filter: blur( 15.5px );
+    /* border-radius: 10px; */
+}
+@media (max-width: 768px){
+    main{
+        padding: 8vh 10vw 8vh;
+    }
 }
 section{
     margin: 5vh 0;
@@ -20,8 +38,8 @@ img{
 #img-self{
     object-fit: cover;
     height: 500px;
-    border: #333 5px solid;
-    border-radius: 7% ;
+    border: #333 1px solid;
+    border-radius: 2% ;
 }
 .intro-container{
     margin-bottom: 10%;
@@ -50,6 +68,13 @@ summary{
     backdrop-filter: blur( 13.5px );
     -webkit-backdrop-filter: blur( 13.5px );
     border-radius: 10px;
+
+    background: rgba( 0,0,0, .12 );
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 15.5px );
+    -webkit-backdrop-filter: blur( 15.5px );
+    border-radius: 10px;
+
     display: flex;
     flex-flow: column;
     text-align: center;

@@ -148,6 +148,7 @@ a:hover{
   
   a {
     text-decoration: none;
+    color: currentColor
   }
   
   h1 {
@@ -186,20 +187,20 @@ a:hover{
   }
   .hero h1 span {
     font-size: 25px;
-    color: #e8f380;
-    border-bottom: 2px solid #e8f380;
+    border-bottom: 2px solid #FFF;
     padding-bottom: 12px;
     line-height: 3;
   }
 
   #ContactButton{
-    color:#e8f380;
-    border: #e8f380 solid 2px;
+    color: lightyellow;
+    border: currentColor solid 2px;
     padding: 5%;
   }
   #ContactButton:hover{
     color:#333;
     background-color: #e8f380;
+    background-color: #FFFFD6;
     font-size: large;
   }
   #contact-container{
@@ -213,6 +214,7 @@ a:hover{
     height: 46px;
     border-radius: 13px;
     border: 2px solid #e8f380;
+    border-color: lightyellow;
     
     bottom: 40px;
     position: absolute;
@@ -227,6 +229,7 @@ a:hover{
     height: 2px;
     border-radius: 4px;
     background: #e8f380;
+    background: lightyellow;
     border: 1px solid transparent;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;

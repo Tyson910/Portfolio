@@ -94,7 +94,7 @@
 
 </div>
 
-<main class="row content">
+<main>
     <section>
         <h2 class="about-me">About Me</h2>
         <br>
@@ -136,7 +136,7 @@
     </section>
 
     <section class='tech-container flex'>
-        <h4 id='tools-header'>Tools and Technologies I Use</h4>
+        <h3 id='tools-header'>Tools and Technologies I Use</h3>
         <div class='tools-icons'>
                     <object type='image/svg+xml' data="html5-brands.svg" 
                     width='40' height='40' style="justify-self: right;"
@@ -202,10 +202,21 @@
         </div>
 
     </section>
-</main>
+    <form>
+        <h2 class="contact-me">Contact Me</h2>
+            <div>
+                <label>First Name <input required type="text" name="first-name" class='contact-input' /> </label>
+                <label>Last Name <input required type="text"  name="last-name" class='contact-input'/> </label>
+                <label>Phone Number <input required type="tel" name="phoneNum" class='contact-input'/> </label>
+                <label>Email Address <input required type="email" name="email" class='contact-input' /></label>
+                <label> Comments <textarea name="event_comments"></textarea></label>
+                <button>Submit</button>
+            </div>
+        </form>
 
-<h2 class="contact-me">Contact Me</h2>
-<p>bread </p>
+    </form>
+
+</main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src='navMenu.js'></script>
