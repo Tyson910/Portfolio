@@ -87,7 +87,7 @@
     </div>
 
     <div class='intro-container' id='img-container'>
-        <img id='img-self' src='Screenshot.jpg' 
+        <img id='img-self' src='miniScreenshot.jpg' 
         alt='picture of Tyson smiling' />
     </div>
 
@@ -135,7 +135,7 @@
         </details>
     </section>
 
-    <section class='tech-container flex'>
+    <section class='flex-column'>
         <h3 id='tools-header'>Tools and Technologies I Use</h3>
         <div class='tools-icons'>
                     <object type='image/svg+xml' data="html5-brands.svg" 
@@ -177,7 +177,7 @@
 
     <section class="project-container">
         <h2>Projects I've Done</h2>
-        <div class="projects">
+        <div class="projects flex-column">
             <h3>The Cajun Trouxth</h3>
             <p>Created a brochure website for a Little Rock, AR based food truck company serving cajun & creole food.</p>
             <ul>
@@ -189,7 +189,7 @@
             <a>Link to site</a>
         </div>
 
-        <div class="projects">
+        <div class="projects flex-column center">
             <h3>Matching Up</h3>
             <p>Created a game of Matching Up, also known as Match Match, Memory, or Pairs, a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards in as little of time as you can.</p>
             <ul>
@@ -203,19 +203,16 @@
 
     </section>
     <form>
-        <h2 class="contact-me">Contact Me</h2>
-            <div>
-                <label>First Name <input required type="text" name="first-name" class='contact-input' /> </label>
-                <label>Last Name <input required type="text"  name="last-name" class='contact-input'/> </label>
-                <label>Phone Number <input required type="tel" name="phoneNum" class='contact-input'/> </label>
-                <label>Email Address <input required type="email" name="email" class='contact-input' /></label>
-                <label> Comments <textarea name="event_comments"></textarea></label>
-                <button>Submit</button>
-            </div>
-        </form>
+        <h2 style='text-align: center;'>Contact Me</h2>
+
+        <label>First Name <input required type="text" name="first-name" class='contact-input' /> </label>
+        <label>Last Name <input required type="text"  name="last-name" class='contact-input'/> </label>
+        <label>Phone Number <input type="tel" name="phoneNum" class='contact-input'/> </label>
+        <label>Email Address <input required type="email" name="email" class='contact-input' /></label>
+        <label> Reason for Inquiry<textarea required name="event_comments"></textarea></label>
+        <button  >Submit</button>
 
     </form>
-
 </main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
