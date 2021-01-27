@@ -8,31 +8,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="nav-bar.css" rel="stylesheet"/>
     <link href="icons-hover.css" rel="stylesheet"/>
+    <link href='top-nav.css' rel="stylesheet" />
     <link href="grids.css" rel="stylesheet"/>
     <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
 </head>
 
-<header class="main_h">
 
-    <div class="row">
-        <a class="logo" href="#">Home</a>
+<header class="topnav sticky" id="myTopnav">
+    <a href="#top" class="active" >Home</a>
+    <a href="#about" >About Me</a>
+    <a href=".projects-container" >Projects</a>
+    <a href="#contact-form" >Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="openNav()">
+      &#9776;
+    </a>
+  </header>
 
-        <div class="mobile-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href=".about-me">About</a></li>
-                <li><a href=".projects">Projects</a></li>
-                <li><a href=".contact-me">Contact</a></li>
-            </ul>
-        </nav>
-
+  <div id="myNav" class="overlay row sticky">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+        <a href="#home"  onclick="closeNav()">Home</a>
+        <a href="#calendar" onclick="closeNav()">Schedule</a>
+        <a href="#catering-container" onclick="closeNav()">Catering</a>
+        <a href="#footer" onclick="closeNav()">Contact</a>
     </div>
-</header>
+  </div>
 
 <div class="hero">
 
@@ -94,8 +94,8 @@
 
 </div>
 
-<main>
-    <section>
+<main id='about'>
+    <section >
         <h2 class="about-me">About Me</h2>
         <br>
         <p>
@@ -204,7 +204,7 @@
 
     </section>
 
-    <form>
+    <form id='contact-form'>
         <h2 style='text-align: center;'>Contact Me</h2>
 
         <label>First Name <input required type="text" name="first-name" class='contact-input' /> </label>
@@ -216,17 +216,12 @@
 
     </form>
 </main>
-<form>
-    <h2 style='text-align: center;'>Contact Me</h2>
 
-    <label>First Name <input required type="text" name="first-name" class='contact-input' /> </label>
-    <label>Last Name <input required type="text"  name="last-name" class='contact-input'/> </label>
-    <label>Phone Number <input type="tel" name="phoneNum" class='contact-input'/> </label>
-    <label>Email Address <input required type="email" name="email" class='contact-input' /></label>
-    <label> Reason for Inquiry<textarea required name="event_comments"></textarea></label>
-    <button  >Submit</button>
 
-</form>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src='navMenu.js'></script>
+<script>
+    function openNav() {document.getElementById("myNav").style.height = "100%";document.getElementById("myTopnav").style.zIndex = "0";document.getElementById("myTopnav").style.height = "0%";}
+    
+    function closeNav() {document.getElementById("myNav").style.height = "0%";document.getElementById("myTopnav").style.zIndex = "99";document.getElementById("myTopnav").style.height = "initial";}
+</script>    
+
 </html>
