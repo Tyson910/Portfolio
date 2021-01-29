@@ -11,6 +11,7 @@
     <link href='top-nav.css' rel="stylesheet" />
     <link href="grids.css" rel="stylesheet"/>
     <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
 </head>
 
 
@@ -199,15 +200,16 @@
 
     </section>
 
-    <form id='contact-form'>
+    <form id='contact-form' class="pageclip-form" method="post"
+        action="https://send.pageclip.co/0f621CsK4wKM9j75w5eH0ivRcO23DbfS/portfolio_inquiry" >
         <h2 style='text-align: center;'>Contact Me</h2>
 
         <label>First Name <input required type="text" name="first-name" class='contact-input' /> </label>
         <label>Last Name <input required type="text"  name="last-name" class='contact-input'/> </label>
         <label>Phone Number <input type="tel" name="phoneNum" class='contact-input'/> </label>
         <label>Email Address <input required type="email" name="email" class='contact-input' /></label>
-        <label> Reason for Inquiry<textarea required name="event_comments"></textarea></label>
-        <button  >Submit</button>
+        <label> Reason for Inquiry<textarea required name="inquiry"></textarea></label>
+        <button type="submit" class="pageclip-form__submit">Submit</button>
 
     </form>
 </main>
@@ -217,6 +219,8 @@
     function openNav() {document.getElementById("myNav").style.height = "100%";document.getElementById("myTopnav").style.zIndex = "0";document.getElementById("myTopnav").style.height = "0%";}
     
     function closeNav() {document.getElementById("myNav").style.height = "0%";document.getElementById("myTopnav").style.zIndex = "99";document.getElementById("myTopnav").style.height = "initial";}
+
 </script>    
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
 </html>
