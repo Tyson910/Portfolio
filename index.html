@@ -15,17 +15,17 @@
 </head>
 
 
-<header class="topnav sticky" id="myTopnav">
+<header class="topnav " id="myTopnav">
     <a href="#top" class="active" >Home</a>
     <a href="#about" >About Me</a>
-    <a href=".projects-container" >Projects</a>
+    <a href="#project-container" >Projects</a>
     <a href="#contact-form" >Contact</a>
     <a href="javascript:void(0);" class="icon" onclick="openNav()">
       &#9776;
     </a>
   </header>
 
-  <div id="myNav" class="overlay row sticky">
+  <div id="myNav" class="overlay row ">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
         <a href="#home"  onclick="closeNav()">Home</a>
@@ -173,7 +173,7 @@
         </div>
     </section>
 
-    <section class="project-container">
+    <section class="project-container" id="project-container">
         <h2>Projects I've Done</h2>
         <div class="projects flex-column">
             <h3>The Cajun Trouxth</h3>
@@ -204,11 +204,12 @@
         action="https://send.pageclip.co/0f621CsK4wKM9j75w5eH0ivRcO23DbfS/portfolio_inquiry" >
         <h2 style='text-align: center;'>Contact Me</h2>
 
-        <label>First Name <input required type="text" name="first-name" class='contact-input' /> </label>
-        <label>Last Name <input required type="text"  name="last-name" class='contact-input'/> </label>
-        <label>Phone Number <input type="tel" name="phoneNum" class='contact-input'/> </label>
-        <label>Email Address <input required type="email" name="email" class='contact-input' /></label>
-        <label> Reason for Inquiry<textarea required name="inquiry"></textarea></label>
+        <label>First Name * <input required type="text" name="first-name" class='contact-input' /> </label>
+        <label>Last Name * <input required type="text"  name="last-name" class='contact-input'/> </label>
+        <label>Phone Number  <input type="tel" name="phoneNum" class='contact-input'/> </label>
+        <label>Email Address * <input required type="email" name="email" class='contact-input' /></label>
+        <label> Reason for Inquiry * <textarea required name="inquiry"></textarea></label>
+        <p>* required</p>
         <button type="submit" class="pageclip-form__submit">Submit</button>
 
     </form>

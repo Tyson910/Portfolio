@@ -183,6 +183,11 @@ button[type=submit]:active, button:active{
     box-shadow: inset -1px 1px 2px #321e1f,
     inset 1px -1px 2px #402829;
 }
+form p{
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1em;
+}
 
 /*  snippet from https://codepen.io/knyttneve/pen/LamBMP?editors=1100  */
 @media (min-width: 768px) {
