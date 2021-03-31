@@ -41,6 +41,7 @@ img{
     height: 500px;
     border: #333 1px solid;
     border-radius: 2% ;
+    box-shadow: 2px 5px 11px rgb(55 55 55);
 }
 .intro-container{
     margin-bottom: 10%;

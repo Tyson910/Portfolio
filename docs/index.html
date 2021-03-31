@@ -6,10 +6,14 @@
     <meta charset='UTF-8'>
     <title>Tyson Suttle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet"/>
+    <link href="nav-bar.css" rel="stylesheet"/>
+    <link href='icons-hover.css' rel='stylesheet' />
+    <link href='top-nav.css' rel="stylesheet" />
+    <link href="grids.css" rel="stylesheet"/>
     <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
 </head>
+
 
 <body>
     <header class="topnav " id="myTopnav">
@@ -25,10 +29,10 @@
       <div id="myNav" class="overlay row ">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-            <a href="#home"  onclick="closeNav()">Home</a>
-            <a href="#calendar" onclick="closeNav()">Schedule</a>
-            <a href="#catering-container" onclick="closeNav()">Catering</a>
-            <a href="#footer" onclick="closeNav()">Contact</a>
+            <a href="#top"  onclick="closeNav()">Home</a>
+            <a href="#about" onclick="closeNav()">About Me</a>
+            <a href="#project-container" onclick="closeNav()">Projects</a>
+            <a href="#contact-form" onclick="closeNav()">Contact</a>
         </div>
       </div>
     
@@ -71,7 +75,7 @@
     
             </div>
             <div id='contact-container'>
-                <a href='Tyson_Suttle_Resume.pdf'
+                <a href='Tyson_S_Resume.pdf'
                  id='ContactButton'>Resume</a> 
             </div>
         
@@ -173,19 +177,20 @@
         <section class="project-container" id="project-container">
             <h2>Projects I've Done</h2>
             <div class="projects flex-column">
-                <h3>The Cajun Trouxth</h3>
-                <p>Created a brochure website for a Little Rock, AR based food truck company serving cajun & creole food.</p>
+                <h3>Sample Website</h3>
+                <p>Created a custom template for brochure websites for various types of businesses to
+                    display their products & services and allow for interested clients to submit inquiries </p>
                 <ul>
                     <h4>Technologies</h4>
-                    <li>UIKit (CSS Framework)</li>
+                    <li>Vanilla CSS</li>
                     <li>Vanilla JavaScript</li>
                 </ul>
-                <a href='https://github.com/Tyson910/TheCajunTrouxth'>Source Code</a>
-                <a href="https://thecajuntrouxth-17b0.hostman.site/">Link to site</a>
+                <a href="https://tyson910.github.io/Preview/">Tyson910.github.io/Preview</a>
+                <a href='https://github.com/Tyson910/Preview'>Source Code</a>
             </div>
     
             <div class="projects flex-column">
-                <h3>NBA stats tool</h3>
+                <h3>NBA Stats Tool</h3>
                 <p>Created a react app to compare up to 5 NBA players stats visually by using a graph
                     either throughout the entire season or between a given date range</p>
                 <ul>
@@ -221,4 +226,5 @@
     </script>    
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 </body>
+
 </html>

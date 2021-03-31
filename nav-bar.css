@@ -41,7 +41,6 @@ a:hover{
   }
   
   a {
-    text-decoration: none;
     color: currentColor
   }
   
@@ -90,6 +89,7 @@ a:hover{
     color: lightyellow;
     border: currentColor solid 2px;
     padding: 5%;
+    text-decoration: none;
   }
   #ContactButton:hover{
     color:#333;
