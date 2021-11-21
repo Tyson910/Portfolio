@@ -30,13 +30,22 @@
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "eslint": "^7.32.0",
-    "eslint-config-next": "12.0.4",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-config-next": "^12.0.4",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-sonarjs": "^0.10.0",
+    "eslint-plugin-unicorn": "^38.0.1",
     "postcss": "^8.3.11",
     "prettier": "^2.4.1",
     "tailwindcss": "^2.2.19"
+  },
+  "eslintConfig": {
+    "extends": "plugin:unicorn/all"
   }
 }
