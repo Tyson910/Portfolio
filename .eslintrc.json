@@ -35,6 +35,7 @@
     "rules": {
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
+        // "import/prefer-default-export": "off",
         "unicorn/filename-case": "off",
         "eqeqeq": "off",
         "no-console": "warn",
