@@ -1,6 +1,6 @@
 export default function NavBar() {
   return (
-    <header className="w-full sticky top-0 shadow-sm opacity-95">
+    <header className="w-full sticky top-0 shadow-md z-10 opacity-95 bg-white backdrop-filter backdrop-blur-sm">
       <nav className="max-w-screen-xl flex justify-evenly">
         <NavLink href="#top">
           Home
