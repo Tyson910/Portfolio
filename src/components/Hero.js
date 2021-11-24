@@ -1,8 +1,10 @@
 import { MailIcon } from '@heroicons/react/outline';
 import Image from 'next/image';
 
-import { GitHubLogo } from './icons/GitHubLogo';
-import LinkedIn from './icons/LinkedIn';
+import {
+  GitHubIcon,
+  LinkedInIcon,
+} from './Icons';
 
 export default function Hero() {
   // min h 500px
@@ -34,7 +36,7 @@ export default function Hero() {
           href="https://linkedin.com/in/tyson-suttle"
           className="w-12 h-12 hover:text-[#0A66C2]"
         >
-          <LinkedIn />
+          <LinkedInIcon />
         </a>
         <a
           href="https://linkedin.com/in/tyson-suttle"
@@ -46,7 +48,7 @@ export default function Hero() {
           href="https://linkedin.com/in/tyson-suttle"
           className="w-12 h-12 hover:text-green-500"
         >
-          <GitHubLogo />
+          <GitHubIcon />
         </a>
       </div>
     </section>
