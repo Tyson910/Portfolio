@@ -12,25 +12,25 @@ export function FeaturedProject({
   sourceCodeURL,
 }) {
   return (
-    <div
-      className="flex flex-col border border-red-500 mb-10 p-8 gap-y-10"
-      key={projectName}
-    >
-      <p className="text-2xl font-medium">
+    <div className="flex flex-col border border-red-500 mb-10 p-8">
+      <p className="text-4xl font-medium mb-2">
         {projectName}
       </p>
-      <p>{description}</p>
-      <div>
-        <p>Technologies I Used:</p>
-        <ul className="flex flex-wrap gap-x-2">
-          {techUsed.map((tech) => (
-            <li className="italic">
-              {tech}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="flex justify-evenly">
+      <ul className="flex flex-wrap gap-x-7 mb-7">
+        {techUsed.map((tech) => (
+          <li
+            className="italic text-slate-800 font-light"
+            key={tech}
+          >
+            {tech}
+          </li>
+        ))}
+      </ul>
+      <p className="mb-5">
+        {description}
+      </p>
+
+      <div className="flex gap-x-16">
         <a
           href={deployURL}
           className="border border-black w-40 space-x-3 p-2.5 text-center	"
@@ -42,7 +42,7 @@ export function FeaturedProject({
           </span>
           <span className="text-2xl">
             {
-              // eyes emoji hexcode
+              // eyes emoji hexcode OR globe icon?
             }
             &#128064;
           </span>
