@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 
+// TODO: GET projects data from GitHub
+import projects from '../../../data/projects.json';
 import { GitHubOutlineIcon } from '../Icons';
 
 export function FeaturedProject({
@@ -72,3 +74,21 @@ FeaturedProject.propTypes = {
   sourceCodeURL:
     PropTypes.string.isRequired,
 };
+
+export default function AllProjects() {
+  return (
+    <>
+      {projects.map((project) => (
+        <div className="grid grid-cols-2">
+          <FeaturedProject
+            {...project}
+          />
+          <img
+            src="/img/miniScreenshot.jpg"
+            className="max-h-[270px] w-96"
+          />
+        </div>
+      ))}
+    </>
+  );
+}
