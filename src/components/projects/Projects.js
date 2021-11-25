@@ -68,7 +68,7 @@ FeaturedProject.propTypes = {
     PropTypes.string.isRequired,
   description:
     PropTypes.string.isRequired,
-  techUsed: PropTypes.string.isRequired,
+  techUsed: PropTypes.array.isRequired,
   deployURL:
     PropTypes.string.isRequired,
   sourceCodeURL:
