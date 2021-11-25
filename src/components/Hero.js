@@ -9,7 +9,7 @@ import {
 export default function Hero() {
   // min h 500px
   return (
-    <section className="flex flex-col items-center text-pink-900 px-5 gap-5">
+    <section className="flex flex-col items-center px-5 gap-5 border-b pb-10">
       <div className="pt-10">
         {/* <Image
           src="/img/miniScreenshot.jpg"
@@ -40,7 +40,7 @@ export default function Hero() {
         </a>
         <a
           href="https://linkedin.com/in/tyson-suttle"
-          className="w-12 h-12 hover:text-yellow-600"
+          className="pt-four w-14 h-14 hover:text-yellow-600"
         >
           <MailIcon />
         </a>
@@ -51,6 +51,12 @@ export default function Hero() {
           <GitHubIcon />
         </a>
       </div>
+      <a
+        href="doc/Tyson_S_Resume.pdf"
+        className="border border-black px-12 py-3 shadow-md hover:shadow-lg rounded-md bg-zinc-400"
+      >
+        My Resume
+      </a>
     </section>
   );
 }
