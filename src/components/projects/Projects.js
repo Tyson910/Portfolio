@@ -79,14 +79,15 @@ export default function AllProjects() {
   return (
     <>
       {projects.map((project) => (
-        <div className="grid grid-cols-2">
+        <div className="max-w-screen-sm mx-auto">
           <FeaturedProject
             {...project}
+            key={project.projectName}
           />
-          <img
+          {/* <img
             src="/img/miniScreenshot.jpg"
             className="max-h-[270px] w-96"
-          />
+          /> */}
         </div>
       ))}
     </>
