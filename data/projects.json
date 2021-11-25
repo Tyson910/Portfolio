@@ -15,9 +15,9 @@
     "description": "Created a react app to compare up to 5 NBA players stats visually by using a graph either throughout the entire season or between a given date range",
     "techUsed": [
       "React",
-      "PureCSS (CSS Framework)",
-      "PureCSS (CSS Framework)",
-      "PureCSS (CSS Framework)"
+      "React Testing Library",
+      "Material UI",
+      "Balldontlie API"
     ],
     "deployURL": "https://nba-stats-tool.netlify.app/",
     "sourceCodeURL": "https://github.com/Tyson910/nba-stats-tool"
