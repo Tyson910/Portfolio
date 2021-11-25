@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function NavBar() {
   return (
     <header className="w-full sticky top-0 shadow-md z-10 opacity-95 bg-white backdrop-filter backdrop-blur-sm">
@@ -29,3 +31,8 @@ function NavLink({ href, children }) {
     </a>
   );
 }
+
+NavLink.propTypes = {
+  href: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
+};
