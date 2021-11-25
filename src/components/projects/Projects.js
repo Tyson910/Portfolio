@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { GitHubOutlineIcon } from '../Icons';
 
 export function FeaturedProject({
@@ -59,3 +61,14 @@ export function FeaturedProject({
   );
 }
 
+FeaturedProject.propTypes = {
+  projectName:
+    PropTypes.string.isRequired,
+  description:
+    PropTypes.string.isRequired,
+  techUsed: PropTypes.string.isRequired,
+  deployURL:
+    PropTypes.string.isRequired,
+  sourceCodeURL:
+    PropTypes.string.isRequired,
+};
