@@ -1,3 +1,4 @@
+import { ExternalLinkIcon } from '@heroicons/react/outline';
 import PropTypes from 'prop-types';
 
 // TODO: GET projects data from GitHub
@@ -13,10 +14,30 @@ export function FeaturedProject({
 }) {
   return (
     <div className="flex flex-col border border-red-500 mb-10 p-8">
-      <p className="text-4xl font-medium mb-2">
-        {projectName}
+      <div className="flex items-center md:items-baseline mb-5">
+        <p className="align-text-bottom text-2xl md:text-4xl font-medium">
+          {projectName}
+        </p>
+        <a
+          href={deployURL}
+          target="_blank"
+          rel="noreferrer"
+          className="ml-5 mr-3"
+        >
+          <ExternalLinkIcon className="w-6" />
+        </a>
+        <a
+          href={sourceCodeURL}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <GitHubOutlineIcon className="w-6 stroke-2	" />
+        </a>
+      </div>
+      <p className="mb-3">
+        {description}
       </p>
-      <ul className="flex flex-wrap gap-x-7 mb-7">
+      <ul className="flex flex-wrap gap-x-7">
         {techUsed.map((tech) => (
           <li
             className="italic text-slate-800 font-light"
@@ -26,39 +47,6 @@ export function FeaturedProject({
           </li>
         ))}
       </ul>
-      <p className="mb-5">
-        {description}
-      </p>
-
-      <div className="flex gap-x-16">
-        <a
-          href={deployURL}
-          className="border border-black w-40 space-x-3 p-2.5 text-center	"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span className="align-text-bottom">
-            View Demo
-          </span>
-          <span className="text-2xl">
-            {
-              // eyes emoji hexcode OR globe icon?
-            }
-            &#128064;
-          </span>
-        </a>
-        <a
-          href={sourceCodeURL}
-          className="flex items-center gap-x-3 border border-black w-40 p-2.5 text-center"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span className="align-text-bottom">
-            Source Code
-          </span>
-          <GitHubOutlineIcon className="w-5" />
-        </a>
-      </div>
     </div>
   );
 }
