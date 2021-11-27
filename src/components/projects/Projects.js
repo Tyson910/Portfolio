@@ -65,7 +65,10 @@ FeaturedProject.propTypes = {
 
 export default function AllProjects() {
   return (
-    <>
+    <section
+      id="projects"
+      className="space-y-24"
+    >
       {projects.map((project) => (
         <div
           className="flex even:justify-end"
@@ -83,6 +86,6 @@ export default function AllProjects() {
           </div> */}
         </div>
       ))}
-    </>
+    </section>
   );
 }

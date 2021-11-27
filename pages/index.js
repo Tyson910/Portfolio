@@ -24,7 +24,7 @@ export default function Home() {
       </Head>
       <NavBar />
       <Hero />
-      <main className="mt-10 max-w-screen-lg mx-auto px-10 md:px-0">
+      <main className="mt-10 container space-y-32">
         <AboutMe />
         <ToolBelt />
         <AllProjects />

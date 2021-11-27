@@ -1,5 +1,6 @@
 export default function AboutMe() {
   return (
+    <section>
       <h3
         className="text-4xl mb-5 font-semibold"
         id="about"
@@ -76,6 +77,6 @@ export default function AboutMe() {
           such as NodeJS or Laravel.
         </p>
       </details>
-    </>
+    </section>
   );
 }
