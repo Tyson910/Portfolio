@@ -111,9 +111,7 @@ function TechIconContainer({
   return (
     <div className="flex flex-col items-center">
       {icon}
-      <p className="font-light">
-        {tool}
-      </p>
+      <p>{tool}</p>
     </div>
   );
 }
