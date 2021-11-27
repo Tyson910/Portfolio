@@ -13,9 +13,9 @@ export function FeaturedProject({
   sourceCodeURL,
 }) {
   return (
-    <div className="flex flex-col border border-red-500 mb-10 p-8">
-      <div className="flex items-center md:items-baseline mb-5">
-        <p className="align-text-bottom text-2xl md:text-4xl font-medium">
+    <div className="max-w-screen-sm flex flex-col border border-red-500 mb-10 bg-slate-200 pb-5">
+      <div className="bg-slate-400 flex items-center md:items-baseline mb-5 py-2 px-8">
+        <p className="align-text-bottom text-2xl md:text-4xl font-medium ">
           {projectName}
         </p>
         <a
@@ -34,10 +34,10 @@ export function FeaturedProject({
           <GitHubOutlineIcon className="w-6 stroke-2	" />
         </a>
       </div>
-      <p className="mb-3">
+      <p className="mb-3 px-8">
         {description}
       </p>
-      <ul className="flex flex-wrap gap-x-7">
+      <ul className="flex flex-wrap gap-x-7 px-8">
         {techUsed.map((tech) => (
           <li
             className="italic text-slate-800 font-light"
@@ -67,15 +67,20 @@ export default function AllProjects() {
   return (
     <>
       {projects.map((project) => (
-        <div className="max-w-screen-sm mx-auto">
+        <div
+          className="flex even:justify-end"
+          key={project.projectName}
+        >
           <FeaturedProject
             {...project}
-            key={project.projectName}
           />
-          {/* <img
-            src="/img/miniScreenshot.jpg"
-            className="max-h-[270px] w-96"
-          /> */}
+          {/* <div className="">
+          <img
+              src="/img/miniScreenshot.jpg"
+              alt="Picture of the author"
+              className=" object-cover h-full w-full "
+            />
+          </div> */}
         </div>
       ))}
     </>
