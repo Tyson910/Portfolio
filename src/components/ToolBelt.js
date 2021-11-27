@@ -13,8 +13,7 @@ import {
 export default function ToolBelt() {
   const iconClasses = 'w-12 h-12';
   return (
-    <>
-      <h3 className="text-center">
+      <h3 className="text-4xl mb-5 text-center font-semibold">
         My Favorite Tools & Technologies
       </h3>
 
