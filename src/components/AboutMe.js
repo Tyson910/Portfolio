@@ -1,7 +1,9 @@
 export default function AboutMe() {
   return (
-    <>
-      <h3 className="text-3xl mb-5">
+      <h3
+        className="text-4xl mb-5 font-semibold"
+        id="about"
+      >
         About Me
       </h3>
       <p>
