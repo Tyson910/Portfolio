@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export default function NavBar() {
   return (
-    <header className="w-full sticky top-0 shadow-md z-10 opacity-95 bg-transparent backdrop-filter backdrop-blur-sm">
+    <header className="w-full sticky top-0 shadow-md z-10 opacity-[98%] bg-slate-100">
       <nav className="max-w-screen-xl mx-auto flex justify-evenly">
         <NavLink href="/#top">
           Home
