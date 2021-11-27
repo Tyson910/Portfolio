@@ -18,7 +18,7 @@ export default function AboutMe() {
         Development.
       </p>
       <details className="space-y-5">
-        <summary className="mt-2.5 hover:underline hover:cursor-pointer">
+        <summary className="mt-2.5 hover:underline hover:cursor-pointer w-40">
           More About Me
         </summary>
 
