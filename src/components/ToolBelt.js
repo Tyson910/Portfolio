@@ -14,11 +14,11 @@ export default function ToolBelt() {
   const iconClasses = 'w-12 h-12';
   return (
     <section>
-      <h3 className="text-4xl mb-5 text-center font-semibold">
+      <h3 className="text-4xl mb-14 text-center font-semibold">
         My Favorite Tools & Technologies
       </h3>
 
-      <div className="flex flex-wrap max-w-full md:max-w-sm mx-auto items-center justify-evenly gap-x-10 md:gap-x-12 gap-y-5">
+      <div className="flex flex-wrap max-w-full md:max-w-sm mx-auto items-center justify-evenly gap-10 md:gap-x-12">
         <TechIconContainer
           tool="HTML"
           icon={
@@ -109,7 +109,7 @@ function TechIconContainer({
   tool,
 }) {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center gap-y-3.5">
       {icon}
       <p>{tool}</p>
     </div>
