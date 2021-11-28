@@ -21,7 +21,7 @@ export function FeaturedProject({
         <a
           href={deployURL}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="ml-5 mr-3"
         >
           <ExternalLinkIcon className="w-6" />
@@ -29,7 +29,7 @@ export function FeaturedProject({
         <a
           href={sourceCodeURL}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           <GitHubOutlineIcon className="w-6 stroke-2	" />
         </a>
