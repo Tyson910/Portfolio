@@ -13,7 +13,7 @@ export function FeaturedProject({
   sourceCodeURL,
 }) {
   return (
-    <div className="max-w-screen-sm flex flex-col border border-red-500 mb-10 bg-slate-200 pb-5">
+    <div className="max-w-screen-sm flex flex-col border border-red-500 rounded-lg mb-10 bg-slate-200 pb-5">
       <div className="bg-slate-400 flex items-center md:items-baseline mb-5 py-2 px-8">
         <p className="align-text-bottom text-2xl md:text-4xl font-medium ">
           {projectName}
