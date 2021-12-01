@@ -1,12 +1,27 @@
+import classNames from 'classnames';
+
+import styles from '../../styles/details.module.css';
+
 export default function AboutMe() {
   return (
-    <section>
+    <section className="text-lg">
       <h3
-        className="text-4xl mb-5 font-semibold"
+        className="text-4xl mb-8 font-semibold"
         id="about"
       >
         About Me
       </h3>
+      <p className="mb-7">
+      <details
+        className={classNames(
+          styles.details,
+          'space-y-10'
+        )}
+      >
+        <summary className="hover:underline hover:cursor-pointer w-40">
+          More About Me
+        </summary>
+
       <p>
         I'm an Undergraduate student in
         my Senior year studying
