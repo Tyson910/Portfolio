@@ -13,8 +13,8 @@ export function FeaturedProject({
   sourceCodeURL,
 }) {
   return (
-    <div className="max-w-screen-sm flex flex-col border border-red-500 rounded-lg mb-10 bg-slate-200 pb-5">
-      <div className="bg-slate-400 flex items-center md:items-baseline mb-5 py-2 px-8">
+    <div className="max-w-screen-sm flex flex-col border-2 border-[#2C0E44] rounded-lg mb-10 bg-purple-100 pb-5">
+      <div className="text-purple-100 bg-[#2C0E44] flex items-center md:items-baseline mb-5 py-5 px-8">
         <p className="align-text-bottom text-2xl md:text-4xl font-medium ">
           {projectName}
         </p>
@@ -34,13 +34,13 @@ export function FeaturedProject({
           <GitHubOutlineIcon className="w-6 stroke-2	" />
         </a>
       </div>
-      <p className="mb-3 px-8">
+      <p className="mb-3 px-8 text-[#210A33]">
         {description}
       </p>
       <ul className="flex flex-wrap gap-x-7 px-8">
         {techUsed.map((tech) => (
           <li
-            className="italic text-slate-800 font-light"
+            className="italic text-[#210A33] font-light"
             key={tech}
           >
             {tech}
