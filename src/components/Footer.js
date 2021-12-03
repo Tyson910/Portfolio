@@ -25,6 +25,8 @@ export default function Footer() {
           email:{'  '}
           <a
             href='mailto:TysonS.417@gmail.com, subject="Inquiry from website" '
+            rel="noopener noreferrer"
+            target="_blank"
             className="underline"
           >
             TysonS.417@gmail.com
