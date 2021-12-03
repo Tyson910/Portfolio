@@ -26,8 +26,10 @@ export default function Hero() {
         </h2>
         <SocialMediaLinks />
         <a
-          href="doc/Tyson_S_Resume.pdf"
-          className="mt-4 lg:m-0 max-w-max self-center text-slate-900 border-2 border-current px-12 py-3 shadow-med hover:shadow-lg rounded-md hover:bg-slate-300   active:bg-slate-400"
+          href="/doc/Tyson_Suttle_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 lg:m-0 max-w-max self-center text-slate-900 border-2 border-current px-12 py-3 shadow-med hover:shadow-lg rounded-md hover:bg-slate-200   active:bg-slate-300"
         >
           My Resume
         </a>
