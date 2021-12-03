@@ -9,11 +9,9 @@ export default function NavBar() {
   👨🏿‍💻 Github: https://github.com/Tyson910 
   👨🏿‍💼 LinkedIn: https://linkedin.com/in/tyson-suttle`);
   return (
-    <header className="w-full sticky top-0 shadow-md z-10 opacity-[98%] bg-slate-100 text-[#2C0E44]">
+    <header className="w-full sticky top-0 shadow-md z-10 opacity-[98%] bg-slate-100 text-purple-shade-4 ">
       <nav className="max-w-screen-xl mx-auto flex justify-evenly">
-        <NavLink href="/#top">
-          Home
-        </NavLink>
+        <NavLink href="/">Home</NavLink>
         <NavLink href="/#about">
           About Me
         </NavLink>

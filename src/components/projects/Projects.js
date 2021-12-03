@@ -13,8 +13,8 @@ export function FeaturedProject({
   sourceCodeURL,
 }) {
   return (
-    <div className="max-w-screen-sm flex flex-col border-2 border-[#2C0E44] rounded-lg mb-10 bg-purple-100 pb-5">
-      <div className="text-purple-100 bg-[#2C0E44] flex items-center md:items-baseline mb-5 py-5 px-8">
+    <div className="max-w-screen-sm flex flex-col border-2 border-purple-shade-4 rounded-lg mb-10 bg-purple-100 pb-5">
+      <div className="text-purple-100 bg-purple-shade-4 flex items-center md:items-baseline mb-5 py-5 px-8">
         <p className="align-text-bottom text-2xl md:text-4xl font-medium ">
           {projectName}
         </p>
@@ -34,13 +34,13 @@ export function FeaturedProject({
           <GitHubOutlineIcon className="w-6 stroke-2	" />
         </a>
       </div>
-      <p className="mb-3 px-8 text-[#210A33]">
+      <p className="mb-3 px-8 text-purple-shade-5">
         {description}
       </p>
       <ul className="flex flex-wrap gap-x-7 px-8">
         {techUsed.map((tech) => (
           <li
-            className="italic text-[#210A33] font-light"
+            className="italic text-purple-shade-5 font-light"
             key={tech}
           >
             {tech}
@@ -65,10 +65,13 @@ FeaturedProject.propTypes = {
 
 export default function AllProjects() {
   return (
-    <section
-      id="projects"
-      className="space-y-24"
-    >
+    <section className="space-y-10">
+      <p
+        className="pt-36 -mt-36 mb-14 text-4xl text-center font-semibold"
+        id="projects"
+      >
+        Projects
+      </p>
       {projects.map((project) => (
         <div
           className="flex even:justify-end"
@@ -77,13 +80,6 @@ export default function AllProjects() {
           <FeaturedProject
             {...project}
           />
-          {/* <div className="">
-          <img
-              src="/img/miniScreenshot.jpg"
-              alt="Picture of the author"
-              className=" object-cover h-full w-full "
-            />
-          </div> */}
         </div>
       ))}
     </section>

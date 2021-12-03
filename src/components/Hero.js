@@ -9,7 +9,7 @@ import {
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center px-5 gap-5 lg:grid lg:grid-cols-2 lg:container lg:py-20 lg:mb-20 pb-10 lg:pb-5">
+    <section className="flex flex-col items-center px-5 gap-5 lg:grid lg:grid-cols-2 lg:container lg:py-20 pb-10 lg:pb-5">
       <div className="mb-4 lg:m-0 pt-14 lg:pt-10 justify-self-center	">
         <div className="h-48 w-48 lg:h-96 lg:w-96 border border-black object-cover rounded-full shadow-md relative">
           <Image
@@ -21,7 +21,7 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div className="flex flex-col text-center gap-y-5 lg:gap-y-10 text-[#2C0E44]">
+      <div className="flex flex-col text-center gap-y-5 lg:gap-y-10 text-purple-shade-4">
         <h1 className="w-max mx-auto text-5xl lg:text-7xl font-bold lg:no-underline">
           Tyson Suttle
         </h1>

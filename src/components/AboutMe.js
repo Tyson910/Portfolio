@@ -6,7 +6,7 @@ export default function AboutMe() {
   return (
     <section className="text-lg">
       <h3
-        className="text-4xl mb-8 font-semibold"
+        className="text-4xl mb-8 font-semibold pt-20"
         id="about"
       >
         About Me

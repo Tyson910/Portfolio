@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="w-full text-purple-100 bg-[#2C0E44] py-14 mt-20 md:mt-40">
+    <footer className="w-full text-purple-100 bg-purple-shade-4 py-14 mt-20 md:mt-40">
       <div className="container space-y-10">
         <p
           className="text-3xl md:text-4xl font-medium "
