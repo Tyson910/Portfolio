@@ -6,7 +6,6 @@ import {
   JavaScriptIcon,
   NextJSIcon,
   ReactIcon,
-  TailwindIcon,
   TestingLibraryIcon,
 } from './Icons';
 
@@ -42,18 +41,6 @@ export default function ToolBelt() {
             />
           }
         />
-
-        {/* <TechIconContainer
-          tool="TailwindCSS"
-          icon={
-            <TailwindIcon
-              className={classNames(
-                'text-sky-400',
-                iconClasses
-              )}
-            />
-          }
-        /> */}
 
         <TechIconContainer
           tool="JavaScript"
