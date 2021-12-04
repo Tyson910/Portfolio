@@ -1,5 +1,4 @@
 import { ExternalLinkIcon } from '@heroicons/react/outline';
-import PropTypes from 'prop-types';
 
 // TODO: GET projects data from GitHub
 import projects from '../../../data/projects.json';
@@ -50,18 +49,6 @@ export function FeaturedProject({
     </div>
   );
 }
-
-FeaturedProject.propTypes = {
-  projectName:
-    PropTypes.string.isRequired,
-  description:
-    PropTypes.string.isRequired,
-  techUsed: PropTypes.array.isRequired,
-  deployURL:
-    PropTypes.string.isRequired,
-  sourceCodeURL:
-    PropTypes.string.isRequired,
-};
 
 export default function AllProjects() {
   return (
