@@ -53,6 +53,7 @@ function SocialMediaLinks() {
         rel="noopener noreferrer"
         target="_blank"
         className="w-12 h-12 hover:drop-shadow	btn-animation text-[#0A66C2]"
+        title="LinkedIn profile"
       >
         <LinkedInIcon />
       </a>
@@ -61,6 +62,7 @@ function SocialMediaLinks() {
         rel="noopener noreferrer"
         target="_blank"
         className="w-14 h-14 hover:drop-shadow hover:text-slate-700 btn-animation"
+        title="My email"
       >
         <EmailIcon />
       </a>
@@ -69,6 +71,7 @@ function SocialMediaLinks() {
         rel="noopener noreferrer"
         target="_blank"
         className="w-12 h-12 hover:drop-shadow hover:text-slate-700 btn-animation"
+        title="My Github profile"
       >
         <GitHubIcon />
       </a>
