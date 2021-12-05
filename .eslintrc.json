@@ -41,10 +41,12 @@
         "no-console": "warn",
         "prettier/prettier": "error",
         "react/display-name": "off",
-        "react/no-children-prop": "off",
+        "react/prop-types": "warn",
         "react/react-in-jsx-scope": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
+        "react/no-unescaped-entities": "off",
+        "react/jsx-props-no-spreading": "warn",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "react/function-component-definition":  [1, {
             "namedComponents": "function-declaration"
