@@ -21,7 +21,8 @@ export function FeaturedProject({
           href={deployURL}
           target="_blank"
           rel="noopener noreferrer"
-          className="ml-5 mr-3"
+          title={`Link to ${projectName} site`}
+          className="ml-5 mr-3 hover:text-slate-300"
         >
           <ExternalLinkIcon className="w-6" />
         </a>
@@ -29,8 +30,9 @@ export function FeaturedProject({
           href={sourceCodeURL}
           target="_blank"
           rel="noopener noreferrer"
+          title={`Github link to ${projectName}`}
         >
-          <GitHubOutlineIcon className="w-6 stroke-2	" />
+          <GitHubOutlineIcon className="w-6 stroke-2	hover:text-slate-300" />
         </a>
       </div>
       <p className="mb-3 px-8 text-purple-shade-5">
