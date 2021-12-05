@@ -14,6 +14,7 @@ export default function Layout({
           rel="icon"
           href="/img/icons/avi.svg"
         />
+        <html lang="en" />
       </Head>
       <NavBar />
       <main>{children}</main>
