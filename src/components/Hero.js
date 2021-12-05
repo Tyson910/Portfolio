@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import Me from '../../public/img/miniScreenshot.jpg';
+import Me from '../../public/img/headshot.JPG';
 import {
   EmailIcon,
   GitHubIcon,
@@ -52,7 +52,7 @@ function SocialMediaLinks() {
         href="https://linkedin.com/in/tyson-suttle"
         rel="noopener noreferrer"
         target="_blank"
-        className="w-12 h-12 hover:drop-shadow	 text-[#0A66C2]"
+        className="w-12 h-12 hover:drop-shadow	btn-animation text-[#0A66C2]"
       >
         <LinkedInIcon />
       </a>
@@ -60,7 +60,7 @@ function SocialMediaLinks() {
         href='mailto:TysonS.417@gmail.com, subject="Inquiry from website" '
         rel="noopener noreferrer"
         target="_blank"
-        className="w-14 h-14 hover:drop-shadow hover:text-slate-700"
+        className="w-14 h-14 hover:drop-shadow hover:text-slate-700 btn-animation"
       >
         <EmailIcon />
       </a>
@@ -68,7 +68,7 @@ function SocialMediaLinks() {
         href="https://github.com/Tyson910"
         rel="noopener noreferrer"
         target="_blank"
-        className="w-12 h-12 hover:drop-shadow hover:text-slate-700"
+        className="w-12 h-12 hover:drop-shadow hover:text-slate-700 btn-animation"
       >
         <GitHubIcon />
       </a>
