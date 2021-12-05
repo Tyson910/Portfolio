@@ -16,7 +16,8 @@ export default function Footer() {
             href="https://linkedin.com/in/tyson-suttle"
             rel="noopener noreferrer"
             target="_blank"
-            className="underline"
+            title="LinkedIn profile"
+            className="underline hover:text-slate-300"
           >
             here
           </a>{' '}
@@ -27,7 +28,7 @@ export default function Footer() {
             href='mailto:TysonS.417@gmail.com, subject="Inquiry from website" '
             rel="noopener noreferrer"
             target="_blank"
-            className="underline"
+            className="underline hover:text-slate-300"
           >
             TysonS.417@gmail.com
           </a>
