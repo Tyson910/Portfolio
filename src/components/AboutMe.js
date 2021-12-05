@@ -12,6 +12,16 @@ export default function AboutMe() {
         About Me
       </h3>
       <p className="mb-7">
+        I am a Software Developer
+        specializing in Front-End
+        development and creating
+        accessible UIs. I'm experienced
+        in using HTML, CSS, JavaScript,
+        and JS frameworks. Lately, I
+        have been learning to use NextJS
+        alongside a headless CMS
+        (Prismic)
+      </p>
       <details
         className={classNames(
           styles.details,
@@ -22,21 +32,69 @@ export default function AboutMe() {
           More About Me
         </summary>
 
-      <p>
-        I'm an Undergraduate student in
-        my Senior year studying
-        Information Technology at
-        Missouri State University. I
-        will be graduating Spring of
-        2021 with a Bachelor's degree in
-        Information Technology and an
-        emphasis in Application
-        Development.
-      </p>
-      <details className="space-y-5">
-        <summary className="mt-2.5 hover:underline hover:cursor-pointer w-40">
-          More About Me
-        </summary>
+        <p>
+          I graduated from Missouri
+          State University in the Spring
+          of 2021 with a Bachelor's
+          degree in Information
+          Technology and an emphasis in
+          Application Development.
+        </p>
+
+        <p>
+          My experience consists of
+          using my skills & knowledge at
+          various non profits, PivotTech
+          & Congregational Health &amp;
+          Education Network (CHEN) both
+          based in Nashville, part time
+          as well as a full time role as
+          a front-end software engineer.
+          PivotTech is a software
+          bootcamp, with a focus on
+          helping people from
+          underrepresented groups{' '}
+          <em>'pivot'</em> from their
+          current career into a new one
+          in technology. I was
+          responsible for giving
+          one-on-one or small group
+          instruction and lesson review
+          as well as collaborating with
+          other instructors to recognize
+          issues students are facing and
+          recommend solutions. I helped
+          CHEN by creating web forms and
+          maintaining their database to
+          aid those in need of
+          assistance due to the COVID-19
+          pandemic.
+        </p>
+
+        <p>
+          I take in pride in working
+          with other individuals who are
+          passionate about using modern
+          technology and great design to
+          deliver incredible experiences
+          and products to people in a
+          way that is environmentally
+          conscious, socially inclusive,
+          and accessible to all.
+        </p>
+
+        <p>
+          I love learning new things,
+          and trying new techonologies.
+          This website was built
+          using&nbsp;a combination of
+          React, NextJS, TailwindCSS,
+          and vanilla CSS.&nbsp; My next
+          goal is to start a blog,
+          writing about new
+          techonologies I'm learning,
+          hosted on this same site!
+        </p>
 
         <p>
           With my free time,&nbsp; I
@@ -45,51 +103,6 @@ export default function AboutMe() {
           complete puzzles, and stay
           active by playing pick up
           basketball.&nbsp;
-        </p>
-
-        <p>
-          After I graduate, I aim to
-          work with other individuals
-          who are passionate about using
-          modern technology and great
-          design to deliver incredible
-          experiences and products to
-          people in a way that is
-          environmentally conscious,
-          socially inclusive, and
-          accessible to all. Until then,
-          I will be having fun with
-          code, exploring my creativity,
-          and trying to find the best
-          slice of pizza in town.
-        </p>
-
-        <p>
-          My experience consists of
-          using my digital skills to
-          help a non profit organization
-          Congregational Health &amp;
-          Education Network (CHEN),
-          based in Nashville, TN,
-          including creating web forms
-          and maintaining their
-          database, as well as remotely
-          tutoring Confluence Prep
-          Academy (St. Louis, MO)
-          students in math and coding
-          skills.
-        </p>
-
-        <p>
-          I love learning new things,
-          and trying new techonologies.
-          This website was built
-          using&nbsp;a combination of
-          HTML, CSS, and vanilla
-          JavaScript.&nbsp; The next
-          technology I would like to
-          learn is a backend technology
-          such as NodeJS or Laravel.
         </p>
       </details>
     </section>
