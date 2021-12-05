@@ -15,7 +15,7 @@
 
 @layer utilities{
   .btn-animation{
-    @apply ease-in-out transform hover:scale-[1.02] active:scale-[.98]
+    @apply ease-in-out transform hover:scale-[1.005] active:scale-[.99]
   }
 }
 
