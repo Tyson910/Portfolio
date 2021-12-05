@@ -30,7 +30,7 @@ export default function Hero() {
         </h2>
         <SocialMediaLinks />
         <a
-          href="/doc/Tyson_Suttle_Resume.pdf"
+          href="/doc/Tyson_S_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={`mt-4 lg:m-0 px-12 py-3 max-w-max self-center 
