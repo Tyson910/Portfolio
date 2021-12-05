@@ -16,7 +16,7 @@ export default function Home() {
         />
       </Head>
       <Hero />
-      <article className="mt-10 container space-y-32">
+      <article className="mt-10 container space-y-32 text-purple-shade-5">
         <AboutMe />
         <ToolBelt />
         <AllProjects />
