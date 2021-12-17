@@ -29,7 +29,7 @@ export default function NavBar() {
 function NavLink({ href, children }) {
   return (
     <Link href={href}>
-          'hover:underline p-4 font-medium',
+      <a className="hover:underline p-4 font-medium">
         {children}
       </a>
     </Link>
