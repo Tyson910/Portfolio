@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import Head from 'next/head';
 
 import Footer from './Footer';
 import NavBar from './NavBar';
@@ -9,13 +8,6 @@ export default function Layout({
 }) {
   return (
     <>
-      <Head>
-        <link
-          rel="icon"
-          href="/img/icons/avi.svg"
-        />
-        <html lang="en" />
-      </Head>
       <NavBar />
       <main>{children}</main>
       <Footer />
