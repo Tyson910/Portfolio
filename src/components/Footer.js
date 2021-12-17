@@ -11,7 +11,7 @@ export default function Footer() {
         <p className="text-lg max-w-screen-sm">
           Whether you have a question or
           just want to chat, you can
-          click{' '}
+          send me a message on {'  '}
           <a
             href="https://linkedin.com/in/tyson-suttle"
             rel="noopener noreferrer"
@@ -19,11 +19,10 @@ export default function Footer() {
             title="LinkedIn profile"
             className="underline hover:text-slate-300"
           >
-            here
-          </a>{' '}
-          to send me a message on
-          LinkedIn, or shoot me an
-          email:{'  '}
+            LinkedIn
+          </a>
+          {'  '}, or shoot me an email:
+          {'  '}
           <a
             href='mailto:TysonS.417@gmail.com, subject="Inquiry from website" '
             rel="noopener noreferrer"
