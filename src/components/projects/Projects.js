@@ -56,7 +56,7 @@ export default function AllProjects() {
   return (
     <section className="space-y-10">
       <p
-        className="pt-20 -mt-20 mb-14 text-4xl text-center font-semibold"
+        className="scroll-m-20 mb-14 text-4xl text-center font-semibold"
         id="projects"
       >
         Projects
