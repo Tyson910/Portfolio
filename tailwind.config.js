@@ -1,9 +1,7 @@
 module.exports = {
   mode: 'jit',
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,jsx,ts,tsx}',
+    "./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}",
   ],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
