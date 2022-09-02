@@ -1,0 +1,32 @@
+---
+export interface Props {
+  /** The page title */
+  meta_title: string;
+  /** The meta description */
+  meta_description: string;
+}
+import '@styles/global.css';
+import MainHead from '@components/seo/MainHead.astro';
+// import { Footer } from "@components/Footer";
+import { NavBar } from "@components/Navbar";
+const { meta_title, meta_description } =
+  Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <MainHead
+      title={meta_title}
+      description={meta_description}
+    />
+  </head>
+
+  <body class="bg-gray-50">
+    <NavBar />
+    <main>
+      <slot />
+      <!-- children will go here -->
+    </main>
+    <!-- <Footer /> -->
+  </body>
+</html>
