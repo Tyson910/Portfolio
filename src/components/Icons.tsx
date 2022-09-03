@@ -1,11 +1,12 @@
-/* eslint-disable react/jsx-props-no-spreading */
-export function HTMLIcon(properties) {
+import { SVGProps } from "react";
+
+export function HTMLIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      {...properties}
+      {...props}
     >
       <title>HTML5</title>
       <path
@@ -16,13 +17,13 @@ export function HTMLIcon(properties) {
   );
 }
 
-export function CSSIcon(properties) {
+export function CSSIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      {...properties}
+      {...props}
     >
       <title>CSS3</title>
       <path
@@ -34,14 +35,14 @@ export function CSSIcon(properties) {
 }
 
 export function JavaScriptIcon(
-  properties
-) {
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+): JSX.Element {
   return (
     <svg
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      {...properties}
+      {...props}
     >
       <title>JavaScript</title>
       <path
@@ -52,13 +53,13 @@ export function JavaScriptIcon(
   );
 }
 
-export function ReactIcon(properties) {
+export function ReactIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      {...properties}
+      {...props}
     >
       <title>React</title>
       <path
@@ -69,13 +70,13 @@ export function ReactIcon(properties) {
   );
 }
 
-export function NextJSIcon(properties) {
+export function NextJSIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      {...properties}
+      {...props}
     >
       <title>Next.js</title>
       <path
@@ -87,14 +88,14 @@ export function NextJSIcon(properties) {
 }
 
 export function TailwindIcon(
-  properties
-) {
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+): JSX.Element {
   return (
     <svg
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      {...properties}
+      {...props}
     >
       <title>Tailwind CSS</title>
       <path
@@ -105,13 +106,13 @@ export function TailwindIcon(
   );
 }
 
-export function NPMIcon(properties) {
+export function NPMIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      {...properties}
+      {...props}
     >
       <title>npm</title>
       <path
@@ -123,14 +124,14 @@ export function NPMIcon(properties) {
 }
 
 export function TestingLibraryIcon(
-  properties
-) {
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+): JSX.Element {
   return (
     <svg
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      {...properties}
+      {...props}
     >
       <title>Testing Library</title>
       <path
@@ -141,13 +142,13 @@ export function TestingLibraryIcon(
   );
 }
 
-export function JestIcon(properties) {
+export function JestIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg
       role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      {...properties}
+      {...props}
     >
       <title>Jest</title>
       <path
@@ -158,14 +159,14 @@ export function JestIcon(properties) {
   );
 }
 
-export function GitHubIcon(properties) {
+export function GitHubIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg
       aria-hidden="true"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
-      {...properties}
+      {...props}
     >
       <title>GitHub</title>
       <path
@@ -177,8 +178,8 @@ export function GitHubIcon(properties) {
 }
 
 export function GitHubOutlineIcon(
-  properties
-) {
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+): JSX.Element {
   return (
     <svg
       role="img"
@@ -186,7 +187,7 @@ export function GitHubOutlineIcon(
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       stroke="currentColor"
-      {...properties}
+      {...props}
     >
       <title>GitHub</title>
 
@@ -199,8 +200,8 @@ export function GitHubOutlineIcon(
 }
 
 export function LinkedInIcon(
-  properties
-) {
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+): JSX.Element {
   return (
     <svg
       aria-hidden="true"
@@ -210,7 +211,7 @@ export function LinkedInIcon(
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
-      {...properties}
+      {...props}
     >
       <path
         fill="currentColor"
@@ -220,7 +221,7 @@ export function LinkedInIcon(
   );
 }
 
-export function EmailIcon(properties) {
+export function EmailIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg
       aria-hidden="true"
@@ -230,7 +231,7 @@ export function EmailIcon(properties) {
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
-      {...properties}
+      {...props}
     >
       <path
         fill="currentColor"
