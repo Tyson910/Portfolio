@@ -7,7 +7,8 @@
         "src/components/*"
       ],
       "@layouts/*": ["src/layouts/*"],
-      "@public/*": ["public/*"]
+      "@public/*": ["public/*"],
+      "@assets/*": ["src/assets/*"]
     },
     // Enable top-level await and other modern ESM features.
     "target": "ESNext",
