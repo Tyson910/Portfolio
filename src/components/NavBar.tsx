@@ -31,7 +31,7 @@ export function NavBar(): JSX.Element {
     // },
   ];
   return (
-    <header className={`mb-10 w-full sticky top-0 shadow-md z-10
+    <header className={`py-1 w-full sticky top-0 shadow-md z-10
      opacity-[98%] bg-slate-100 text-purple-shade-4`}>
       <nav className="max-w-screen-xl mx-auto flex justify-evenly">
         {navigationLinks.map(
