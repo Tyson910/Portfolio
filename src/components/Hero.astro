@@ -1,0 +1,38 @@
+---
+import { SocialMediaLinks } from '@components/SocialMediaLinks';
+---
+
+<section class="w-full bg-gradient-to-br from-gray-50 to-gray-300">
+  <div
+    class="flex flex-col items-center md:items-start px-5 gap-5 lg:grid lg:grid-cols-2 lg:container pb-10 lg:py-20"
+  >
+    <div
+      class="flex flex-col text-center lg:text-left gap-y-5 lg:gap-y-10 text-purple-shade-4"
+    >
+      <h1
+        class="w-max text-5xl lg:text-7xl font-bold "
+      >
+        Tyson Suttle
+      </h1>
+      <h2
+        class="text-2xl lg:text-4xl lg:font-light lg:-mt-5"
+      >
+        Software & Web Developer
+      </h2>
+      <SocialMediaLinks />
+      <a
+        href="/doc/Tyson_S_Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class={`mt-4 lg:m-0 px-12 py-3 max-w-max 
+          text-slate-50 hover:bg-purple-shade-4 active:bg-slate-200
+          bg-purple-shade-5
+          font-medium border-2 border-current 
+            shadow-med hover:shadow-lg rounded-md 
+           btn-animation`}
+      >
+        My Resume
+      </a>
+    </div>
+  </div>
+</section>
