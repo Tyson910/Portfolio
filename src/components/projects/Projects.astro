@@ -1,0 +1,23 @@
+---
+// TODO: GET projects data from GitHub
+import projects from '@data/projects.json';
+import { FeaturedProject } from '@components/projects/FeaturedProject';
+---
+
+<section class="space-y-10 container">
+  <p
+    class="scroll-m-20 mb-14 text-4xl text-center font-semibold"
+    id="projects"
+  >
+    Projects
+  </p>
+  {
+    projects.map((project:  { projectName: string; description: string; techUsed: string[]; deployURL: string; sourceCodeURL: string; } & astroHTML.JSX.IntrinsicAttributes) => (
+      <div
+        class="flex even:justify-end"
+      >
+        <FeaturedProject {...project} />
+      </div>
+    ))
+  }
+</section>
