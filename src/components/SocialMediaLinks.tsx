@@ -2,7 +2,7 @@ import {
   EmailIcon,
   GitHubIcon,
   LinkedInIcon,
-} from '@components/Icons';
+} from '@assets/icons/TechIcons';
 
 export function SocialMediaLinks(): JSX.Element {
   return (
