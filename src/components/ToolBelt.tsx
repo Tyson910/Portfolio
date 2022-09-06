@@ -7,9 +7,9 @@ import {
   NextJSIcon,
   ReactIcon,
   TestingLibraryIcon,
-} from './Icons';
+} from '@assets/icons/TechIcons';
 
-export default function ToolBelt() {
+export function ToolBelt() {
   const iconClasses = 'w-12 h-12';
   return (
     <section>
@@ -94,7 +94,12 @@ export default function ToolBelt() {
 function TechIconContainer({
   icon,
   tool,
-}) {
+}: {
+  /** Name of Tech used */
+  tool: string;
+  /** SVG icon of tech used */
+  icon: JSX.Element;
+}): JSX.Element {
   return (
     <div className="flex flex-col items-center gap-y-3.5">
       {icon}
