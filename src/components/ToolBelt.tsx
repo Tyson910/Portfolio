@@ -12,12 +12,12 @@ import {
 export function ToolBelt() {
   const iconClasses = 'w-12 h-12';
   return (
-    <section>
+    <section className='py-20 bg-gradient-to-br from-gray-50 to-gray-300'>
       <h3 className="text-4xl mb-14 text-center font-semibold">
         My Favorite Tools & Technologies
       </h3>
 
-      <div className="flex flex-wrap max-w-full md:max-w-sm mx-auto items-center justify-evenly gap-10 md:gap-x-12">
+      <div className="flex flex-wrap container md:max-w-sm items-center justify-evenly gap-10 md:gap-x-12">
         <TechIconContainer
           tool="HTML"
           icon={
