@@ -23,17 +23,29 @@ export function SocialMediaLinks(): JSX.Element {
         className="w-14 h-14 hover:drop-shadow hover:text-slate-700 btn-animation"
         title="My email"
       >
-        <EmailIcon />
-      </a>
+function SocialMediaLink({
+  href,
+  title,
+  children,
+  ...props
+}: {
+  href: string;
+  title: string;
+  children: JSX.Element;
+}): JSX.Element {
+  return (
+    <>
       <a
-        href="https://github.com/Tyson910"
+        className="group -m-1 p-1"
+        aria-label={title}
+        title={title}
+        href={href}
         rel="noopener noreferrer"
         target="_blank"
-        className="w-12 h-12 hover:drop-shadow hover:text-slate-700 btn-animation"
-        title="My Github profile"
+        {...props}
       >
-        <GitHubIcon />
+        {children}
       </a>
-    </div>
+    </>
   );
 }
