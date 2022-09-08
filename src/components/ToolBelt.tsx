@@ -12,7 +12,7 @@ import {
 export function ToolBelt() {
   const iconClasses = 'w-12 h-12';
   return (
-    <section className='py-20 bg-gradient-to-br from-gray-50 to-gray-300'>
+    <section className='py-20 bg-gradient-to-br from-gray-50 to-gray-300 md:to-gray-100'>
       <h3 className="text-4xl mb-14 text-center font-semibold">
         My Favorite Tools & Technologies
       </h3>
