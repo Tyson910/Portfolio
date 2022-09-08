@@ -11,7 +11,7 @@ export function SocialMediaLinks(): JSX.Element {
   return (
     <div className="mt-6 flex flex-row gap-6 text-slate-900">
       <SocialMediaLink
-        href="hhttps://linkedin.com/in/tyson-suttle"
+        href="https://linkedin.com/in/tyson-suttle"
         title="My LinkedIn profile"
       >
         <LinkedInIcon
@@ -22,7 +22,7 @@ export function SocialMediaLinks(): JSX.Element {
         />
       </SocialMediaLink>
       <SocialMediaLink
-        href='mailto:TysonS.417@gmail.com, subject="Inquiry from website" '
+        href='mailto:TysonS.417@gmail.com?subject=Inquiry from website '
         title="My Github profile"
       >
         <EmailIcon
