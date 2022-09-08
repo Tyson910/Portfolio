@@ -17,7 +17,7 @@ export function SocialMediaLinks(): JSX.Element {
         <LinkedInIcon
           className={classNames(
             iconClasses,
-            'group-hover:fill-[#0A66C2] dark:group-hover:fill-[#0A66C2]'
+            '!fill-[#0A66C2] md:!fill-zinc-500 group-hover:fill-[#0A66C2] dark:group-hover:fill-[#0A66C2]'
           )}
         />
       </SocialMediaLink>
