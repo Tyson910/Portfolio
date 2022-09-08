@@ -24,14 +24,16 @@ export function FeaturedProject({
         >
           <ExternalLinkIcon className="w-6" />
         </a>
-        <a
-          href={sourceCodeURL}
-          target="_blank"
-          rel="noopener noreferrer"
-          title={`Github link to ${projectName}`}
-        >
-          <GitHubOutlineIcon className="w-6 stroke-2	hover:text-slate-300" />
-        </a>
+        {sourceCodeURL && (
+          <a
+            href={sourceCodeURL}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={`Github link to ${projectName}`}
+          >
+            <GitHubOutlineIcon className="w-6 stroke-2	hover:text-slate-300" />
+          </a>
+        )}
       </div>
       <p className="mb-3 px-8 text-purple-shade-5">
         {description}
