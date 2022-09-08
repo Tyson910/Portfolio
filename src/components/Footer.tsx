@@ -24,7 +24,7 @@ export function Footer(): JSX.Element {
             email:
             {'  '}
             <a
-              href='mailto:TysonS.417@gmail.com, subject="Inquiry from website" '
+              href='mailto:TysonS.417@gmail.com?subject=Inquiry from website'
               rel="noopener noreferrer"
               target="_blank"
               className="underline hover:text-slate-300"
