@@ -1,0 +1,46 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { MailIcon } from '@heroicons/react/outline/index.js';
+import { LinkedInIcon } from '@assets/icons/TechIcons';
+import ContactForm from '@components/ContactForm.astro';
+import ContactLink from '@components/ContactLink.astro';
+---
+
+<BaseLayout
+  meta_title="Contact Me"
+  meta_description="Reach out to me"
+>
+  <section class="py-20 w-full">
+    <div
+      class="flex flex-col lg:flex-row gap-x-10 container"
+    >
+      <div
+        id="contact-info"
+        class="pl-5"
+      >
+        <h1
+          class="mb-10 md:mb-8 text-4xl lg:text-2xl font-medium"
+        >
+          Get In Touch
+        </h1>
+        <ContactLink
+          href="mailto:TysonS.417@gmail.com?subject=Inquiry from website"
+          containerClass="mb-5"
+        >
+          <MailIcon slot="icon" />
+          TysonS.417@gmail.com
+        </ContactLink>
+        <ContactLink
+          href="https://linkedin.com/in/tyson-suttle"
+        >
+          <LinkedInIcon
+            slot="icon"
+            className="fill-[#0A66C2]"
+          />
+          LinkedIn
+        </ContactLink>
+      </div>
+      <ContactForm />
+    </div>
+  </section>
+</BaseLayout>
