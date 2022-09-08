@@ -29,7 +29,6 @@ export function SocialMediaLinks(): JSX.Element {
           className={iconClasses}
         />
       </SocialMediaLink>
-
       <SocialMediaLink
         href="https://github.com/Tyson910"
         title="My Github profile"
@@ -38,6 +37,7 @@ export function SocialMediaLinks(): JSX.Element {
           className={iconClasses}
         />
       </SocialMediaLink>
+      
     </div>
   );
 }
