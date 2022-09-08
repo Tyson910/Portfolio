@@ -21,5 +21,15 @@
     ],
     "deployURL": "https://nba-stats-tool.netlify.app/",
     "sourceCodeURL": "https://github.com/Tyson910/nba-stats-tool"
+  },
+  {
+    "projectName": "Ragain’s Flooring",
+    "description": "Created a brochure website for a flooring business based in Jefferson City, Mo, enabling this small business owners to display their products & services and allow for interested clients to submit inquiries",
+    "techUsed": [
+      "Vanilla HTML",
+      "Vanilla CSS",
+      "Vanilla JavaScript"
+    ],
+    "deployURL": "https://www.RagainsFlooring.com"
   }
 ]
