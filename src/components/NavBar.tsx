@@ -14,7 +14,7 @@ export function NavBar(): JSX.Element {
       text: 'About',
     },
     {
-      href: '/projects',
+      href: '/index.html#projects',
       text: 'Projects',
     },
     {
