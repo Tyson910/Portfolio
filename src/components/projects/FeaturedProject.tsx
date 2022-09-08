@@ -1,5 +1,6 @@
 import { ExternalLinkIcon } from '@heroicons/react/outline';
 import { GitHubOutlineIcon } from '@assets/icons/TechIcons';
+import { Project } from './types';
 
 export function FeaturedProject({
   projectName,
@@ -7,17 +8,7 @@ export function FeaturedProject({
   techUsed,
   deployURL,
   sourceCodeURL,
-}:{
-    projectName: string;
-    /** Short description of project */
-    description: string;
-    /** List of technologies used on a given project */
-    techUsed: string[];
-    /** Live URL of the project */
-    deployURL: string;
-    /** Link to GitHub repo */
-    sourceCodeURL: string;
-}): JSX.Element {
+}: Project): JSX.Element {
   return (
     <div className="max-w-screen-sm flex flex-col border-2 border-purple-shade-4 rounded-lg mb-10 bg-purple-100 pb-5">
       <div className="text-purple-100 bg-purple-shade-4 flex items-center md:items-baseline mb-5 py-5 px-8">

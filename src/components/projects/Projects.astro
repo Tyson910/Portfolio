@@ -2,6 +2,7 @@
 // TODO: GET projects data from GitHub
 import projects from '@data/projects.json';
 import { FeaturedProject } from '@components/projects/FeaturedProject';
+import { Project } from './types';
 ---
 
 <section class="space-y-10 container">
@@ -12,12 +13,17 @@ import { FeaturedProject } from '@components/projects/FeaturedProject';
     Projects
   </p>
   {
-    projects.map((project:  { projectName: string; description: string; techUsed: string[]; deployURL: string; sourceCodeURL: string; } & astroHTML.JSX.IntrinsicAttributes) => (
-      <div
-        class="flex even:justify-end"
-      >
-        <FeaturedProject {...project} />
-      </div>
-    ))
+    projects.map(
+      (
+        project: Project &
+          astroHTML.JSX.IntrinsicAttributes
+      ) => (
+        <div class="flex even:justify-end">
+          <FeaturedProject
+            {...project}
+          />
+        </div>
+      )
+    )
   }
 </section>
