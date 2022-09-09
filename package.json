@@ -19,7 +19,7 @@
   "scripts": {
     "dev": "astro dev --host",
     "start": "astro dev",
-    "build": "npm run clean-up-src-code && astro build",
+    "build": "astro build",
     "clean-up-src-code": "npx prettier --write ./src/**/**",
     "preview": "astro preview --host"
   },
