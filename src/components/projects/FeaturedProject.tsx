@@ -1,4 +1,4 @@
-import { ExternalLinkIcon } from '@heroicons/react/outline';
+import { ExternalLinkIcon } from '@heroicons/react/outline/index.js';
 import { GitHubOutlineIcon } from '@assets/icons/TechIcons';
 import { Project } from './types';
 
