@@ -1,0 +1,45 @@
+---
+import Astronaut from '/img/icons/astronaut404.svg';
+import Scarecrow from '/img/icons/scarecrow404.svg';
+import BaseLayout from '@layouts/BaseLayout.astro';
+const today = new Date();
+---
+
+<BaseLayout
+  meta_title="404 | Tyson Suttle"
+  meta_description="Lost? Click the link to return home"
+>
+  <article
+    class="pt-10 md:pt-5 pb-20 md:pb-36"
+  >
+    <div
+      class="w-96 md:w-[32rem] lg:w-[42rem] mx-auto self-center"
+    >
+      <img
+        loading="lazy"
+        src={// show scarecrow during October only
+        today.getMonth() == 9
+          ? Scarecrow
+          : Astronaut}
+        alt="404"
+        class=""
+      />
+    </div>
+    <div class="flex flex-col gap-y-10">
+      <h1
+        class="text-purple-shade-5 text-4xl sm:text-5xl flex flex-col max-w-max mx-auto text-center font-medium"
+      >
+        This page could not be found.
+      </h1>
+      <a
+        href="/"
+        class={`rounded-lg max-w-max mx-auto py-4 px-6
+        bg-purple-shade-5 hover:bg-purple-shade-4 
+        text-white text-2xl lg:text-4xl hover:underline 
+        font-medium`}
+      >
+        Home
+      </a>
+    </div>
+  </article>
+</BaseLayout>

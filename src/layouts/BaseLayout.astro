@@ -1,0 +1,38 @@
+---
+export interface Props {
+  /** The page title */
+  meta_title: string;
+  /** The meta description */
+  meta_description: string;
+}
+import '@styles/global.css';
+import MainHead from '@components/seo/MainHead.astro';
+import { NavBar } from '@components/Navbar';
+import { Footer } from '@components/Footer';
+const { meta_title, meta_description } =
+  Astro.props;
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <MainHead
+      meta_title={meta_title}
+      meta_description={meta_description}
+    />
+  </head>
+
+  <body class="bg-gray-50">
+    <NavBar />
+    <main>
+      <slot />
+      <!-- children will go here -->
+    </main>
+    <Footer />
+    <script is:inline>
+      console.log(`Thanks for visiting my portfolio site! Please, feel free to contact me using any of these options: 
+  📧 Email: TysonS.417@gmail.com 
+  👨🏿‍💻 Github: https://github.com/Tyson910 
+  👨🏿‍💼 LinkedIn: https://linkedin.com/in/tyson-suttle`);
+    </script>
+  </body>
+</html>
