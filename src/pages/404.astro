@@ -15,8 +15,8 @@ const today = new Date();
     <div
       class="w-96 md:w-[32rem] lg:w-[42rem] mx-auto self-center"
     >
-      <!-- use astro image here -->
       <img
+        loading="lazy"
         src={// show scarecrow during October only
         today.getMonth() == 9
           ? Scarecrow
