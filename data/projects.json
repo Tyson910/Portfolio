@@ -3,12 +3,12 @@
     "projectName": "Sample Website",
     "description": "Created a custom template for brochure websites for various types of businesses to display their products & services and allow for interested clients to submit inquiries",
     "techUsed": [
-      "Vanilla HTML",
-      "Vanilla CSS",
-      "Vanilla JavaScript"
+      "Astro",
+      "TailwindCSS",
+      "React"
     ],
-    "deployURL": "https://tyson910.github.io/Preview/",
-    "sourceCodeURL": "https://github.com/Tyson910/Preview"
+    "deployURL": "https://insure-agency.netlify.app/",
+    "sourceCodeURL": "https://github.com/Tyson910/InsureLandingPage"
   },
   {
     "projectName": "NBA Stats Tool",
