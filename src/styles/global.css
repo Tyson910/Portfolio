@@ -4,19 +4,17 @@
 
 @layer components {
   .container {
-    @apply max-w-screen-lg mx-auto px-10 md:px-0
+    @apply max-w-screen-lg mx-auto px-10 md:px-0;
   }
 }
-@layer base{
+@layer base {
   body {
-    @apply bg-purple-50
+    @apply bg-purple-50;
   }
 }
 
-@layer utilities{
-  .btn-animation{
-    @apply ease-in-out transform hover:scale-[1.005] active:scale-[.99]
+@layer utilities {
+  .btn-animation {
+    @apply ease-in-out transform hover:scale-[1.005] active:scale-[.99];
   }
 }
-
-

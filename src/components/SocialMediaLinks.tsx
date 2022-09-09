@@ -22,7 +22,7 @@ export function SocialMediaLinks(): JSX.Element {
         />
       </SocialMediaLink>
       <SocialMediaLink
-        href='mailto:TysonS.417@gmail.com?subject=Inquiry from website '
+        href="mailto:TysonS.417@gmail.com?subject=Inquiry from website "
         title="My Github profile"
       >
         <EmailIcon
@@ -37,7 +37,6 @@ export function SocialMediaLinks(): JSX.Element {
           className={iconClasses}
         />
       </SocialMediaLink>
-      
     </div>
   );
 }
