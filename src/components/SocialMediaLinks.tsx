@@ -7,7 +7,7 @@ import classNames from 'classnames';
 // TODO: rename this function
 export function SocialMediaLinks(): JSX.Element {
   const iconClasses: string =
-    'h-9 w-9 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300 ';
+    'h-9 w-9 fill-purple-shade-3 transition group-hover:fill-zinc-700 dark:fill-zinc-500 dark:group-hover:fill-zinc-400 ';
   return (
     <div className="mt-6 flex flex-row gap-6 text-slate-900">
       <SocialMediaLink
@@ -17,7 +17,7 @@ export function SocialMediaLinks(): JSX.Element {
         <LinkedInIcon
           className={classNames(
             iconClasses,
-            '!fill-[#0A66C2] md:!fill-zinc-500 group-hover:fill-[#0A66C2] dark:group-hover:fill-[#0A66C2]'
+            '!fill-[#0A66C2] md:!fill-purple-shade-3 group-hover:!fill-[#0A66C2] dark:group-hover:!fill-[#0A66C2]'
           )}
         />
       </SocialMediaLink>
