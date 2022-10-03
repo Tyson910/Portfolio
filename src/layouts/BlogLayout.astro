@@ -1,0 +1,98 @@
+---
+export interface Props {
+  frontmatter: {
+    /** The page title */
+    meta_title: string;
+    /** The meta description */
+    meta_description: string;
+
+    minutesRead: string;
+    wordCount: number;
+    title: string;
+    nextPage?: string;
+    prevPage?: string;
+  };
+}
+import BaseLayout from '@layouts/BaseLayout.astro';
+const {
+  meta_title,
+  meta_description,
+  title,
+  minutesRead,
+  wordCount,
+  nextPage,
+  prevPage,
+} = Astro.props.frontmatter;
+
+if (!meta_description)
+  throw new Error(
+    'Add a meta description'
+  );
+
+import { Code } from 'astro/components';
+---
+
+<BaseLayout
+  meta_title={meta_title || title}
+  meta_description={meta_description}
+>
+  <!-- <Code
+    code={`
+		npx create-next-app@latest --ts;
+	npm install -D tailwindcss postcss autoprefixer        
+ npx tailwindcss init -p
+ npm i zod classnames
+	npm run lint   create eslintrc & ignore
+	 npm install --save-dev eslint-config-prettier   prettierrc & ignore
+ `}
+    lang="ts"
+    theme="dark-plus"
+    wrap
+  /> -->
+
+  <section
+    class="container my-20 md:!min-h-[650px]"
+  >
+    <div class="flex flex-col">
+      <h1
+        class="font-bold text-3xl mb-4"
+      >
+        {title}
+      </h1>
+      <h2
+        class="font-light text-neutral-500"
+      >
+        {minutesRead}
+      </h2>
+      <h3
+        class="font-light text-neutral-500"
+      >
+        {wordCount} characters
+      </h3>
+    </div>
+    <!-- <div class="prose !container flex flex-row justify-between">
+        {
+          prevPage && (
+            <a href={prevPage}>
+              Previous Page
+            </a>
+          )
+        }
+        {
+          nextPage && (
+            <a href={nextPage}>
+              Next Page
+            </a>
+          )
+        }
+		</div> -->
+
+    <article
+      class="mt-10 container prose"
+    >
+      <hr />
+      <slot />
+      <!-- children will go here -->
+    </article>
+  </section>
+</BaseLayout>
