@@ -1,0 +1,65 @@
+---
+import type { BlogLayoutProps } from '@layouts/BlogLayout.astro';
+import type { MDXInstance } from 'astro';
+
+export interface Props {
+  posts: MDXInstance<BlogLayoutProps['frontmatter']>[];
+}
+const { posts } = Astro.props;
+---
+
+<section class="prosee my-20">
+  <div class="max-w-6xl pb-20 mx-auto border-b border-t-gray-200">
+    <div class="prose">
+      <h2>
+        <slot name="heading-link" />
+      </h2>
+    </div>
+  </div>
+
+  <ul class="flex flex-col max-w-6xl mx-auto">
+    {
+      posts.map((post) => (
+        <li class="m-0 p-10 flex md:flex-row items-center border-t border-t-gray-200 first:border-t-transparent odd:bg-gray-2000 even:bg-gray-1000">
+          <div class="w-max">
+            <p class="font-light text-neutral-500">
+              Created:
+              {new Date(post.frontmatter.dateCreated).toLocaleDateString(
+                'en-US',
+                {
+                  weekday: 'long',
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                }
+              )}
+            </p>
+            <p class="font-light text-neutral-500">
+              Last Updated:
+              {new Date(post.frontmatter.lastUpdated).toLocaleDateString(
+                'en-US',
+                {
+                  weekday: 'long',
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                }
+              )}
+            </p>
+          </div>
+          <div class="ml-20 flex flex-col gap-y-1 prose prose-p:text-gray-600">
+            <a href={post.url}>{post.frontmatter.title}</a>
+            <p class="m-0 mt-4">{post.frontmatter.meta_description}</p>
+            <div class="flex flex-row gap-x-2">
+              {post.frontmatter?.tags?.map((tag) => (
+                <p class="bg-purple-300 w-max px-4 py-1 capitalize rounded-full">
+                  {tag}
+                </p>
+              ))}
+            </div>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>
