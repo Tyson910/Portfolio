@@ -1,0 +1,26 @@
+---
+export interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<section
+  class="w-full min-h-[40vh] bg-gradient-to-tl to-[#efd5ff] via-[#efd5ff] from-[#515ada]"
+>
+  <div
+    class="flex flex-col items-center md:items-start px-5 gap-5 lg:container py-20"
+  >
+    <div
+      class="flex flex-col md:text-center lg:text-left gap-y-5 lg:gap-y-10 text-purple-shade-3"
+    >
+      <div>
+        <h1
+          class="-ml-3 text-5xl lg:text-7xl font-bold flex flex-col gap-y-5"
+        >
+          {title}
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>
