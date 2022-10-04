@@ -4,7 +4,7 @@ import image from '@astrojs/image';
 import prefetch from '@astrojs/prefetch';
 import mdx from '@astrojs/mdx';
 import markdownEmoji from 'remark-emoji';
-import { calcReadingTime } from './src/utils/helpers/calc-reading-time.mjs';
+import { calcReadingTime } from './src/utils/frontmatter-helpers/calc-reading-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({
