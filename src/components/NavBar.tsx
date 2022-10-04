@@ -17,13 +17,13 @@ export function NavBar(): JSX.Element {
       text: 'Projects',
     },
     {
+      href: '/blog',
+      text: 'Blog',
+    },
+    {
       href: '/contact',
       text: 'Contact',
     },
-    // {
-    //   href: '/blog',
-    //   text: 'Blog',
-    // },
   ];
   return (
     <header
