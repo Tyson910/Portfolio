@@ -4,16 +4,21 @@ meta_description: "In this post I introduce a problem I'm facing and how I plan 
 title: 'Form Handler Project Outline'
 author: 'Tyson Suttle'
 dateCreated: '02 Oct 2022'
-lastUpdated: '02 Oct 2022'
+lastUpdated: '04 Oct 2022'
 prevPage: null
 nextPage: '/blog/tech/form-handler/tech-stack'
 tags: ['planning', 'First Post']
 draft: false
 ---
 
-I’m currently using a third party service to handle my contact me form on my [personal site](https://tyson-suttle.vercel.app/contact). This was fine when I initially created my site because I just wanted a simple contact form up and running as quickly as possible, but now I’m ready to try out making my own form handling solution due to limitations that come with SaaS free tiers. Ideally my form handler will be able to work for not only my own personal site, but also any sites that clients may want in the future. In this series I’m going to write out my planning process, the pros/cons to each solution, and any debugging :bug: I’ll need to do.
+I’m currently using a third party service to handle my contact me form on my [personal site](https://tyson-suttle.vercel.app/contact). 
+This was fine when I initially created my site because I just wanted a simple contact form up and running as quickly as possible, 
+but now I’m ready to try out making my own form handling solution due to limitations that come with SaaS free tiers. 
+Ideally my form handler will be able to work for not only my own personal site, but also any sites that clients may want in the future.
+In this series I’m going to write out my planning process, the pros/cons to each solution, and any debugging :bug: I’ll need to do.
 
-Before choosing tech stack, deployment options, or anything else I’ll first need to tackle the core problems I aim to solve when I create this software. In a nutshell this form handling software will need to be able to:
+Before choosing tech stack, deployment options, or anything else I’ll first need to tackle the core problems I aim to solve when 
+I create this software. In a nutshell this form handling software will need to be able to:
 
 1. [ ] Receive & handle a post request
 2. [ ] Validate the form data to make sure all required fields are present & formatted in a way I can use
@@ -22,3 +27,10 @@ Before choosing tech stack, deployment options, or anything else I’ll first ne
 5. [ ] Ideally this software is flexible enough to be used for any client website I might build in the future.
 
 These 5 core problems/steps will be my “North Star” during every part of this process. I plan to update this initial post with each subsequent post as I create them.
+
+I'm going to use the full-stack frammework [NextJS](https://nextjs.org/docs) as it satisfies all 5 needs
+outlined in above. I can utilize the [getServerSideProps](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props)
+function provided by Next to handle POST requests, Validate forms, and send emails.  I can also server-side render & respond with 
+reusable UI (React) components from a single stable, production ready meta framework.
+
+Visit my [post on creating a Next app](/blog/tech/create-next-app) for more info on how I set up my Next app.
