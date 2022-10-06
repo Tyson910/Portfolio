@@ -12,6 +12,7 @@ export interface Props {
 import BaseLayout from '@layouts/BaseLayout.astro';
 import BlogHero from '@components/blog/Hero.astro';
 import DisplayBlogPostSummaries from '@components/blog/DisplayBlogPostSummaries.astro';
+import { sortBlogPostsByLastUpdated } from '@utils/frontmatter-helpers/sort-posts';
 
 const { meta_title, meta_description, title, posts } = Astro.props;
 
@@ -24,6 +25,6 @@ if (!meta_description) throw new Error('Add a meta description');
 >
   <BlogHero title={title} />
   <div class="-mt-40">
-    <DisplayBlogPostSummaries posts={posts} />
+    <DisplayBlogPostSummaries posts={sortBlogPostsByLastUpdated(posts)} />
   </div>
 </BaseLayout>
