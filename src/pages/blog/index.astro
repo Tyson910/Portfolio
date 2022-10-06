@@ -19,6 +19,11 @@ techPosts = techPosts.filter((post) => !post?.frontmatter?.draft);
 >
   <BlogHero title="Welcome to my Blog" />
   <DisplayBlogPostSummaries posts={techPosts}>
-    <a href="/blog/tech" slot="heading-link" class="!no-underline hover:!underline !font-bold">My Tech Blog</a>
+    <div slot="heading-link" class="!container md:pl-10">
+      <a
+        href="/blog/tech"
+        class="!no-underline hover:!underline !font-bold">My Tech Blog</a
+      >
+    </div>
   </DisplayBlogPostSummaries>
 </BaseLayout>
