@@ -21,15 +21,4 @@ techPosts = techPosts.filter((post) => !post?.frontmatter?.draft);
   <DisplayBlogPostSummaries posts={techPosts}>
     <a href="/blog/tech" slot="heading-link" class="!no-underline hover:!underline !font-bold">My Tech Blog</a>
   </DisplayBlogPostSummaries>
-  <!-- <section class="prose container my-20">
-    <h2>My Food Blog</h2>
-    <hr />
-    {
-      foodPosts.map((post) => (
-        <div>
-          <a href={post.url}>{post.frontmatter.title}</a>
-        </div>
-      ))
-    }
-  </section> -->
 </BaseLayout>
