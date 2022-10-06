@@ -1,0 +1,29 @@
+---
+import type { BlogLayoutProps } from '@layouts/BlogLayout.astro';
+import type { MDXInstance } from 'astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import BlogHero from '@components/blog/Hero.astro';
+import DisplayBlogPostSummaries from '@components/blog/DisplayBlogPostSummaries.astro';
+
+// TODO: sort posts from newest to oldest,
+// TODO: only display 5 most recent arr.length = 5?
+let techPosts: MDXInstance<BlogLayoutProps['frontmatter']>[] =
+  await Astro.glob('./tech/**/*.mdx'); // returns an array of posts that live at ./src/pages/blog/tech/*.md
+// filter out drafts
+techPosts = techPosts.filter((post) => !post?.frontmatter?.draft);
+---
+
+<BaseLayout
+  meta_description="This is a hub for all Tech related content I've created"
+  meta_title="Welcome to my Blog"
+>
+  <BlogHero title="Welcome to my Blog" />
+  <DisplayBlogPostSummaries posts={techPosts}>
+    <div slot="heading-link" class="!container md:pl-10">
+      <a
+        href="/blog/tech"
+        class="!no-underline hover:!underline !font-bold">My Tech Blog</a
+      >
+    </div>
+  </DisplayBlogPostSummaries>
+</BaseLayout>

@@ -1,0 +1,30 @@
+---
+import type { BlogLayoutProps } from '@layouts/BlogLayout.astro';
+import type { MDXInstance } from 'astro';
+export interface Props {
+  /** The page title */
+  meta_title: string;
+  /** The meta description */
+  meta_description: string;
+  posts: MDXInstance<BlogLayoutProps['frontmatter']>[];
+  title: string;
+}
+import BaseLayout from '@layouts/BaseLayout.astro';
+import BlogHero from '@components/blog/Hero.astro';
+import DisplayBlogPostSummaries from '@components/blog/DisplayBlogPostSummaries.astro';
+import { sortBlogPostsByLastUpdated } from '@utils/frontmatter-helpers/sort-posts';
+
+const { meta_title, meta_description, title, posts } = Astro.props;
+
+if (!meta_description) throw new Error('Add a meta description');
+---
+
+<BaseLayout
+  meta_title={meta_title || title}
+  meta_description={meta_description}
+>
+  <BlogHero title={title} />
+  <div class="-mt-40">
+    <DisplayBlogPostSummaries posts={sortBlogPostsByLastUpdated(posts)} />
+  </div>
+</BaseLayout>

@@ -9,16 +9,12 @@ const today = new Date();
   meta_title="404 | Tyson Suttle"
   meta_description="Lost? Click the link to return home"
 >
-  <article
-    class="pt-10 md:pt-5 pb-20 md:pb-36"
-  >
-    <div
-      class="w-96 md:w-[32rem] lg:w-[42rem] mx-auto self-center"
-    >
+  <article class="pt-10 md:pt-5 pb-20 md:pb-36">
+    <div class="w-96 md:w-[32rem] lg:w-[42rem] mx-auto self-center">
       <img
         loading="lazy"
-        src={// show scarecrow during October only
-        today.getMonth() == 9
+        src={// show scarecrow during October or November only
+        today.getMonth() == 9 || today.getMonth() == 10
           ? Scarecrow
           : Astronaut}
         alt="404"
