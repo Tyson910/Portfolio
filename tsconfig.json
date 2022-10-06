@@ -22,6 +22,7 @@
     "isolatedModules": true,
     // Astro will directly run your TypeScript code, no transpilation needed.
     "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
     // Replace `astro/client` with `@astrojs/image/client`
     "types": [
       "@astrojs/image/client",
