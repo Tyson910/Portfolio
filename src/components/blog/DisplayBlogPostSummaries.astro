@@ -58,7 +58,7 @@ const { posts } = Astro.props;
             <p class="m-0 mt-4">{post.frontmatter.meta_description}</p>
             <div class="flex flex-row gap-x-2">
               {post.frontmatter?.tags?.map((tag) => (
-                <p class="bg-purple-300 w-max px-4 py-1 capitalize rounded-full">
+                <p class="bg-purple-300 !text-purple-shade-5 w-max px-4 py-1 capitalize rounded-full">
                   {tag}
                 </p>
               ))}
