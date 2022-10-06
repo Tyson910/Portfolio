@@ -9,7 +9,9 @@ const { posts } = Astro.props;
 ---
 
 <section class="prosee my-20">
-  <div class="max-w-6xl pb-20 mx-auto border-b border-t-gray-200">
+  <div
+    class="max-w-6xl md:container pb-20 mx-auto border-b border-t-gray-200"
+  >
     <div class="prose">
       <h2>
         <slot name="heading-link" />
@@ -17,29 +19,42 @@ const { posts } = Astro.props;
     </div>
   </div>
 
-  <ul class="flex flex-col max-w-6xl mx-auto">
+  <ul class="flex flex-col max-w-6xl md:container mx-auto">
     {
       posts.map((post) => (
-        <li class="m-0 p-10 flex md:flex-row items-center border-t border-t-gray-200 first:border-t-transparent odd:bg-gray-2000 even:bg-gray-1000">
-          <div class="w-max self-start mt-1">
+        <li class="m-0 p-10 flex flex-col md:flex-row items-center justify-between border-t border-t-gray-200 first:border-t-transparent odd:bg-gray-2000 even:bg-gray-1000">
+          <div class="hidden md:block w-96 self-start mt-1">
             <p class="font-light text-neutral-500">
               Last Updated:
               {new Date(post.frontmatter.lastUpdated).toLocaleDateString(
                 'en-US',
                 {
-                  weekday: 'long',
                   year: 'numeric',
                   month: 'long',
                   day: 'numeric',
                 }
               )}
             </p>
-            <p class="font-lightt text-neutral-500">
-              {post.frontmatter.minutesRead}
-            </p>
+            <p class="text-neutral-500">{post.frontmatter.minutesRead}</p>
           </div>
-          <div class="ml-20 flex flex-col gap-y-1 prose prose-p:text-gray-600">
+          <div class="flex flex-col md:gap-y-1 prose prose-p:text-gray-600 md:w-[550px]">
             <a href={post.url}>{post.frontmatter.title}</a>
+            <div class="md:hidden">
+              <p class="m-0 mt-3 font-light text-neutral-500">
+                Last Updated:
+                {new Date(post.frontmatter.lastUpdated).toLocaleDateString(
+                  'en-US',
+                  {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  }
+                )}
+              </p>
+              <p class="m-0 text-neutral-500 font-light md:font-normal">
+                {post.frontmatter.minutesRead}
+              </p>
+            </div>
             <p class="m-0 mt-4">{post.frontmatter.meta_description}</p>
             <div class="flex flex-row gap-x-2">
               {post.frontmatter?.tags?.map((tag) => (
