@@ -4,7 +4,7 @@ title: 'Creating a Next App'
 meta_description: "Outlining how I usually set up a Next App & show set up commands"
 author: 'Tyson Suttle'
 dateCreated: '05 Oct 2022'
-lastUpdated: '05 Oct 2022'
+lastUpdated: '12 Oct 2022'
 tags: ['Set Up', "NextJS", "How To"]
 draft: false
 ---
@@ -18,6 +18,39 @@ I'll set up a Next App with Typescript using the `create-next-app` command
   lang="zsh"
   wrap
 ></Code>
+Move pages & styles to source folder
+This is how I set up my tsconfig.json, the paths options let's me use `@components/componentName` 
+on imports instead of `../../components/componentName`
+<Code
+code={`{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}`}
+  theme="dark-plus"
+  lang="json"
+  wrap
+ />
 
 <Code
   code={`cd <project-name>`}
