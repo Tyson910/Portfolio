@@ -87,8 +87,8 @@ Lastly I'll install [Prettier](https://prettier.io/), a tool used to catch autom
   wrap
 ></Code>
 
-Create .prettierignore file, this works similar to a .gitignore or the .prettierignore file mentioned earlier.
-It basically tells prettier to ignore these files/directories when formatting code.
+Create a prettierrc.json file. This is a config file where all Prettier related settings live, 
+similar to what I did with the eslintrc.json file .
 <Code
 code={`{
   "useTabs": false,
@@ -102,7 +102,9 @@ code={`{
   lang="json"
   wrap
  />
-Create a .prettierignore
+
+Create .prettierignore file, this works similar to a .gitignore or the .prettierignore file mentioned earlier.
+It basically tells prettier to ignore these files/directories when formatting code.
  <Code
 code={`# dependencies
 /node_modules
