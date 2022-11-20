@@ -5,6 +5,7 @@ import prefetch from '@astrojs/prefetch';
 import mdx from '@astrojs/mdx';
 import markdownEmoji from 'remark-emoji';
 import { calcReadingTime } from './src/utils/frontmatter-helpers/calc-reading-time.mjs';
+import svelte from '@astrojs/svelte';
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,10 +17,8 @@ export default defineConfig({
       selector: "a[href^='/']",
     }),
     mdx({
-      remarkPlugins: [
-        markdownEmoji,
-        calcReadingTime,
-      ],
+      remarkPlugins: [markdownEmoji, calcReadingTime],
     }),
+    svelte(),
   ],
 });
