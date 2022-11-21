@@ -20,6 +20,7 @@
     "dev": "astro dev --host",
     "start": "astro dev",
     "build": "astro build",
+    "create-new-blog-post": "python3 scripts/create-new-food-blog-post.py",
     "clean-up-src-code": "npx prettier --write ./src/**/**",
     "preview": "astro preview --host"
   },
