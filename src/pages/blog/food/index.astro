@@ -1,0 +1,16 @@
+---
+import type { BlogLayoutProps } from '@layouts/BlogLayout.astro';
+import type { MDXInstance } from 'astro';
+import BlogHubLayout from '@layouts/BlogHubLayout.astro';
+let posts: MDXInstance<BlogLayoutProps['frontmatter']>[] =
+  await Astro.glob('../food/**/*.mdx'); // returns an array of posts that live at ./src/pages/blog/tech/**/*.md
+// filter out drafts
+posts = posts.filter((post) => !!post?.frontmatter?.draft);
+---
+
+<BlogHubLayout
+  title="Welcome to My Food Blog"
+  meta_description="This is a hub for all food related content I've created"
+  meta_title="Welcome to my Food Blog"
+  posts={posts}
+/>

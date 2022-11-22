@@ -1,0 +1,99 @@
+---
+export interface Props {
+  frontmatter: {
+    /** The page title */
+    meta_title: string;
+    /** The meta description */
+    meta_description: string;
+    /** Is this blog post ready to be built & published? */
+    draft: boolean;
+    /** When was this post created? */
+    dateCreated: string;
+    /** When was this post last edited? */
+    lastUpdated: string;
+    /** Who else? :D */
+    author: 'Tyson Suttle';
+    title: string;
+    wordCount: number;
+    totalCookTime: string;
+    difficulty: 'Beginner' | 'Intermediate' | 'Expert';
+    /** What topics are covered in this blog post */
+    tags?: string[];
+    nextPage?: string;
+    prevPage?: string;
+  };
+}
+export type { Props as BlogLayoutProps };
+import BaseLayout from '@layouts/BaseLayout.astro';
+const {
+  meta_description,
+  title,
+  lastUpdated,
+  totalCookTime,
+  difficulty,
+  tags,
+} = Astro.props.frontmatter;
+if (!meta_description) throw new Error('Add a meta description');
+---
+
+<BaseLayout meta_title={title} meta_description={meta_description}>
+  <div>
+    <section class="container py-20 md:!min-h-[650px]">
+      <div class="flex flex-col">
+        <h1 class="font-bold text-3xl mb-4">
+          {title}
+        </h1>
+        <h2 class="font-light text-neutral-500">
+          {totalCookTime} cook time
+        </h2>
+        <h3 class="font-light text-neutral-500">
+          {difficulty}
+        </h3>
+        <h4 class="font-light text-neutral-500">
+          Last Updated:
+          {
+            new Date(lastUpdated).toLocaleDateString('en-US', {
+              weekday: 'long',
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })
+          }
+        </h4>
+        <div class="inline-flex flex-row my-5 gap-x-4">
+          {
+            tags.map((tag) => (
+              <span class=" w-max bg-purple-100 text-purple-800 px-2.5 py-0.5 rounded">
+                {tag}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+      <article class="mt-10 md:container flex flex-col gap-y-4">
+        <hr />
+        <div class="mt-3 flex items-center gap-x-2 flex-row">
+          <a href="/">Home</a>
+          /
+          <a href="/blog">Blog</a>
+          /
+          <a href="/blog/food">Food</a>
+          /
+          <span class="text-gray-600">{title}</span>
+        </div>
+        <p class="mt-6">{meta_description}</p>
+        <a href="#steps" class="underline my-6">Jump To Recipe</a>
+        <div class="prose">
+          <slot />
+        </div>
+        <!-- children will go here -->
+      </article>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  a {
+    @apply hover:underline;
+  }
+</style>
