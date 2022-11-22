@@ -12,7 +12,7 @@ let techPosts: MDXInstance<BlogLayoutProps['frontmatter']>[] =
 let foodPosts: MDXInstance<BlogLayoutProps['frontmatter']>[] =
   await Astro.glob('./food/**/*.mdx'); // returns an array of posts that live at ./src/pages/blog/blog/*.md
 // filter out drafts
-foodPosts = techPosts.filter((post) => !post?.frontmatter?.draft);
+foodPosts = foodPosts.filter((post) => !post?.frontmatter?.draft);
 // filter out drafts
 techPosts = techPosts.filter((post) => !post?.frontmatter?.draft);
 ---
