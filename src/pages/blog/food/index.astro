@@ -5,7 +5,7 @@ import BlogHubLayout from '@layouts/BlogHubLayout.astro';
 let posts: MDXInstance<BlogLayoutProps['frontmatter']>[] =
   await Astro.glob('../food/**/*.mdx'); // returns an array of posts that live at ./src/pages/blog/tech/**/*.md
 // filter out drafts
-posts = posts.filter((post) => !!post?.frontmatter?.draft);
+posts = posts.filter((post) => !post?.frontmatter?.draft);
 ---
 
 <BlogHubLayout
