@@ -53,7 +53,7 @@ def main():
             "totalCookTime : ''\n"
             f"dateCreated: '{todaysDateMonthYear}'\n",
             f"lastUpdated: '{todaysDateMonthYear}'\n",
-            "---\n",
+            "---\n\n",
             "## Ingredients:\n\n",
             "### Steps",
         ])
