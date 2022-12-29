@@ -38,7 +38,7 @@ export const projects: Project[] = [
   {
     projectName: "NBA Stats Tool 2.0",
     description:
-      "Converted my React single page app to a Svelte app powered by Typescript and Vite",
+      "Converted my React app to a Svelte app powered by Typescript and Vite",
     techUsed: [
       "Svelte",
       "TailwindCSS",
