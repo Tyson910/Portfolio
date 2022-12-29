@@ -15,6 +15,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     projectName: "Sample Website",
+    imageURL: "@assets/images/insure-agency.png",
     description:
       "Created a custom template for brochure websites for various types of businesses to display their products & services and allow for interested clients to submit inquiries",
     techUsed: ["Astro", "TailwindCSS", "React"],
@@ -37,6 +38,7 @@ export const projects: Project[] = [
   },
   {
     projectName: "NBA Stats Tool 2.0",
+    imageURL: "@assets/images/v2-nba-react-app.png",
     description:
       "Converted my React app to a Svelte app powered by Typescript and Vite",
     techUsed: [
