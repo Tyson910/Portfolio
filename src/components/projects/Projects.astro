@@ -4,20 +4,28 @@ import { projects } from '@assets/projects';
 import { FeaturedProject } from '@components/projects/FeaturedProject';
 ---
 
-<section class="space-y-10 container">
-  <p
-    class="scroll-m-20 mb-14 text-4xl text-center font-semibold"
-    id="projects"
-  >
-    Projects
-  </p>
-  {
-    projects.map(
-      (project) => (
-        <div class="flex even:justify-end">
-          <FeaturedProject {...project} />
-        </div>
-      )
-    )
-  }
+<section>
+  <div class="container pb-8 lg:pb-16">
+    <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+      <p
+        class="scroll-m-20 mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900"
+        id="projects"
+      >
+        Projects
+      </p>
+      <p class="font-light text-gray-500 sm:text-xl">
+        We use an agile approach to test assumptions and connect with the
+        needs of your audience early and often.
+      </p>
+    </div>
+    <div class="grid gap-8 lg:grid-cols-2">
+      {
+        projects.map((project) => (
+          <div class="flex even:justify-end">
+            <FeaturedProject {...project} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </section>
