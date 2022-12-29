@@ -8,6 +8,8 @@ export interface Project {
   deployURL: string;
   /** Link to GitHub repo */
   sourceCodeURL: null | string;
+  /** Screenshot preview of deployed project */
+  imageURL?: string;
 }
 
 export const projects: Project[] = [
