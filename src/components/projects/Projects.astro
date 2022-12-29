@@ -13,14 +13,9 @@ import { FeaturedProject } from '@components/projects/FeaturedProject';
   </p>
   {
     projects.map(
-      (
-        project: Project &
-          astroHTML.JSX.IntrinsicAttributes
-      ) => (
+      (project) => (
         <div class="flex even:justify-end">
-          <FeaturedProject
-            {...project}
-          />
+          <FeaturedProject {...project} />
         </div>
       )
     )
