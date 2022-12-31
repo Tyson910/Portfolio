@@ -1,4 +1,4 @@
-import { LinkIcon } from '@heroicons/react/20/solid';
+import { LinkIcon } from '@heroicons/react/20/solid/index.js';
 import { GitHubOutlineIcon } from '@assets/icons/TechIcons';
 import type { Project } from '@assets/projects';
 
