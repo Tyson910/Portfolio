@@ -8,10 +8,19 @@ export function FeaturedProject({
   techUsed,
   deployURL,
   sourceCodeURL,
+  imageURL,
 }: Project): JSX.Element {
   return (
     <>
       <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-md">
+        <div className="hidden md:block mb-6 border border-gray-200 rounded-sm shadow-sm">
+          <img
+            src={imageURL}
+            loading="lazy"
+            alt={`Demo image of ${projectName}`}
+            className="rounded-sm w-full h-full"
+          />
+        </div>
         <div className="flex flex-row items-center gap-x-5">
           <p className="text-2xl flex flex-row items-center font-bold text-gray-900">
             {projectName}
