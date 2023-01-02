@@ -9,35 +9,11 @@ import BaseLayout from '@layouts/BaseLayout.astro';
   meta_title="Tyson Suttle"
   meta_description="Learn about Tyson Suttle"
 >
-  <Hero />
-  <div
-    class="py-12 md:pt-0 md:pb-20 flex flex-col gap-y-20 lg:gap-y-28"
-  >
-    <section
-      class="md:hidden container"
-    >
-      <p>
-        I am a Software Developer
-        specializing in Front-End
-        development and creating
-        accessible UIs. I'm experienced
-        in using HTML, CSS, JavaScript,
-        and JS frameworks. Lately, I
-        have been learning to use NextJS
-        alongside Prismic, a headless CMS.
-      </p>
-
-      <div
-        class="mt-6 md:mt-10 text-center font-semibold text-2xl"
-      >
-        <a
-          href="/about"
-          class="underline"
-          >Learn More About Me!</a
-        >
-      </div>
-    </section>
-    <ToolBelt />
-    <AllProjects />
+  <div class="bg-gray-50">
+    <Hero />
+    <div class="pb-12 md:pb-20 flex flex-col gap-y-20 lg:gap-y-28">
+      <ToolBelt />
+      <AllProjects />
+    </div>
   </div>
 </BaseLayout>

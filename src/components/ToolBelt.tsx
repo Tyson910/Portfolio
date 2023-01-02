@@ -12,7 +12,7 @@ import {
 export function ToolBelt() {
   const iconClasses = 'w-12 h-12';
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-300 md:to-gray-100">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-300 md:to-gray-200">
       <h3 className="text-4xl mb-14 text-center font-semibold">
         My Favorite Tools & Technologies
       </h3>
@@ -22,10 +22,7 @@ export function ToolBelt() {
           tool="HTML"
           icon={
             <HTMLIcon
-              className={classNames(
-                'text-red-600',
-                iconClasses
-              )}
+              className={classNames('text-red-600', iconClasses)}
             />
           }
         />
@@ -34,10 +31,7 @@ export function ToolBelt() {
           tool="CSS"
           icon={
             <CSSIcon
-              className={classNames(
-                'text-cyan-400',
-                iconClasses
-              )}
+              className={classNames('text-cyan-400', iconClasses)}
             />
           }
         />
@@ -58,31 +52,21 @@ export function ToolBelt() {
           tool="React"
           icon={
             <ReactIcon
-              className={classNames(
-                'text-sky-300',
-                iconClasses
-              )}
+              className={classNames('text-sky-300', iconClasses)}
             />
           }
         />
 
         <TechIconContainer
           tool="NextJS"
-          icon={
-            <NextJSIcon
-              className={iconClasses}
-            />
-          }
+          icon={<NextJSIcon className={iconClasses} />}
         />
 
         <TechIconContainer
           tool="React Testing Library"
           icon={
             <TestingLibraryIcon
-              className={classNames(
-                'text-pink-900',
-                iconClasses
-              )}
+              className={classNames('text-pink-900', iconClasses)}
             />
           }
         />
