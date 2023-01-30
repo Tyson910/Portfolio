@@ -6,7 +6,7 @@ export async function getStaticPaths() {
     // filter out drafts
     return data.draft !== true && slug.startsWith('form-handler');
   });
-  blogEntries.forEach((uh) => console.log(uh));
+
   return blogEntries.map((blogPost) => ({
     params: {
       formHandlerBlogPost: blogPost.slug.replace('form-handler/', ''),
