@@ -17,7 +17,7 @@ def slugifyStr(stringy : str):
     return re.sub(r"\s+", '-', stringy)
 
 def main():
-    blog_post_directory = 'src/pages/blog/food'
+    blog_post_directory = 'src/content/food'
     colorLogger.green('Creating a new food blog post')
     # Ask user for input
     questions = [
