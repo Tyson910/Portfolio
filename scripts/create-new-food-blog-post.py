@@ -43,7 +43,7 @@ def main():
         # write meta title/description, dateCreated to .md file
         f.writelines([
             '---\n',
-            "layout: '@layouts/BlogLayout.astro'\n",
+            "layout: '@layouts/FoodBlogLayout.astro'\n",
             "author: 'Tyson Suttle'\n",
             f"title: '{answers['dish_name']}'\n",
             f"meta_description: '{answers['dish_description']}'\n"
@@ -53,7 +53,7 @@ def main():
             "totalCookTime : ''\n"
             f"dateCreated: '{todaysDateMonthYear}'\n",
             f"lastUpdated: '{todaysDateMonthYear}'\n",
-            "---\n",
+            "---\n\n",
             "## Ingredients:\n\n",
             "### Steps",
         ])
