@@ -1,20 +1,19 @@
 ---
-import type { BlogLayoutProps } from '@layouts/BlogLayout.astro';
-import type { MDXInstance } from 'astro';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import BlogHero from '@components/blog/Hero.astro';
 import DisplayBlogPostSummaries from '@components/blog/DisplayBlogPostSummaries.astro';
+import { getCollection } from 'astro:content';
 
 // TODO: sort posts from newest to oldest,
 // TODO: only display 5 most recent arr.length = 5?
-let techPosts: MDXInstance<BlogLayoutProps['frontmatter']>[] =
-  await Astro.glob('./tech/**/*.mdx'); // returns an array of posts that live at ./src/pages/blog/tech/*.md
-let foodPosts: MDXInstance<BlogLayoutProps['frontmatter']>[] =
-  await Astro.glob('./food/**/*.mdx'); // returns an array of posts that live at ./src/pages/blog/blog/*.md
-// filter out drafts
-foodPosts = foodPosts.filter((post) => !post?.frontmatter?.draft);
-// filter out drafts
-techPosts = techPosts.filter((post) => !post?.frontmatter?.draft);
+const techPosts = await getCollection('tech', ({ data }) => {
+  // filter out drafts
+  return data.draft !== true;
+});
+const foodPosts = await getCollection('food', ({ data }) => {
+  // filter out drafts
+  return data.draft !== true;
+});
 ---
 
 <BaseLayout

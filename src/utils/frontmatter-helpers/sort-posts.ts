@@ -1,13 +1,12 @@
-import type { BlogLayoutProps } from "@layouts/BlogLayout.astro";
-import type { MDXInstance } from "astro";
+import type { CollectionEntry } from "astro:content";
 
 /** Sort posts from most recently updated to oldest */
 export function sortBlogPostsByLastUpdated(
-  blogPosts: MDXInstance<BlogLayoutProps["frontmatter"]>[],
-): MDXInstance<BlogLayoutProps["frontmatter"]>[] {
+  blogPosts: CollectionEntry<"food">[] | CollectionEntry<"tech">[],
+) {
   const sortedBlogPosts = [...blogPosts].sort((blogPostA, blogPostB) => {
-    const date1LastUpdated = new Date(blogPostA.frontmatter.lastUpdated).getTime();
-    const date2LastUpdated = new Date(blogPostB.frontmatter.lastUpdated).getTime();
+    const date1LastUpdated = new Date(blogPostA.data.lastUpdated).getTime();
+    const date2LastUpdated = new Date(blogPostB.data.lastUpdated).getTime();
     return date2LastUpdated - date1LastUpdated;
   });
 
