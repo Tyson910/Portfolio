@@ -25,9 +25,9 @@
     "preview": "astro preview --host"
   },
   "dependencies": {
-    "@astrojs/image": "^0.4.0",
-    "@astrojs/react": "^1.1.1",
-    "@astrojs/tailwind": "^1.0.0",
+    "@astrojs/image": "^0.14.0",
+    "@astrojs/react": "^2.0.2",
+    "@astrojs/tailwind": "^3.0.1",
     "@heroicons/react": "^2.0.13",
     "astro": "^2.0.4",
     "classnames": "^2.2.6",
@@ -36,8 +36,8 @@
     "remark-emoji": "^3.0.2"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^0.11.3",
-    "@astrojs/prefetch": "^0.0.7",
+    "@astrojs/mdx": "^0.16.0",
+    "@astrojs/prefetch": "^0.1.2",
     "@astrojs/svelte": "^2.0.1",
     "@tailwindcss/typography": "^0.5.7",
     "@types/node": "^18.7.14",
