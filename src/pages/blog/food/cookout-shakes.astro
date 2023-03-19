@@ -1,0 +1,67 @@
+---
+import MilkshakeReview  from '@components/food-blog/cookout-shakes/MilkshakeReview.svelte';
+import { milkshakeReviews } from '@assets/cookout-milkshakes';
+import BaseLayout from '@layouts/BaseLayout.astro';
+const lastUpdated = 'Mar 11 2023';
+const title = 'Cookout Milkshake Review';
+const meta_description = `Welcome to my cookout milkshake review blog, where I'll be embarking on a delicious journey to try every milkshake on the menu at Cookout!
+ As a food enthusiast and a fan of this popular NC based fast-food chain, I've always been curious about the wide variety of 
+ flavors and combinations that they offer. From classic flavors like vanilla and chocolate to more unique options 
+ like banana pudding and peach cobbler, I'll be tasting and reviewing each milkshake to give you a better idea of what
+ to expect. Join me on this tasty adventure as we explore the world of Cookout milkshakes!`;
+---
+
+<BaseLayout meta_description={meta_description} meta_title={title}>
+  <div>
+    <section class="container py-20">
+      <div class="flex flex-col">
+        <div class="mb-3 flex items-center gap-x-2 flex-row">
+          <a href="/">Home</a>
+          /
+          <a href="/blog">Blog</a>
+          /
+          <a href="/blog/food">Food</a>
+          /
+          <span class="text-neutral-500 font-light">{title}</span>
+        </div>
+        <h1 class="font-bold text-3xl mb-4">
+          {title}
+        </h1>
+        <p class="font-light text-neutral-500">
+          Last Updated:
+          {
+            new Date(lastUpdated).toLocaleDateString('en-US', {
+              weekday: 'long',
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })
+          }
+        </p>
+        <p class="mt-6">{meta_description}</p>
+      </div>
+      <article class="mt-10 md:container flex flex-col gap-y-4">
+        <hr />
+        <div class="flex flex-col gap-y-10">
+          <div class="grid grid-cols-2 gap-10 mx-auto">
+            {
+              milkshakeReviews.map((review) => (
+                <MilkshakeReview
+                  explanation={review.explanation}
+                  dishName={review.dishName}
+                  stars={review.stars}
+                />
+              ))
+            }
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  a {
+    @apply hover:underline;
+  }
+</style>
