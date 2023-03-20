@@ -45,7 +45,7 @@ const foodEmojis = {
 
 export const ratingObj: Rating = {
   "-3":
-    ":nauseated_face: Do not try this. Ever. If they are out of everything else on the menu you should just go home.",
+    "\u{1F922} Do not try this. Ever. If they are out of everything else on the menu you should just go home.",
   "-2":
     "Awful. Would only recommend this if they are out of everything else on the menu ",
   "-1": "Bad. try this dish at your own risk",
