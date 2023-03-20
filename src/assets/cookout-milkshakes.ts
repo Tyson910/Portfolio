@@ -89,4 +89,12 @@ export const milkshakeReviews: MilkshakeReview[] = [
      which create a unique and enjoyable taste. Overall, the Banana Berry shake is a pretty good option`,
     dateOfReview: new Date(2023, 2, 14),
   },
+  {
+    stars: 3,
+    dishName: `Banana Fudge ${foodEmojis['banana']}${foodEmojis['chocolate bar']} `,
+    explanation:
+      `The shake is like a banana split, but better. The fudge is a perfect compliment to the banana flavor in this shake.
+     Arguably, the best shake at cookout`,
+    dateOfReview: new Date(2023, 2, 19),
+  },
 ];
