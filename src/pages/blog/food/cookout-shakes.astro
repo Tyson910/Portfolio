@@ -1,7 +1,6 @@
 ---
-import MilkshakeReview  from '@components/food-blog/cookout-shakes/MilkshakeReview.svelte';
-import { milkshakeReviews } from '@assets/cookout-milkshakes';
 import BaseLayout from '@layouts/BaseLayout.astro';
+import MilkshakeSearch from '@components/food-blog/cookout-shakes/MilkshakeSearch.svelte';
 import { milkshakeReviews, ratingObj } from '@assets/cookout-milkshakes';
 
 const lastUpdated = 'Mar 20 2023';
@@ -95,6 +94,7 @@ const ratingNumArr = [-3, -2, -1, 0, 1, 2, 3];
               }
             </ul>
           </div>
+          <MilkshakeSearch client:idle />
         </div>
       </article>
     </section>
