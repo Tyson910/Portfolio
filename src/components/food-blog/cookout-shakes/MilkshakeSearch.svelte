@@ -53,7 +53,7 @@
   );
 </script>
 
-<form class="" on:submit|preventDefault>
+<form id="milkshake-search-form" class="scroll-mt-10" on:submit|preventDefault>
   <div class="flex flex-col-reverse sm:flex-col md:flex-row gap-y-6 sm:gap-y-5 items-center justify-between mb-6 text-gray-900">
     <label for="shake-search" class="font-medium text-lg md:text-base"
       >Search For a Flavor</label
@@ -67,7 +67,7 @@
       <select
         id="sort-by"
         name="sort-by"
-        class="rounded-md py-2 px-3 text-sm scroll-mt-24"
+        class="rounded-md py-2 px-3 text-sm"
         bind:value={sortMethod}
         on:change={(e) =>
           (sortedReviews = sortReviews([...milkshakeReviews]))}
