@@ -41,6 +41,7 @@ const foodEmojis = {
   "cookie": "\u{1F36A}",
   "peanuts": "\u{1F95C}",
   "blueberries": "\u{1FAD0}",
+  "shamrock": "\u{2618}",
 };
 
 export const ratingObj: Rating = {
@@ -126,4 +127,38 @@ export const milkshakeReviews: MilkshakeReview[] = [
     explanation:
       "The chocolate totally overpowers the cherry and the cherries were too tart (granted I had this shake in late March but my point still stands), which is a shame because this shake had so much potential. Wouldn't recommend",
   },
+  {
+    dateOfReview: new Date(2023, 3, 2),
+    stars: 0,
+    dishName: `Chocolate Malt ${foodEmojis["chocolate bar"]}`,
+    explanation:
+      "The chocolate dominates the experience. There's barely any taste of malt in this shake. Wouldn't recommend",
+  },
+  {
+    dateOfReview: new Date(2023, 3, 5),
+    stars: 1,
+    dishName: `Chocolate Chip Mint ${foodEmojis["chocolate bar"]} ${
+      foodEmojis["shamrock"]
+    }`,
+    explanation:
+      "Not as good as a Girl Scout Thin Mint cookie, but only a few things are. Only downside to this dish is I almost choked on a chocolate chip. That being said would recommend",
+  },
+  {
+    dateOfReview: new Date(2023, 3, 7),
+    stars: 2,
+    dishName: `Butterfinger ${foodEmojis["chocolate bar"]} ${
+      foodEmojis["peanuts"]
+    }`,
+    explanation:
+      "Peanut butter that's kinda sweet. Chocolate. What's not to love? Would strongly recommend",
+  },
+  // {
+  //   dateOfReview: new Date(2023, 3, 7),
+  //   stars: 0,
+  //   dishName: `Blueberry Cheesecake ${foodEmojis["blueberry"]} ${
+  //     foodEmojis["cheesecake"]
+  //   }`,
+  //   explanation:
+  //     "",
+  // },
 ];
