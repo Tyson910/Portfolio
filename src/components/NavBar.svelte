@@ -18,10 +18,10 @@
       href: '/index.html#projects',
       text: 'Projects',
     },
-    {
-      href: '/blog',
-      text: 'Blog',
-    },
+    // {
+    //   href: '/blog',
+    //   text: 'Blog',
+    // },
     {
       href: '/contact',
       text: 'Contact',
