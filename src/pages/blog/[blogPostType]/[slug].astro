@@ -21,6 +21,12 @@ const post = await getEntry(blogPostType, slug);
 const { Content } = await post.render();
 ---
 
-<BlogLayout frontmatter={post.data}>
+<BlogLayout
+  frontmatter={{
+    ...post.data,
+    meta_title:
+      post.data.meta_title ?? `${blogPostType} | ${post.data.title}`,
+  }}
+>
   <Content />
 </BlogLayout>
