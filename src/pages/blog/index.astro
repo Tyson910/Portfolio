@@ -6,10 +6,10 @@ import { getCollection } from 'astro:content';
 
 // TODO: sort posts from newest to oldest,
 // TODO: only display 5 most recent arr.length = 5?
-const foodPosts = await getCollection('food', ({ data }) => {
-  // filter out drafts
-  return data.draft !== true;
-});
+// const foodPosts = await getCollection('food', ({ data }) => {
+//   // filter out drafts
+//   return data.draft !== true;
+// });
 ---
 
 <BaseLayout
@@ -17,12 +17,12 @@ const foodPosts = await getCollection('food', ({ data }) => {
   meta_title="Welcome to my Blog"
 >
   <BlogHero title="Welcome to my Blog" />
-  <DisplayBlogPostSummaries posts={foodPosts}>
+  <!-- <DisplayBlogPostSummaries posts={foodPosts}>
     <div slot="heading-link" class="!container md:pl-10">
       <a
         href="/blog/food"
         class="!no-underline hover:!underline !font-bold">My Food Blog</a
       >
     </div>
-  </DisplayBlogPostSummaries>
+  </DisplayBlogPostSummaries> -->
 </BaseLayout>
