@@ -1,6 +1,6 @@
 ---
-import Astronaut from '/img/icons/astronaut404.svg';
-import Scarecrow from '/img/icons/scarecrow404.svg';
+import Astronaut from '@assets/icons/astronaut404.svg';
+import Scarecrow from '@assets/icons/scarecrow404.svg';
 import BaseLayout from '@layouts/BaseLayout.astro';
 const today = new Date();
 ---
@@ -15,8 +15,8 @@ const today = new Date();
         loading="lazy"
         src={// show scarecrow during October or November only
         today.getMonth() == 9 || today.getMonth() == 10
-          ? Scarecrow
-          : Astronaut}
+          ? Scarecrow.src
+          : Astronaut.src}
         alt="404"
         class=""
       />
