@@ -4,37 +4,18 @@ import BlogHero from '@components/blog/Hero.astro';
 import DisplayBlogPostSummaries from '@components/blog/DisplayBlogPostSummaries.astro';
 import { getCollection } from 'astro:content';
 
-// TODO: sort posts from newest to oldest,
-// TODO: only display 5 most recent arr.length = 5?
-const techPosts = await getCollection('tech', ({ data }) => {
-  // filter out drafts
-  return data.draft !== true;
-});
-const foodPosts = await getCollection('food', ({ data }) => {
-  // filter out drafts
-  return data.draft !== true;
-});
+/** The page title */
+const meta_title = 'Welcome to my Blog';
+
+const posts = await getCollection('snippets');
 ---
 
 <BaseLayout
   meta_description="This is a hub for all Tech related content I've created"
-  meta_title="Welcome to my Blog"
+  meta_title={meta_title}
 >
-  <BlogHero title="Welcome to my Blog" />
-  <DisplayBlogPostSummaries posts={techPosts}>
-    <div slot="heading-link" class="!container md:pl-10">
-      <a
-        href="/blog/tech"
-        class="!no-underline hover:!underline !font-bold">My Tech Blog</a
-      >
-    </div>
-  </DisplayBlogPostSummaries>
-  <DisplayBlogPostSummaries posts={foodPosts}>
-    <div slot="heading-link" class="!container md:pl-10">
-      <a
-        href="/blog/food"
-        class="!no-underline hover:!underline !font-bold">My Food Blog</a
-      >
-    </div>
+  <BlogHero title={meta_title} />
+  <DisplayBlogPostSummaries posts={posts}>
+    <span slot="heading-link">Snippets</span>
   </DisplayBlogPostSummaries>
 </BaseLayout>

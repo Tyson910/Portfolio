@@ -1,4 +1,6 @@
 ---
+import BaseLayout from '@layouts/BaseLayout.astro';
+
 export interface Props {
   frontmatter: {
     /** The page title */
@@ -11,11 +13,9 @@ export interface Props {
     dateCreated: string;
     /** When was this post last edited? */
     lastUpdated: string;
-    /** Who else? :D */
-    author: 'Tyson Suttle';
     title: string;
-    minutesRead: string;
-    wordCount: number;
+    minutesRead?: string;
+    wordCount?: number;
     /** What topics are covered in this blog post */
     tags?: string[];
     nextPage?: string;
@@ -23,7 +23,7 @@ export interface Props {
   };
 }
 export type { Props as BlogLayoutProps };
-import BaseLayout from '@layouts/BaseLayout.astro';
+
 const {
   meta_title,
   meta_description,
@@ -36,22 +36,23 @@ const {
 if (!meta_description) throw new Error('Add a meta description');
 ---
 
-<BaseLayout
-  meta_title={meta_title || title}
-  meta_description={meta_description}
->
+<BaseLayout meta_title={meta_title} meta_description={meta_description}>
   <div>
     <section class="container py-20 md:!min-h-[650px]">
       <div class="flex flex-col">
         <h1 class="font-bold text-3xl mb-4">
           {title}
         </h1>
-        <h2 class="font-light text-neutral-500">
-          {minutesRead}
-        </h2>
-        <h3 class="font-light text-neutral-500">
-          {wordCount} words
-        </h3>
+        {
+          minutesRead && (
+            <h2 class="font-light text-neutral-500">{minutesRead}</h2>
+          )
+        }
+        {
+          wordCount && (
+            <h3 class="font-light text-neutral-500">{wordCount} words</h3>
+          )
+        }
         <h4 class="font-light text-neutral-500">
           Last Updated:
           {
@@ -65,7 +66,9 @@ if (!meta_description) throw new Error('Add a meta description');
         </h4>
       </div>
 
-      <article class="mt-10 md:container prose prose-p:text-purple-shade-5">
+      <article
+        class="mt-10 md:container prose prose-p:text-purple-shade-5"
+      >
         <hr />
         <slot />
         <!-- children will go here -->

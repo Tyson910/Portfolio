@@ -1,5 +1,5 @@
 ---
-import { Image } from '@astrojs/image/components';
+import { Image } from "astro:assets"
 import Me from '@assets/images/headshot.png';
 import BaseLayout from '@layouts/BaseLayout.astro';
 ---
@@ -14,10 +14,11 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         rounded-full border border-black
         shadow-md`}
   >
-    <Image
-      src={Me}
+    <Image 
+      src={Me} 
       alt="My Headshot"
-      class="rounded-full h-full object-cover"
+      loading="lazy"  
+      class="rounded-full h-full w-full object-cover"
     />
   </div>
   <section

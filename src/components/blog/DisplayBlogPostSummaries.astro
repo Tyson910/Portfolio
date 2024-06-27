@@ -2,48 +2,30 @@
 import { sortBlogPostsByLastUpdated } from '@utils/frontmatter-helpers/sort-posts';
 import type { CollectionEntry } from 'astro:content';
 export interface Props {
-  posts: CollectionEntry<'food'>[] | CollectionEntry<'tech'>[];
+  posts: CollectionEntry<'snippets'>[];
 }
 const { posts } = Astro.props;
 ---
 
-<section class="prosee my-20">
-  <div
-    class="max-w-6xl md:container pb-20 mx-auto border-b border-t-gray-200"
-  >
-    <div class="prose">
-      <h2>
-        <slot name="heading-link" />
-      </h2>
-    </div>
+<section class="flex flex-col max-w-6xl md:container mx-auto">
+  <div class="font-bold text-4xl pl-10 pt-10">
+    <h2>
+      <slot name="heading-link" />
+    </h2>
   </div>
-
-  <ul class="flex flex-col max-w-6xl md:container mx-auto">
+  <ul class="flex flex-col">
     {
       sortBlogPostsByLastUpdated(posts).map((post) => (
         <li class="m-0 p-10 flex flex-col md:flex-row items-center justify-between border-t border-t-gray-200 first:border-t-transparent odd:bg-gray-2000 even:bg-gray-1000">
-          <div class="hidden md:block w-96 self-start mt-1">
-            <p class="font-light text-neutral-500">
-              Last Updated:
-              {new Date(post.data.lastUpdated).toLocaleDateString(
-                'en-US',
-                {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                }
-              )}
-            </p>
-            <p class="text-neutral-500">
-              {post?.data?.minutesRead || post.data.difficulty}
-            </p>
-          </div>
-          <div class="flex flex-col md:gap-y-1 prose prose-p:text-gray-600 md:w-[550px]">
-            <a href={'/blog/' + post.collection + '/' + post.slug}>
-              {post.data.title}
-            </a>
-            <div class="md:hidden">
-              <p class="m-0 mt-3 font-light text-neutral-500">
+          <div class="flex flex-col">
+            <div class="flex flex-col mb-2">
+              <a
+                class="underline capitalize font-semibold text-lg"
+                href={'/blog/' + post.collection + '/' + post.slug}
+              >
+                {post.data.title}
+              </a>
+              <p class="font-light text-neutral-500">
                 Last Updated:
                 {new Date(post.data.lastUpdated).toLocaleDateString(
                   'en-US',
@@ -54,14 +36,14 @@ const { posts } = Astro.props;
                   }
                 )}
               </p>
-              <p class="m-0 text-neutral-500 font-light md:font-normal">
-                {post?.data?.minutesRead || post.data.difficulty}
-              </p>
             </div>
-            <p class="m-0 mt-4">{post.data.meta_description}</p>
+            {/* <p class="m-0 text-neutral-500 font-light md:font-normal">
+                {post?.data?.minutesRead || post.data.difficulty}
+              </p> */}
+            <p class="mb-4">{post.data.meta_description}</p>
             <div class="flex flex-row gap-x-2">
               {post.data?.tags?.map((tag) => (
-                <p class="bg-purple-300 !text-purple-shade-5 w-max px-4 py-1 capitalize rounded-full">
+                <p class="bg-purple-300 text-purple-shade-5 w-max px-4 py-1 capitalize rounded-full">
                   {tag}
                 </p>
               ))}

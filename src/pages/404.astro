@@ -1,6 +1,7 @@
 ---
-import Astronaut from '/img/icons/astronaut404.svg';
-import Scarecrow from '/img/icons/scarecrow404.svg';
+import { Image } from 'astro:assets';
+import Astronaut from '@assets/icons/astronaut404.svg';
+import Scarecrow from '@assets/icons/scarecrow404.svg';
 import BaseLayout from '@layouts/BaseLayout.astro';
 const today = new Date();
 ---
@@ -11,7 +12,7 @@ const today = new Date();
 >
   <article class="pt-10 md:pt-5 pb-20 md:pb-36">
     <div class="w-96 md:w-[32rem] lg:w-[42rem] mx-auto self-center">
-      <img
+      <Image
         loading="lazy"
         src={// show scarecrow during October or November only
         today.getMonth() == 9 || today.getMonth() == 10

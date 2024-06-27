@@ -1,8 +1,7 @@
-import { SVGProps } from 'react';
+import type { ComponentPropsWithoutRef } from 'react';
 
 export function HTMLIcon(
-  props: JSX.IntrinsicAttributes &
-    SVGProps<SVGSVGElement>
+  props: ComponentPropsWithoutRef<'svg'>
 ): JSX.Element {
   return (
     <svg
@@ -21,8 +20,7 @@ export function HTMLIcon(
 }
 
 export function CSSIcon(
-  props: JSX.IntrinsicAttributes &
-    SVGProps<SVGSVGElement>
+  props: ComponentPropsWithoutRef<'svg'>
 ): JSX.Element {
   return (
     <svg
@@ -41,8 +39,7 @@ export function CSSIcon(
 }
 
 export function JavaScriptIcon(
-  props: JSX.IntrinsicAttributes &
-    SVGProps<SVGSVGElement>
+  props: ComponentPropsWithoutRef<'svg'>
 ): JSX.Element {
   return (
     <svg
@@ -61,8 +58,7 @@ export function JavaScriptIcon(
 }
 
 export function ReactIcon(
-  props: JSX.IntrinsicAttributes &
-    SVGProps<SVGSVGElement>
+  props: ComponentPropsWithoutRef<'svg'>
 ): JSX.Element {
   return (
     <svg
@@ -81,8 +77,7 @@ export function ReactIcon(
 }
 
 export function NextJSIcon(
-  props: JSX.IntrinsicAttributes &
-    SVGProps<SVGSVGElement>
+  props: ComponentPropsWithoutRef<'svg'>
 ): JSX.Element {
   return (
     <svg
@@ -101,8 +96,7 @@ export function NextJSIcon(
 }
 
 export function TailwindIcon(
-  props: JSX.IntrinsicAttributes &
-    SVGProps<SVGSVGElement>
+  props: ComponentPropsWithoutRef<'svg'>
 ): JSX.Element {
   return (
     <svg
@@ -121,8 +115,7 @@ export function TailwindIcon(
 }
 
 export function NPMIcon(
-  props: JSX.IntrinsicAttributes &
-    SVGProps<SVGSVGElement>
+  props: ComponentPropsWithoutRef<'svg'>
 ): JSX.Element {
   return (
     <svg
@@ -141,8 +134,7 @@ export function NPMIcon(
 }
 
 export function TestingLibraryIcon(
-  props: JSX.IntrinsicAttributes &
-    SVGProps<SVGSVGElement>
+  props: ComponentPropsWithoutRef<'svg'>
 ): JSX.Element {
   return (
     <svg
@@ -161,8 +153,7 @@ export function TestingLibraryIcon(
 }
 
 export function JestIcon(
-  props: JSX.IntrinsicAttributes &
-    SVGProps<SVGSVGElement>
+  props: ComponentPropsWithoutRef<'svg'>
 ): JSX.Element {
   return (
     <svg
@@ -181,8 +172,7 @@ export function JestIcon(
 }
 
 export function GitHubIcon(
-  props: JSX.IntrinsicAttributes &
-    SVGProps<SVGSVGElement>
+  props: ComponentPropsWithoutRef<'svg'>
 ): JSX.Element {
   return (
     <svg
@@ -200,8 +190,7 @@ export function GitHubIcon(
 }
 
 export function GitHubOutlineIcon(
-  props: JSX.IntrinsicAttributes &
-    SVGProps<SVGSVGElement>
+  props: ComponentPropsWithoutRef<'svg'>
 ): JSX.Element {
   return (
     <svg
@@ -223,8 +212,7 @@ export function GitHubOutlineIcon(
 }
 
 export function LinkedInIcon(
-  props: JSX.IntrinsicAttributes &
-    SVGProps<SVGSVGElement>
+  props: ComponentPropsWithoutRef<'svg'>
 ): JSX.Element {
   return (
     <svg
@@ -244,8 +232,7 @@ export function LinkedInIcon(
 }
 
 export function EmailIcon(
-  props: JSX.IntrinsicAttributes &
-    SVGProps<SVGSVGElement>
+  props: ComponentPropsWithoutRef<'svg'>
 ): JSX.Element {
   return (
     <svg
