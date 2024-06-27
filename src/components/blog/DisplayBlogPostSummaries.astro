@@ -2,7 +2,7 @@
 import { sortBlogPostsByLastUpdated } from '@utils/frontmatter-helpers/sort-posts';
 import type { CollectionEntry } from 'astro:content';
 export interface Props {
-  posts: CollectionEntry<'food'>[] | CollectionEntry<'tech'>[];
+  posts: CollectionEntry<'snippets'>[];
 }
 const { posts } = Astro.props;
 ---
@@ -34,9 +34,9 @@ const { posts } = Astro.props;
                 }
               )}
             </p>
-            <p class="text-neutral-500">
-              {post?.data?.minutesRead || post.data.difficulty}
-            </p>
+            {/* <p class="text-neutral-500">
+              {post?.data?.minutesRead}
+            </p> */}
           </div>
           <div class="flex flex-col md:gap-y-1 prose prose-p:text-gray-600 md:w-[550px]">
             <a href={'/blog/' + post.collection + '/' + post.slug}>
@@ -54,9 +54,9 @@ const { posts } = Astro.props;
                   }
                 )}
               </p>
-              <p class="m-0 text-neutral-500 font-light md:font-normal">
+              {/* <p class="m-0 text-neutral-500 font-light md:font-normal">
                 {post?.data?.minutesRead || post.data.difficulty}
-              </p>
+              </p> */}
             </div>
             <p class="m-0 mt-4">{post.data.meta_description}</p>
             <div class="flex flex-row gap-x-2">
