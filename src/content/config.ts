@@ -23,6 +23,7 @@ const techBlogCollection = defineCollection({
 const techSnippetsCollection = defineCollection({
   type: 'content',
   schema: z.object({
+    meta_title: z.string(),
     meta_description: z.string(),
     title: z.string(),
     author: z.literal('Tyson Suttle').default('Tyson Suttle'),
