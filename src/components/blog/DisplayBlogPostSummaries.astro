@@ -7,18 +7,13 @@ export interface Props {
 const { posts } = Astro.props;
 ---
 
-<section class="prosee my-20">
-  <div
-    class="max-w-6xl md:container pb-20 mx-auto border-b border-t-gray-200"
-  >
-    <div class="prose">
-      <h2>
-        <slot name="heading-link" />
-      </h2>
-    </div>
+<section class="flex flex-col max-w-6xl md:container mx-auto">
+  <div class="font-bold text-4xl pl-10 pt-10">
+    <h2>
+      <slot name="heading-link" />
+    </h2>
   </div>
-
-  <ul class="flex flex-col max-w-6xl md:container mx-auto">
+  <ul class="flex flex-col">
     {
       sortBlogPostsByLastUpdated(posts).map((post) => (
         <li class="m-0 p-10 flex flex-col md:flex-row items-center justify-between border-t border-t-gray-200 first:border-t-transparent odd:bg-gray-2000 even:bg-gray-1000">

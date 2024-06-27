@@ -15,7 +15,7 @@ const posts = await getCollection('snippets');
   meta_title={meta_title}
 >
   <BlogHero title={meta_title} />
-  <div class="-mt-40">
-    <DisplayBlogPostSummaries posts={posts} />
-  </div>
+  <DisplayBlogPostSummaries posts={posts}>
+    <span slot="heading-link">Snippets</span>
+  </DisplayBlogPostSummaries>
 </BaseLayout>
