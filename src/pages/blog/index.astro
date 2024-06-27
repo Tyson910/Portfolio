@@ -1,13 +1,13 @@
 ---
-// import type { CollectionEntry } from 'astro:content';
-// CollectionEntry<'food'>[] | CollectionEntry<'tech'>[]
 import BaseLayout from '@layouts/BaseLayout.astro';
 import BlogHero from '@components/blog/Hero.astro';
 import DisplayBlogPostSummaries from '@components/blog/DisplayBlogPostSummaries.astro';
+import { getCollection } from 'astro:content';
 
 /** The page title */
 const meta_title = 'Welcome to my Blog';
-const posts = [];
+
+const posts = await getCollection('snippets');
 ---
 
 <BaseLayout
