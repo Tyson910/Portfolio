@@ -5,7 +5,7 @@
     text: string;
   }
 
-  const navigationLinks: NavigationLink[] = [
+  const navigationLinks = [
     {
       href: '/',
       text: 'Home',
@@ -26,8 +26,9 @@
       href: '/contact',
       text: 'Contact',
     },
-  ];
-  let showOverlay: boolean = false;
+  ] as const satisfies NavigationLink[];
+
+  let showOverlay = $state(false);
 </script>
 
 <header
@@ -45,10 +46,11 @@
 
 <!-- Mobile NavBar (hidden on md: screen breakpoint) -->
 {#if showOverlay}
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y_click_events_have_key_events -->
+  <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
     class="fixed opacity-90 inset-0 bg-black md:hidden"
-    on:click={() => (showOverlay = false)}
+    onclick={() => (showOverlay = false)}
   >
     <nav class="text-center opacity-90 mt-40 flex flex-col">
       {#each navigationLinks as { href, text } (href)}
@@ -72,7 +74,7 @@
           {text}
         </a>
       {/each}
-      <button on:click={() => (showOverlay = true)}>
+      <button onclick={() => (showOverlay = true)}>
         <!-- Heroicons/outline bars-3 -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
