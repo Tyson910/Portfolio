@@ -15,7 +15,6 @@ export interface Project {
 export const projects = [
   {
     projectName: "Ragain’s Flooring",
-    /** use live url from netlify here */
     imageURL: "/img/projects/ragains-flooring.png",
     description:
       `A website for a local flooring company in Jeff City, MO. Features a gallery of completed flooring projects,
