@@ -26,9 +26,9 @@ const { meta_title, meta_description } = Astro.props;
     <meta itemprop="description" content={meta_description} />
   </head>
 
-  <body class="bg-gray-50 min-h-full flex flex-col">
+  <body class="bg-zinc-50 min-h-full flex flex-col">
     <NavBar client:idle />
-    <main class="flex-grow">
+    <main class="flex-grow bg-white max-w-[95vw] md:mx-40">
       <slot />
       <!-- children will go here -->
     </main>
