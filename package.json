@@ -39,6 +39,8 @@
     "@astrojs/svelte": "^5.7.3",
     "@astrojs/tailwind": "^5.1.2",
     "@iconify-json/ri": "^1.2.3",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
     "@tailwindcss/typography": "^0.5.7",
     "@types/node": "^18.7.14",
     "@types/react": "^18.0.18",
