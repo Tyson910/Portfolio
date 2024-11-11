@@ -31,6 +31,7 @@ const techSnippetsCollection = defineCollection({
     lastUpdated: z.string().date(),
     tags: z.string().array(),
     draft: z.boolean(),
+    isFeaturedPost: z.boolean()
   }),
 });
 
