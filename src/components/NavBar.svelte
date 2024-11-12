@@ -29,7 +29,7 @@
   ] as const satisfies NavigationLink[];
 </script>
 
-<header class="py-2 w-full sticky top-0 z-10">
+<header class="py-4 w-full sticky top-0 z-10">
   <nav
     class="container max-w-max gap-x-6 px-8 flex justify-evenly text-purple-100 bg-purple-shade-4 shadow-md lg:shadow-sm rounded-full"
   >
