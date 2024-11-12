@@ -1,6 +1,5 @@
 ---
 import AllProjects from '@components/projects/Projects.astro';
-import { Container } from '@components/Container';
 import { getCollection } from 'astro:content';
 
 import { socialLinks } from '@utils/helpers';
@@ -16,7 +15,7 @@ const featuredSnippetsPosts = await getCollection('snippets', (stuff) => {
   meta_title="Tyson Suttle"
   meta_description="Learn about Tyson Suttle"
 >
-  <Container innerClassName="pt-9">
+  <div class="container pt-9">
     <div class="max-w-2xl">
       <h1
         class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100"
@@ -40,8 +39,8 @@ const featuredSnippetsPosts = await getCollection('snippets', (stuff) => {
         }
       </div>
     </div>
-  </Container>
-  <Container outerClassName="py-16 px-4 sm:px-6">
+  </div>
+  <div class="container py-16">
     <div class="border-b border-zinc-200 py-5">
       <div
         class="-ml-4 -mt-4 flex flex-wrap items-center justify-between sm:flex-nowrap"
@@ -66,26 +65,20 @@ const featuredSnippetsPosts = await getCollection('snippets', (stuff) => {
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-16 ,mt-10">
+    <div class="flex flex-col gap-16">
       <ul role="list" class="divide-y divide-zinc-100">
         {
           featuredSnippetsPosts.map((post) => (
-            <li class="flex gap-x-4 p-5 hover:bg-zinc-50 dark:hover:bg-zinc-800">
-              <a href={`/blog/snippets/${post.slug}`} class="flex-auto">
-                <div class="flex items-baseline justify-between ">
-                  <div class="flex flex-col text-sm/6 gap-y-1.5 mb-2">
-                    <p class="font-semibold text-zinc-900 dark:text-zinc-50">
-                      {post.data.title}
-                    </p>
-                    <div class="flex flex-row gap-x-2 whitespace-nowrap">
-                      {post.data.tags.map((tag) => (
-                        <span class="inline-flex items-center rounded-full bg-zinc-50 px-2 py-0.5 text-xs font-medium text-zinc-600 ring-1 ring-inset ring-zinc-500/10">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <p class="flex-none, text-xs text-zinc-600">
+            <li>
+              <a
+                href={`/blog/snippets/${post.slug}`}
+                class="flex gap-x-4 p-5 hover:bg-zinc-50 dark:hover:bg-zinc-800"
+              >
+                <div class="flex flex-col text-sm/6 gap-y-1">
+                  <p class="font-semibold text-zinc-900 dark:text-zinc-50">
+                    {post.data.title}
+                  </p>
+                  <p class="text-xs text-zinc-600 -mt-1 mb-2">
                     <time datetime={post.data.dateCreated}>
                       Created on{' '}
                       {new Date(post.data.dateCreated).toLocaleDateString(
@@ -99,10 +92,17 @@ const featuredSnippetsPosts = await getCollection('snippets', (stuff) => {
                       )}
                     </time>
                   </p>
+                  <div class="flex flex-row gap-x-2 whitespace-nowrap">
+                    {post.data.tags.map((tag) => (
+                      <span class="inline-flex items-center rounded-full bg-zinc-50 px-2 py-0.5 text-xs font-medium text-zinc-600 ring-1 ring-inset ring-zinc-500/10">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <p class="mt-1 line-clamp-2 text-sm/6 text-zinc-600 dark:text-zinc-50">
+                    {post.data.meta_description}
+                  </p>
                 </div>
-                <p class="mt-1 line-clamp-2 text-sm/6 text-zinc-600 dark:text-zinc-50">
-                  {post.data.meta_description}
-                </p>
               </a>
             </li>
           ))
