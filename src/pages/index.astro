@@ -1,12 +1,10 @@
 ---
-import AllProjects from '@components/projects/Projects.astro';
 import { getCollection } from 'astro:content';
 
 import GithubIcon from '~icons/ri/github-fill';
 import ExternalLinkIcon from '~icons/ri/external-link-line';
 
-import { projects } from '@assets/projects';
-import { socialLinks } from '@utils/helpers';
+import { socialLinks, projects } from '@utils/helpers';
 import BaseLayout from '@layouts/BaseLayout.astro';
 
 const featuredSnippetsPosts = await getCollection('snippets', (stuff) => {
