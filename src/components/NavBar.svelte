@@ -10,22 +10,22 @@
       href: '/',
       text: 'Home',
     },
-    // {
-    //   href: '/about',
-    //   text: 'About',
-    // },
     {
-      href: '/index.html#projects',
-      text: 'Projects',
+      href: '/about',
+      text: 'About',
     },
+    // {
+    //   href: '/projects',
+    //   text: 'Projects',
+    // },
     {
       href: '/blog',
       text: 'Blog',
     },
-    {
-      href: '/contact',
-      text: 'Contact',
-    },
+    // {
+    //   href: '/contact',
+    //   text: 'Contact',
+    // },
   ] as const satisfies NavigationLink[];
 </script>
 
