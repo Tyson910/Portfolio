@@ -2,7 +2,6 @@ import BlueSkyIcon from '~icons/ri/bluesky-line';
 import LinkedInIcon from '~icons/ri/linkedin-box-fill';
 import GithubIcon from '~icons/ri/github-fill';
 
-
 export const socialLinks = [
   {
     href: 'https://bsky.app/profile/tysons.bsky.social',
@@ -41,6 +40,15 @@ export interface Project {
 
 export const projects = [
   {
+    projectName: 'Credit Card Match',
+    imageURL: '',
+    description: `Created an app that provides personalized credit card recommendations tailored to your finances. 
+      Discover the best cards for rewards, cashback, and low interest rates, all based on your unique financial situation.`,
+    techUsed: ['Nuxt', 'Vue', 'TailwindCSS', 'SQLite'],
+    deployURL: 'https://creditcardmatch.org/',
+    sourceCodeURL: null,
+  },
+  {
     projectName: 'Ragain’s Flooring',
     imageURL: '/img/projects/ragains-flooring.png',
     description: `A website for a local flooring company in Jeff City, MO. Features a gallery of completed flooring projects,
@@ -78,13 +86,13 @@ export const projects = [
     deployURL: 'https://nba-stats-tool.netlify.app/',
     sourceCodeURL: 'https://github.com/Tyson910/nba-stats-tool',
   },
-  {
-    projectName: "Sample Website",
-    imageURL: "/img/projects/insure-agency.png",
-    description:
-      "Created a sample template that is availabe to be used by various types of businesses to display their products & services, a contact form to get in touch with a business",
-    techUsed: ["Astro", "TailwindCSS", "React"],
-    deployURL: "https://insure-agency.netlify.app/",
-    sourceCodeURL: "https://github.com/Tyson910/InsureLandingPage",
-  },
+  // {
+  //   projectName: "Sample Website",
+  //   imageURL: "/img/projects/insure-agency.png",
+  //   description:
+  //     "Created a sample template that is availabe to be used by various types of businesses to display their products & services, a contact form to get in touch with a business",
+  //   techUsed: ["Astro", "TailwindCSS", "React"],
+  //   deployURL: "https://insure-agency.netlify.app/",
+  //   sourceCodeURL: "https://github.com/Tyson910/InsureLandingPage",
+  // },
 ] as const satisfies Project[];
