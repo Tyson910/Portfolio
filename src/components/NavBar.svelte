@@ -31,13 +31,12 @@
   let showOverlay = $state(false);
 </script>
 
-<header
-  class={`hidden md:block py-2 w-full sticky top-0 z-10
-   shadow-md lg:shadow-sm text-purple-100 bg-purple-shade-4`}
->
-  <nav class="max-w-screen-xl mx-auto flex justify-evenly">
+<header class="hidden md:block py-2 w-full sticky top-0 z-10">
+  <nav
+    class="container max-w-max gap-x-6 px-8 flex justify-evenly text-purple-100 bg-purple-shade-4 shadow-md lg:shadow-sm rounded-full"
+  >
     {#each navigationLinks as { href, text } (href)}
-      <a {href} class="hover:underline p-4 font-medium hover:text-white">
+      <a {href} class="hover:underline py-4 font-medium hover:text-white">
         {text}
       </a>
     {/each}
