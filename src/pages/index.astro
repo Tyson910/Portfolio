@@ -2,6 +2,10 @@
 import AllProjects from '@components/projects/Projects.astro';
 import { getCollection } from 'astro:content';
 
+import GithubIcon from '~icons/ri/github-fill';
+import ExternalLinkIcon from '~icons/ri/external-link-line';
+
+import { projects } from '@assets/projects';
 import { socialLinks } from '@utils/helpers';
 import BaseLayout from '@layouts/BaseLayout.astro';
 
@@ -36,76 +40,133 @@ const featuredSnippetsPosts = await getCollection('snippets', (stuff) => {
       </div>
     </div>
   </div>
-  <div class="container py-16">
-    <div class="border-b border-zinc-200 py-5">
-      <div
-        class="-ml-4 -mt-4 flex flex-wrap items-center justify-between sm:flex-nowrap"
-      >
-        <div class="ml-4 mt-4">
-          <h2
-            class="text-base font-semibold text-zinc-900 dark:text-zinc-50"
-          >
-            Code Snippets
-          </h2>
-          <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-200">
-            Code snippets I find myself using often that are easy to copy &
-            paste.
-          </p>
-        </div>
-        <div class="ml-4 mt-4 shrink-0">
-          <button
-            type="button"
-            class=" inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >View All Posts</button
-          >
+  <div class="container py-16 grid grid-cols-1 lg:grid-cols-2 gap-x-16">
+    <div>
+      <div class="border-b border-zinc-200 py-5">
+        <div
+          class="-ml-4 -mt-4 flex flex-wrap items-center justify-between sm:flex-nowrap"
+        >
+          <div class="ml-4 mt-4">
+            <h2
+              class="text-base font-semibold text-zinc-900 dark:text-zinc-50"
+            >
+              Code Snippets
+            </h2>
+            <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-200">
+              Code snippets I find myself using often that are easy to copy
+              & paste.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="flex flex-col gap-16">
-      <ul role="list" class="divide-y divide-zinc-100">
-        {
-          featuredSnippetsPosts.map((post) => (
-            <li>
-              <a
-                href={`/blog/snippets/${post.slug}`}
-                class="flex gap-x-4 py-5 md:p-5 hover:bg-zinc-50 dark:hover:bg-zinc-800"
-              >
-                <div class="flex flex-col text-sm/6 gap-y-1">
-                  <p class="font-semibold text-zinc-900 dark:text-zinc-50">
-                    {post.data.title}
-                  </p>
-                  <p class="text-xs text-zinc-600 dark:text-zinc-300 -mt-1 mb-2">
-                    <time datetime={post.data.dateCreated}>
-                      Created on{' '}
-                      {new Date(post.data.dateCreated).toLocaleDateString(
-                        'en-US',
-                        {
+      <div class="flex flex-col gap-16">
+        <ul role="list" class="divide-y divide-zinc-100">
+          {
+            featuredSnippetsPosts.map((post) => (
+              <li class="group">
+                <a
+                  href={`/blog/snippets/${post.slug}`}
+                  class="flex gap-x-4 py-5 md:p-5 group-hover:bg-zinc-100 group-dark:hover:bg-zinc-800"
+                >
+                  <div class="flex flex-col text-sm/6 gap-y-1">
+                    <p class="font-semibold text-zinc-900 dark:text-zinc-50 group-hover:underline">
+                      {post.data.title}
+                    </p>
+                    <p class="text-xs text-zinc-600 dark:text-zinc-300 -mt-1 mb-2">
+                      <time datetime={post.data.dateCreated}>
+                        Created on{' '}
+                        {new Date(
+                          post.data.dateCreated
+                        ).toLocaleDateString('en-US', {
                           // weekday: 'long',
                           year: 'numeric',
                           month: 'long',
                           day: 'numeric',
-                        }
-                      )}
-                    </time>
-                  </p>
-                  <div class="flex flex-col md:flex-row gap-2 whitespace-nowrap">
-                    {post.data.tags.map((tag) => (
-                      <span class="w-max inline-flex items-center rounded-full bg-zinc-50 px-2 py-0.5 text-xs font-medium text-zinc-600 ring-1 ring-inset ring-zinc-500/10">
-                        {tag}
-                      </span>
-                    ))}
+                        })}
+                      </time>
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-2 whitespace-nowrap">
+                      {post.data.tags.map((tag) => (
+                        <span class="w-max inline-flex items-center rounded-full bg-zinc-50 px-2 py-0.5 text-xs font-medium text-zinc-600 ring-1 ring-inset ring-zinc-500/10">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <p class="mt-1 line-clamp-2 text-sm/6 text-zinc-600 dark:text-zinc-50">
+                      {post.data.meta_description}
+                    </p>
                   </div>
-                  <p class="mt-1 line-clamp-2 text-sm/6 text-zinc-600 dark:text-zinc-50">
-                    {post.data.meta_description}
-                  </p>
-                </div>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+                </a>
+              </li>
+            ))
+          }
+          <li class="pl-4 pt-4 shrink-0 text-center">
+            <a href="/blog" class="underline">View All Posts</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </Container>
+    <div>
+      <div class="border-b border-zinc-200 py-5">
+        <div
+          class="-ml-4 -mt-4 flex flex-wrap items-center justify-between sm:flex-nowrap"
+        >
+          <div class="ml-4 mt-4">
+            <h2
+              class="text-base font-semibold text-zinc-900 dark:text-zinc-50"
+            >
+              Projects
+            </h2>
+            <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-200">
+              Take a look at what I'm currently working on
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-16">
+        <ul role="list" class="divide-y divide-zinc-100">
+          {
+            projects.map((project) => (
+              <li>
+                <div class="flex gap-x-4 py-5 md:p-5 hover:bg-zinc-50 dark:hover:bg-zinc-800">
+                  <div class="flex flex-col text-sm/6 gap-y-1">
+                    <div class="flex flex-row items-center gap-x-3 font-semibold text-zinc-900 dark:text-zinc-50">
+                      <p>{project.projectName}</p>
+
+                      {project.sourceCodeURL && (
+                        <a
+                          href={project.sourceCodeURL}
+                          aria-label="Source Code"
+                        >
+                          <GithubIcon />
+                        </a>
+                      )}
+                      <a
+                        href={project.deployURL}
+                        aria-label="Live Preview"
+                      >
+                        <ExternalLinkIcon />
+                      </a>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-2 whitespace-nowrap">
+                      {project.techUsed.map((tag) => (
+                        <span class="w-max inline-flex items-center rounded-full bg-zinc-50 px-2 py-0.5 text-xs font-medium text-zinc-600 ring-1 ring-inset ring-zinc-500/10">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <p class="mt-1 line-clamp-2 text-sm/6 text-zinc-600 dark:text-zinc-50">
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
   <!-- <div
     class="mx-auto grid max-w-xlm grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2"
   >
