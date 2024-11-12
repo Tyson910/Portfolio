@@ -10,10 +10,10 @@
       href: '/',
       text: 'Home',
     },
-    {
-      href: '/about',
-      text: 'About',
-    },
+    // {
+    //   href: '/about',
+    //   text: 'About',
+    // },
     {
       href: '/index.html#projects',
       text: 'Projects',
