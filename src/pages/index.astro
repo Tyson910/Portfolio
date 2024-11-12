@@ -55,7 +55,7 @@ const featuredSnippetsPosts = await getCollection('snippets', (stuff) => {
         <div class="ml-4 mt-4 shrink-0">
           <button
             type="button"
-            class="relative inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            class=" inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >View All Posts</button
           >
         </div>
@@ -88,9 +88,9 @@ const featuredSnippetsPosts = await getCollection('snippets', (stuff) => {
                       )}
                     </time>
                   </p>
-                  <div class="flex flex-row gap-x-2 whitespace-nowrap">
+                  <div class="flex flex-col md:flex-row gap-2 whitespace-nowrap">
                     {post.data.tags.map((tag) => (
-                      <span class="inline-flex items-center rounded-full bg-zinc-50 px-2 py-0.5 text-xs font-medium text-zinc-600 ring-1 ring-inset ring-zinc-500/10">
+                      <span class="w-max inline-flex items-center rounded-full bg-zinc-50 px-2 py-0.5 text-xs font-medium text-zinc-600 ring-1 ring-inset ring-zinc-500/10">
                         {tag}
                       </span>
                     ))}
