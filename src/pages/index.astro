@@ -64,7 +64,7 @@ const featuredSnippetsPosts = await getCollection('snippets', (stuff) => {
               <li class="group">
                 <a
                   href={`/blog/snippets/${post.slug}`}
-                  class="flex gap-x-4 py-5 md:p-5 group-hover:bg-zinc-100 group-dark:hover:bg-zinc-800"
+                  class="flex gap-x-4 py-5 md:p-5 group-hover:bg-zinc-100 dark:group-hover:bg-zinc-800"
                 >
                   <div class="flex flex-col text-sm/6 gap-y-1">
                     <p class="font-semibold text-zinc-900 dark:text-zinc-50 group-hover:underline">
@@ -98,7 +98,7 @@ const featuredSnippetsPosts = await getCollection('snippets', (stuff) => {
               </li>
             ))
           }
-          <li class="pl-4 pt-4 shrink-0 text-center">
+          <li class="pl-4 pt-4 shrink-0 text-center dark:text-zinc-200">
             <a href="/blog" class="underline">View All Posts</a>
           </li>
         </ul>
@@ -126,7 +126,7 @@ const featuredSnippetsPosts = await getCollection('snippets', (stuff) => {
           {
             projects.map((project) => (
               <li>
-                <div class="flex gap-x-4 py-5 md:p-5 hover:bg-zinc-50 dark:hover:bg-zinc-800">
+                <div class="flex gap-x-4 py-5 md:p-5">
                   <div class="flex flex-col text-sm/6 gap-y-1">
                     <div class="flex flex-row items-center gap-x-3 font-semibold text-zinc-900 dark:text-zinc-50">
                       <p>{project.projectName}</p>
