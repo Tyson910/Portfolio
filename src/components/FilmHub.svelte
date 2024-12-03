@@ -63,6 +63,41 @@
       filmType: 'Kodak Gold 400',
     },
     {
+      fileName: 'sandy_dragon',
+      date: 'November 2024',
+      location: 'Barcelona, Spain',
+      tags: ['Misc'],
+      filmType: 'Kodak Gold 200',
+    },
+    {
+      fileName: 'misery_loves_company',
+      date: 'November 2024',
+      location: 'Barcelona, Spain',
+      tags: ['Graffiti'],
+      filmType: 'Kodak Gold 400',
+    },
+    {
+      fileName: 'cozy_spanish_room',
+      date: 'November 2024',
+      location: 'Barcelona, Spain',
+      tags: ['Misc'],
+      filmType: 'Kodak Gold 400',
+    },
+    {
+      fileName: 'botanical_lunch',
+      date: 'November 2024',
+      location: 'Barcelona, Spain',
+      tags: ['Nature / Wildlife', 'Architecture'],
+      filmType: 'Kodak Gold 200',
+    },
+    {
+      fileName: '300_pound_jacket',
+      date: 'November 2024',
+      location: 'London, England',
+      tags: ['Misc'],
+      filmType: 'Fuji Film 400',
+    },
+    {
       fileName: 'boarding_school',
       date: 'December 2024',
       location: 'Phoenix, AZ USA',
@@ -77,7 +112,8 @@
     filmType:
       | 'Kodak Gold 200'
       | 'Kodak Gold 400'
-      | 'Kodak Gold 800 (Disposable)';
+      | 'Kodak Gold 800 (Disposable)'
+      | 'Fuji Film 400';
   }[];
 
   let selectedCategory = $state<'all' | PhotoCategory['name']>('all');
