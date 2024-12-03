@@ -163,7 +163,7 @@
       through my lens and sharing stories beyond pixels.
     </p>
   </header>
-<--
+<!--
   <div class="max-w-6xl mx-auto mb-8">
     <ul class="flex space-x-4">
       <li>
