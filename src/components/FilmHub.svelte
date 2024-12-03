@@ -43,17 +43,17 @@
   const photos = [
     {
       fileName: 'stay_away',
-      date: 'May 2024',
+      date: 'November 2024',
       location: 'Mexico City, Mexico',
       tags: ['Graffiti'],
-      filmType: 'Fujifilm Pro 400H',
+      filmType: "Kodak Gold 800 (Disposable)",
     },
   ] as const satisfies {
     fileName: string;
     date: string;
     location: string;
     tags: PhotoCategory['name'][];
-    filmType: 'Kodak Gold 200' | 'Fujifilm Pro 400H';
+    filmType: 'Kodak Gold 200' | 'Kodak Gold 800 (Disposable)';
   }[];
 
   let selectedCategory = $state<'all' | PhotoCategory['name']>('all');
