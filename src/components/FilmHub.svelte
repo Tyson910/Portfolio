@@ -163,7 +163,7 @@
       through my lens and sharing stories beyond pixels.
     </p>
   </header>
-
+<--
   <div class="max-w-6xl mx-auto mb-8">
     <ul class="flex space-x-4">
       <li>
@@ -197,6 +197,7 @@
       {/each}
     </ul>
   </div>
+-->
 
   <main
     class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
