@@ -46,14 +46,38 @@
       date: 'November 2024',
       location: 'Mexico City, Mexico',
       tags: ['Graffiti'],
-      filmType: "Kodak Gold 800 (Disposable)",
+      filmType: 'Kodak Gold 800 (Disposable)',
+    },
+    {
+      fileName: 'butterfly_building',
+      date: 'November 2024',
+      location: 'Mexico City, Mexico',
+      tags: ['Architecture'],
+      filmType: 'Kodak Gold 800 (Disposable)',
+    },
+    {
+      fileName: 'cloud_carpet',
+      date: 'November 2024',
+      location: 'Somewhere over Greenland',
+      tags: ['Misc'],
+      filmType: 'Kodak Gold 400',
+    },
+    {
+      fileName: 'boarding_school',
+      date: 'December 2024',
+      location: 'Phoenix, AZ USA',
+      tags: ['Architecture'],
+      filmType: 'Kodak Gold 400',
     },
   ] as const satisfies {
     fileName: string;
     date: string;
     location: string;
     tags: PhotoCategory['name'][];
-    filmType: 'Kodak Gold 200' | 'Kodak Gold 800 (Disposable)';
+    filmType:
+      | 'Kodak Gold 200'
+      | 'Kodak Gold 400'
+      | 'Kodak Gold 800 (Disposable)';
   }[];
 
   let selectedCategory = $state<'all' | PhotoCategory['name']>('all');
