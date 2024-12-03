@@ -22,6 +22,6 @@
     // Astro will directly run your TypeScript code, no transpilation needed.
     "noEmit": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["@types/react", "unplugin-icons/types/react"]
+    "types": ["@types/react", "unplugin-icons/types/svelte"]
   }
 }
