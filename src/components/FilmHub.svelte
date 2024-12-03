@@ -178,10 +178,14 @@
     {#each filteredPhotos as photo (photo.fileName)}
       {@const photoTitle = deSlugifyStr(photo.fileName)}
       <div
-        class="bg-white shadow-md rounded-lg overflow-hidden transition hover:shadow-xl"
+        class="bg-white shadow-md rounded-lg h-max overflow-hidden transition hover:shadow-xl px-5 py-2"
       >
         {#await import(`../assets/images/film/${photo.fileName}.jpg`) then { default: { src } }}
-          <img {src} alt={photoTitle} class="w-full h-64 object-cover" />
+          <img
+            {src}
+            alt={photoTitle}
+            class="rounded-sm bg-gray-200 object-cover group-hover:opacity-75"
+          />
           <!-- TODO: add 404 image here  -->
         {/await}
 
