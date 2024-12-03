@@ -21,7 +21,7 @@ export const socialLinks = [
 ] as const satisfies {
   href: string;
   ariaLabel: string;
-  Icon: (props: React.SVGProps<SVGSVGElement>) => React.ReactElement;
+  Icon: typeof GithubIcon;
 }[];
 
 export interface Project {
