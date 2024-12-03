@@ -60,7 +60,7 @@
       date: new Date(2024, 10),
       location: 'Somewhere over Greenland',
       tags: ['Misc'],
-      filmType: 'Kodak Gold 400',
+      filmType: 'Kodak UltraMax 400',
     },
     {
       fileName: 'sandy_dragon',
@@ -74,14 +74,28 @@
       date: new Date(2024, 10),
       location: 'Barcelona, Spain',
       tags: ['Graffiti'],
-      filmType: 'Kodak Gold 400',
+      filmType: 'Kodak UltraMax 400',
+    },
+    {
+      fileName: 'bouba',
+      date: new Date(2024, 10),
+      location: 'Barcelona, Spain',
+      tags: ['Misc'],
+      filmType: 'Kodak Gold 200',
     },
     {
       fileName: 'cozy_spanish_room',
       date: new Date(2024, 10),
       location: 'Barcelona, Spain',
       tags: ['Misc'],
-      filmType: 'Kodak Gold 400',
+      filmType: 'Kodak UltraMax 400',
+    },
+    {
+      fileName: 'meal_fit_for_a_king',
+      date: new Date(2024, 10),
+      location: 'Barcelona, Spain',
+      tags: ['Misc'],
+      filmType: 'Kodak UltraMax 400',
     },
     {
       fileName: 'botanical_lunch',
@@ -89,6 +103,13 @@
       location: 'Barcelona, Spain',
       tags: ['Nature / Wildlife', 'Architecture'],
       filmType: 'Kodak Gold 200',
+    },
+    {
+      fileName: 'thats_a_telly_booth_innit',
+      date: new Date(2024, 10),
+      location: 'London, England',
+      tags: ['Misc'],
+      filmType: 'Fuji Film 400',
     },
     {
       fileName: '300_pound_jacket',
@@ -102,7 +123,7 @@
       date: new Date(2024, 11),
       location: 'Phoenix, AZ USA',
       tags: ['Architecture'],
-      filmType: 'Kodak Gold 400',
+      filmType: 'Kodak UltraMax 400',
     },
   ] as const satisfies {
     fileName: string;
@@ -111,7 +132,7 @@
     tags: PhotoCategory['name'][];
     filmType:
       | 'Kodak Gold 200'
-      | 'Kodak Gold 400'
+      | 'Kodak UltraMax 400'
       | 'Kodak Gold 800 (Disposable)'
       | 'Fuji Film 400';
   }[];
