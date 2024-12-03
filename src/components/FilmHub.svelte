@@ -42,17 +42,17 @@
 
   const photos = [
     {
-      fileName: 'stay_away',
-      date: 'November 2024',
-      location: 'Mexico City, Mexico',
-      tags: ['Graffiti'],
-      filmType: 'Kodak Gold 800 (Disposable)',
-    },
-    {
       fileName: 'butterfly_building',
       date: 'November 2024',
       location: 'Mexico City, Mexico',
       tags: ['Architecture'],
+      filmType: 'Kodak Gold 800 (Disposable)',
+    },
+    {
+      fileName: 'stay_away',
+      date: 'November 2024',
+      location: 'Mexico City, Mexico',
+      tags: ['Graffiti'],
       filmType: 'Kodak Gold 800 (Disposable)',
     },
     {
@@ -178,7 +178,7 @@
     {#each filteredPhotos as photo (photo.fileName)}
       {@const photoTitle = deSlugifyStr(photo.fileName)}
       <div
-        class="bg-white shadow-md rounded-lg h-max overflow-hidden transition hover:shadow-xl px-5 py-2"
+        class="bg-white shadow-md rounded-lg h-max overflow-hidden transition hover:shadow-xl px-5 pt-6"
       >
         {#await import(`../assets/images/film/${photo.fileName}.jpg`) then { default: { src } }}
           <img
