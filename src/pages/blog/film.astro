@@ -1,0 +1,11 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import FilmHub from '@components/FilmHub.svelte';
+---
+
+<BaseLayout
+  meta_description="This is a hub for all film photography related content I've created"
+  meta_title={'Welcome to my Film Page'}
+>
+  <FilmHub client:load />
+</BaseLayout>
