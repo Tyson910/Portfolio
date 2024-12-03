@@ -40,6 +40,9 @@ devDependencies:
   '@astrojs/tailwind':
     specifier: ^5.1.2
     version: 5.1.2(astro@4.16.10)(tailwindcss@3.4.14)
+  '@iconify-json/lucide':
+    specifier: ^1.2.17
+    version: 1.2.17
   '@iconify-json/ri':
     specifier: ^1.2.3
     version: 1.2.3
@@ -669,6 +672,12 @@ packages:
     dependencies:
       react: 18.3.1
     dev: false
+
+  /@iconify-json/lucide@1.2.17:
+    resolution: {integrity: sha512-y+4P1DxD2h4d4fGYxikUdMf0o21DD0GIE/YIgixEBIXKbE90LTOFqmoxkGyPpaGk3vT2qE2w/28+sdmBMFsd5w==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@iconify-json/ri@1.2.3:
     resolution: {integrity: sha512-UVKofd5xkSevGd5K01pvO4NWsu+2C9spu+GxnMZUYymUiaWmpCAxtd22MFSpm6MGf0MP4GCwhDCo1Q8L8oZ9wg==}
