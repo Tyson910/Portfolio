@@ -8,6 +8,7 @@
   import PuzzleIcon from '~icons/lucide/puzzle';
   import SprayCanIcon from '~icons/lucide/spray-can';
   import LeafIcon from '~icons/lucide/leaf';
+  import ArtHangingIcon from '~icons/streamline/travel-places-painting-painting-entertainment-display-museum-event-hobby-exhibit';
 
   import { deSlugifyStr } from '@utils/helpers';
 
@@ -20,6 +21,10 @@
     {
       name: 'Architecture',
       icon: BuildingIcon,
+    },
+    {
+      name: 'Art',
+      icon: ArtHangingIcon,
     },
     {
       name: 'Graffiti',
@@ -66,7 +71,7 @@
       fileName: 'sandy_dragon',
       date: new Date(2024, 10),
       location: 'Barcelona, Spain',
-      tags: ['Misc'],
+      tags: ['Art'],
       filmType: 'Kodak Gold 200',
     },
     {
@@ -80,7 +85,7 @@
       fileName: 'bouba',
       date: new Date(2024, 10),
       location: 'Barcelona, Spain',
-      tags: ['Misc'],
+      tags: ['Art'],
       filmType: 'Kodak Gold 200',
     },
     {

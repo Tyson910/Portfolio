@@ -46,6 +46,9 @@ devDependencies:
   '@iconify-json/ri':
     specifier: ^1.2.3
     version: 1.2.3
+  '@iconify-json/streamline':
+    specifier: ^1.2.1
+    version: 1.2.1
   '@svgr/core':
     specifier: ^8.1.0
     version: 8.1.0(typescript@5.6.3)
@@ -681,6 +684,12 @@ packages:
 
   /@iconify-json/ri@1.2.3:
     resolution: {integrity: sha512-UVKofd5xkSevGd5K01pvO4NWsu+2C9spu+GxnMZUYymUiaWmpCAxtd22MFSpm6MGf0MP4GCwhDCo1Q8L8oZ9wg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/streamline@1.2.1:
+    resolution: {integrity: sha512-hqNodkjyIHBymkFY3zMip0F/D5yw4qXgwMJCaTF3zlbpQMgNJhY3D2ikTFTDVcTHfCSd6EX6enKXj4Rvu+5hnw==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
