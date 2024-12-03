@@ -43,70 +43,70 @@
   const photos = [
     {
       fileName: 'butterfly_building',
-      date: 'November 2024',
+      date: new Date(2024, 10),
       location: 'Mexico City, Mexico',
       tags: ['Architecture'],
       filmType: 'Kodak Gold 800 (Disposable)',
     },
     {
       fileName: 'stay_away',
-      date: 'November 2024',
+      date: new Date(2024, 10),
       location: 'Mexico City, Mexico',
       tags: ['Graffiti'],
       filmType: 'Kodak Gold 800 (Disposable)',
     },
     {
       fileName: 'cloud_carpet',
-      date: 'November 2024',
+      date: new Date(2024, 10),
       location: 'Somewhere over Greenland',
       tags: ['Misc'],
       filmType: 'Kodak Gold 400',
     },
     {
       fileName: 'sandy_dragon',
-      date: 'November 2024',
+      date: new Date(2024, 10),
       location: 'Barcelona, Spain',
       tags: ['Misc'],
       filmType: 'Kodak Gold 200',
     },
     {
       fileName: 'misery_loves_company',
-      date: 'November 2024',
+      date: new Date(2024, 10),
       location: 'Barcelona, Spain',
       tags: ['Graffiti'],
       filmType: 'Kodak Gold 400',
     },
     {
       fileName: 'cozy_spanish_room',
-      date: 'November 2024',
+      date: new Date(2024, 10),
       location: 'Barcelona, Spain',
       tags: ['Misc'],
       filmType: 'Kodak Gold 400',
     },
     {
       fileName: 'botanical_lunch',
-      date: 'November 2024',
+      date: new Date(2024, 10),
       location: 'Barcelona, Spain',
       tags: ['Nature / Wildlife', 'Architecture'],
       filmType: 'Kodak Gold 200',
     },
     {
       fileName: '300_pound_jacket',
-      date: 'November 2024',
+      date: new Date(2024, 10),
       location: 'London, England',
       tags: ['Misc'],
       filmType: 'Fuji Film 400',
     },
     {
       fileName: 'boarding_school',
-      date: 'December 2024',
+      date: new Date(2024, 11),
       location: 'Phoenix, AZ USA',
       tags: ['Architecture'],
       filmType: 'Kodak Gold 400',
     },
   ] as const satisfies {
     fileName: string;
-    date: string;
+    date: Date;
     location: string;
     tags: PhotoCategory['name'][];
     filmType:
@@ -200,7 +200,12 @@
             </div>
             <div class="flex items-center text-sm text-gray-600">
               <CalendarIcon class="mr-2 size-4 text-gray-500" />
-              <span>{photo.date}</span>
+              <span>
+                {photo.date.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                })}
+              </span>
             </div>
             <div class="flex items-center text-sm text-gray-600">
               <FilmIcon class="mr-2 size-4 text-gray-500" />
