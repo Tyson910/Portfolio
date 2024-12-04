@@ -124,7 +124,7 @@
       filmType: 'Fuji Film 400',
     },
     {
-      fileName: 'boarding_school',
+      fileName: 'phoenix_indian_school',
       date: new Date(2024, 11),
       location: 'Phoenix, AZ USA',
       tags: ['Architecture'],
