@@ -197,7 +197,7 @@
     <div
       class="bg-white shadow-md rounded-lg h-max overflow-hidden transition hover:shadow-xl px-5 pt-6"
     >
-      {#await import(`../assets/images/film/${photo.fileName}.jpg`) then { default: { src } }}
+      {#await import(`../assets/images/film/${photo.fileName}.jpg`) as Promise<typeof import('*.jpg')> then { default: { src, width, height } }}
         <img
           {src}
           alt={photoTitle}
