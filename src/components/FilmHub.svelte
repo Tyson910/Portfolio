@@ -153,16 +153,6 @@
   });
 </script>
 
-<div class="min-h-screen bg-gray-50 p-6">
-  <header class="max-w-6xl mx-auto mb-8">
-    <h1 class="text-4xl font-bold text-gray-800 mb-4">
-      Film Photography Journal
-    </h1>
-    <p class="text-gray-600 max-w-2xl">
-      Capturing moments on film, one frame at a time. Exploring the world
-      through my lens and sharing stories beyond pixels.
-    </p>
-  </header>
 <!--
   <div class="max-w-6xl mx-auto mb-8">
     <ul class="flex space-x-4">
@@ -199,48 +189,47 @@
   </div>
 -->
 
-  <main
-    class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-  >
-    {#each filteredPhotos as photo (photo.fileName)}
-      {@const photoTitle = deSlugifyStr(photo.fileName)}
-      <div
-        class="bg-white shadow-md rounded-lg h-max overflow-hidden transition hover:shadow-xl px-5 pt-6"
-      >
-        {#await import(`../assets/images/film/${photo.fileName}.jpg`) then { default: { src } }}
-          <img
-            {src}
-            alt={photoTitle}
-            class="rounded-sm bg-gray-200 object-cover group-hover:opacity-75"
-          />
-          <!-- TODO: add 404 image here  -->
-        {/await}
+<main
+  class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+>
+  {#each filteredPhotos as photo (photo.fileName)}
+    {@const photoTitle = deSlugifyStr(photo.fileName)}
+    <div
+      class="bg-white shadow-md rounded-lg h-max overflow-hidden transition hover:shadow-xl px-5 pt-6"
+    >
+      {#await import(`../assets/images/film/${photo.fileName}.jpg`) then { default: { src } }}
+        <img
+          {src}
+          alt={photoTitle}
+          class="rounded-sm bg-gray-200 object-cover group-hover:opacity-75"
+        />
+        <!-- TODO: add 404 image here  -->
+      {/await}
 
-        <div class="p-4">
-          <h2 class="text-xl font-semibold text-gray-800">
-            {photoTitle}
-          </h2>
-          <div class="mt-2 space-y-1">
-            <div class="flex items-center text-sm text-gray-600">
-              <MapPinIcon class="mr-2 size-4 text-gray-500" />
-              <span>{photo.location}</span>
-            </div>
-            <div class="flex items-center text-sm text-gray-600">
-              <CalendarIcon class="mr-2 size-4 text-gray-500" />
-              <span>
-                {photo.date.toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                })}
-              </span>
-            </div>
-            <div class="flex items-center text-sm text-gray-600">
-              <FilmIcon class="mr-2 size-4 text-gray-500" />
-              <span>{photo.filmType}</span>
-            </div>
+      <div class="p-4">
+        <h2 class="text-xl font-semibold text-gray-800">
+          {photoTitle}
+        </h2>
+        <div class="mt-2 space-y-1">
+          <div class="flex items-center text-sm text-gray-600">
+            <MapPinIcon class="mr-2 size-4 text-gray-500" />
+            <span>{photo.location}</span>
+          </div>
+          <div class="flex items-center text-sm text-gray-600">
+            <CalendarIcon class="mr-2 size-4 text-gray-500" />
+            <span>
+              {photo.date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+              })}
+            </span>
+          </div>
+          <div class="flex items-center text-sm text-gray-600">
+            <FilmIcon class="mr-2 size-4 text-gray-500" />
+            <span>{photo.filmType}</span>
           </div>
         </div>
       </div>
-    {/each}
-  </main>
-</div>
+    </div>
+  {/each}
+</main>
