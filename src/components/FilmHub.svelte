@@ -69,13 +69,6 @@
       filmType: 'Kodak UltraMax 400',
     },
     {
-      fileName: 'sandy_dragon',
-      date: new Date(2024, 10),
-      location: 'Barcelona, Spain',
-      tags: ['Art'],
-      filmType: 'Kodak Gold 200',
-    },
-    {
       fileName: 'misery_loves_company',
       date: new Date(2024, 10),
       location: 'Barcelona, Spain',
@@ -83,11 +76,11 @@
       filmType: 'Kodak UltraMax 400',
     },
     {
-      fileName: 'bouba',
+      fileName: 'carousel',
       date: new Date(2024, 10),
       location: 'Barcelona, Spain',
-      tags: ['Art'],
-      filmType: 'Kodak Gold 200',
+      tags: ['Misc'],
+      filmType: 'Kodak UltraMax 400',
     },
     {
       fileName: 'cozy_spanish_room',
@@ -108,6 +101,27 @@
       date: new Date(2024, 10),
       location: 'Barcelona, Spain',
       tags: ['Nature / Wildlife', 'Architecture'],
+      filmType: 'Kodak UltraMax 400',
+    },
+    {
+      fileName: 'bouba',
+      date: new Date(2024, 10),
+      location: 'Barcelona, Spain',
+      tags: ['Art'],
+      filmType: 'Kodak Gold 200',
+    },
+    {
+      fileName: 'hoop_sesh',
+      date: new Date(2024, 10),
+      location: 'Barcelona, Spain',
+      tags: ['Graffiti', 'Misc'],
+      filmType: 'Kodak Gold 200',
+    },
+    {
+      fileName: 'sandy_dragon',
+      date: new Date(2024, 10),
+      location: 'Barcelona, Spain',
+      tags: ['Art'],
       filmType: 'Kodak Gold 200',
     },
     {
@@ -118,10 +132,24 @@
       filmType: 'Fuji Film 400',
     },
     {
+      fileName: 'st_pauls_cathedral',
+      date: new Date(2024, 10),
+      location: 'London, England',
+      tags: ['Architecture'],
+      filmType: 'Fuji Film 400',
+    },
+    {
       fileName: '300_pound_jacket',
       date: new Date(2024, 10),
       location: 'London, England',
       tags: ['Misc'],
+      filmType: 'Fuji Film 400',
+    },
+    {
+      fileName: 'neon_(NE)',
+      date: new Date(2024, 10),
+      location: 'London, England',
+      tags: ['Art'],
       filmType: 'Fuji Film 400',
     },
     {
