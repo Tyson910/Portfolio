@@ -227,7 +227,7 @@
       <div
         class={classNames(
           'bg-white shadow-md rounded-lg overflow-hidden transition hover:shadow-xl px-5 pt-6',
-          height > width && 'row-span-2 h-max my-auto'
+          height > width && 'row-span-2 h-max my-auto,'
         )}
       >
         <img
