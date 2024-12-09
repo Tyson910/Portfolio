@@ -1,5 +1,6 @@
 // 1. Import utilities from `astro:content`
 import { z, defineCollection } from 'astro:content';
+import { file } from 'astro/loaders';
 
 // 2. Define your collection(s)
 const techBlogCollection = defineCollection({
@@ -31,7 +32,36 @@ const techSnippetsCollection = defineCollection({
     lastUpdated: z.string().date(),
     tags: z.string().array(),
     draft: z.boolean(),
-    isFeaturedPost: z.boolean()
+    isFeaturedPost: z.boolean(),
+  }),
+});
+
+const filmCollection = defineCollection({
+  // type: 'data',
+  loader: file('src/content/photos.json'),
+  schema: z.object({
+    fileName: z.string(),
+    // title: z.string().datetime(),
+    date: z.string().datetime(),
+    location: z.string(),
+    tags: z
+      .enum([
+        'Landscape',
+        'Architecture',
+        'Art',
+        'Graffiti',
+        'Nature / Wildlife',
+        'Misc',
+      ])
+      .array(),
+    filmType: z
+      .enum([
+        'Kodak Gold 200',
+        'Kodak UltraMax 400',
+        'Kodak Gold 800 (Disposable)',
+        'Fuji Film 400',
+      ]),
+    // draft: z.boolean(),
   }),
 });
 
@@ -57,4 +87,5 @@ const techSnippetsCollection = defineCollection({
 export const collections = {
   // "tech": techBlogCollection,
   snippets: techSnippetsCollection,
+  photos: filmCollection,
 };

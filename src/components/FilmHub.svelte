@@ -1,5 +1,4 @@
 <script lang="ts">
-  import ImageIcon from '~icons/ri/image-line';
   import RoadMapLineIcon from '~icons/ri/road-map-line';
   import MapPinIcon from '~icons/ri/map-pin-2-line';
   import CalendarIcon from '~icons/ri/calendar-line';
@@ -10,8 +9,11 @@
   import LeafIcon from '~icons/lucide/leaf';
   import ArtHangingIcon from '~icons/streamline/travel-places-painting-painting-entertainment-display-museum-event-hobby-exhibit';
 
+  import type { CollectionEntry } from 'astro:content';
   import classNames from 'classnames';
   import { deSlugifyStr } from '@utils/helpers';
+
+  type PhotoCollectionEntry = CollectionEntry<'photos'>;
 
   // Updated photo data with more details
   const photoCategories = [
@@ -40,136 +42,13 @@
       icon: PuzzleIcon,
     },
   ] as const satisfies {
-    name: string;
+    name: PhotoCollectionEntry['data']['tags'][number];
     icon: typeof FilmIcon;
   }[];
 
   type PhotoCategory = (typeof photoCategories)[number];
 
-  const photos = [
-    {
-      fileName: 'butterfly_building',
-      date: new Date(2024, 10),
-      location: 'Mexico City, Mexico',
-      tags: ['Architecture'],
-      filmType: 'Kodak Gold 800 (Disposable)',
-    },
-    {
-      fileName: 'stay_away',
-      date: new Date(2024, 10),
-      location: 'Mexico City, Mexico',
-      tags: ['Graffiti'],
-      filmType: 'Kodak Gold 800 (Disposable)',
-    },
-    {
-      fileName: 'cloud_carpet',
-      date: new Date(2024, 10),
-      location: 'Somewhere over Greenland',
-      tags: ['Misc'],
-      filmType: 'Kodak UltraMax 400',
-    },
-    {
-      fileName: 'misery_loves_company',
-      date: new Date(2024, 10),
-      location: 'Barcelona, Spain',
-      tags: ['Graffiti'],
-      filmType: 'Kodak UltraMax 400',
-    },
-    {
-      fileName: 'carousel',
-      date: new Date(2024, 10),
-      location: 'Barcelona, Spain',
-      tags: ['Misc'],
-      filmType: 'Kodak UltraMax 400',
-    },
-    {
-      fileName: 'cozy_spanish_room',
-      date: new Date(2024, 10),
-      location: 'Barcelona, Spain',
-      tags: ['Misc'],
-      filmType: 'Kodak UltraMax 400',
-    },
-    {
-      fileName: 'meal_fit_for_a_king',
-      date: new Date(2024, 10),
-      location: 'Barcelona, Spain',
-      tags: ['Misc'],
-      filmType: 'Kodak UltraMax 400',
-    },
-    {
-      fileName: 'botanical_lunch',
-      date: new Date(2024, 10),
-      location: 'Barcelona, Spain',
-      tags: ['Nature / Wildlife', 'Architecture'],
-      filmType: 'Kodak UltraMax 400',
-    },
-    {
-      fileName: 'bouba',
-      date: new Date(2024, 10),
-      location: 'Barcelona, Spain',
-      tags: ['Art'],
-      filmType: 'Kodak Gold 200',
-    },
-    {
-      fileName: 'hoop_sesh',
-      date: new Date(2024, 10),
-      location: 'Barcelona, Spain',
-      tags: ['Graffiti', 'Misc'],
-      filmType: 'Kodak Gold 200',
-    },
-    {
-      fileName: 'sandy_dragon',
-      date: new Date(2024, 10),
-      location: 'Barcelona, Spain',
-      tags: ['Art'],
-      filmType: 'Kodak Gold 200',
-    },
-    {
-      fileName: 'thats_a_telly_booth_innit',
-      date: new Date(2024, 10),
-      location: 'London, England',
-      tags: ['Misc'],
-      filmType: 'Fuji Film 400',
-    },
-    {
-      fileName: 'st_pauls_cathedral',
-      date: new Date(2024, 10),
-      location: 'London, England',
-      tags: ['Architecture'],
-      filmType: 'Fuji Film 400',
-    },
-    {
-      fileName: '300_pound_jacket',
-      date: new Date(2024, 10),
-      location: 'London, England',
-      tags: ['Misc'],
-      filmType: 'Fuji Film 400',
-    },
-    {
-      fileName: 'neon_(NE)',
-      date: new Date(2024, 10),
-      location: 'London, England',
-      tags: ['Art'],
-      filmType: 'Fuji Film 400',
-    },
-    {
-      fileName: 'phoenix_indian_school',
-      date: new Date(2024, 11),
-      location: 'Phoenix, AZ USA',
-      tags: ['Architecture'],
-      filmType: 'Kodak UltraMax 400',
-    },
-  ] as const satisfies {
-    fileName: string;
-    date: Date;
-    location: string;
-    tags: PhotoCategory['name'][];
-    filmType:
-      | 'Kodak Gold 200'
-      | 'Kodak UltraMax 400'
-      | 'Kodak Gold 800 (Disposable)'
-      | 'Fuji Film 400';
-  }[];
+  let { photos }: { photos: CollectionEntry<'photos'>[] } = $props();
 
   let selectedCategory = $state<'all' | PhotoCategory['name']>('all');
 
@@ -177,8 +56,7 @@
     if (selectedCategory == 'all') {
       return photos;
     }
-    // @ts-expect-error idk man
-    return photos.filter((photo) => photo.tags.includes(selectedCategory));
+    return photos.filter((photo) => photo.data.tags.includes(selectedCategory)) || [];
   });
 </script>
 
@@ -221,7 +99,7 @@
 <main
   class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row-dense gap-6"
 >
-  {#each filteredPhotos as photo (photo.fileName)}
+  {#each filteredPhotos as { data: photo } (photo.fileName)}
     {#await import(`../assets/images/film/${photo.fileName}.jpg`) as Promise<typeof import('*.jpg')> then { default: { src, width, height } }}
       {@const photoTitle = deSlugifyStr(photo.fileName)}
       <div
@@ -251,7 +129,7 @@
             <div class="flex items-center text-sm text-gray-600">
               <CalendarIcon class="mr-2 size-4 text-gray-500" />
               <span>
-                {photo.date.toLocaleDateString('en-US', {
+                {new Date(photo.date).toLocaleDateString('en-US', {
                   year: 'numeric',
                   month: 'long',
                 })}

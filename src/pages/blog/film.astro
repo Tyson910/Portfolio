@@ -1,13 +1,16 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import FilmHub from '@components/FilmHub.svelte';
+import { getCollection } from 'astro:content';
+
+const photos = await getCollection('photos');
 ---
 
 <BaseLayout
   meta_description="This is a hub for all film photography related content I've created"
   meta_title={'Welcome to my Film Page'}
 >
-  <div class="pb-12 px-6 pt-6 lg:p-0">
+  <div class="pb-12 px-6 pt-6 lg:py-10">
     <header class="max-w-6xl mx-auto mb-8">
       <h1 class="text-4xl font-bold text-zinc-800 dark:text-zinc-100 mb-4">
         Film Photography Journal
@@ -17,6 +20,6 @@ import FilmHub from '@components/FilmHub.svelte';
         through my lens and sharing stories beyond pixels.
       </p>
     </header>
-    <FilmHub client:load />
+    <FilmHub photos={photos} client:load />
   </div>
 </BaseLayout>
