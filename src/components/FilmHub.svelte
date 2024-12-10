@@ -12,6 +12,7 @@
   import type { CollectionEntry } from 'astro:content';
   import classNames from 'classnames';
   import { deSlugifyStr } from '@utils/helpers';
+  import Detail from './film/Detail.svelte';
 
   type PhotoCollectionEntry = CollectionEntry<'photos'>;
 
@@ -56,7 +57,11 @@
     if (selectedCategory == 'all') {
       return photos;
     }
-    return photos.filter((photo) => photo.data.tags.includes(selectedCategory)) || [];
+    return (
+      photos.filter((photo) =>
+        photo.data.tags.includes(selectedCategory)
+      ) || []
+    );
   });
 </script>
 
@@ -122,23 +127,18 @@
             {photoTitle}
           </h2>
           <div class="mt-2 space-y-1">
-            <div class="flex items-center text-sm text-gray-600">
-              <MapPinIcon class="mr-2 size-4 text-gray-500" />
-              <span>{photo.location}</span>
-            </div>
-            <div class="flex items-center text-sm text-gray-600">
-              <CalendarIcon class="mr-2 size-4 text-gray-500" />
-              <span>
-                {new Date(photo.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                })}
-              </span>
-            </div>
-            <div class="flex items-center text-sm text-gray-600">
-              <FilmIcon class="mr-2 size-4 text-gray-500" />
-              <span>{photo.filmType}</span>
-            </div>
+            <Detail Icon={MapPinIcon}>
+              {photo.location}
+            </Detail>
+            <Detail Icon={CalendarIcon}>
+              {new Date(photo.date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+              })}
+            </Detail>
+            <Detail Icon={FilmIcon}>
+              {photo.filmType}
+            </Detail>
           </div>
         </div>
       </div>
