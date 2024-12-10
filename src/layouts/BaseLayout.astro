@@ -4,12 +4,13 @@ export interface Props {
   meta_title: string;
   /** The meta description */
   meta_description: string;
+  showNavBar?: boolean;
 }
 
 import '@styles/global.css';
 import NavBar from '@components/NavBar.svelte';
-import Footer  from '@components/Footer.svelte';
-const { meta_title, meta_description } = Astro.props;
+import Footer from '@components/Footer.svelte';
+const { meta_title, meta_description, showNavBar = true } = Astro.props;
 ---
 
 <html lang="en" class="scroll-smooth h-full">
@@ -26,8 +27,10 @@ const { meta_title, meta_description } = Astro.props;
     <meta itemprop="description" content={meta_description} />
   </head>
 
-  <body class="bg-zinc-50 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 min-h-full flex flex-col">
-    <NavBar client:idle />
+  <body
+    class="bg-zinc-50 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 min-h-full flex flex-col"
+  >
+    {showNavBar ? <NavBar client:idle /> : null}
     <main class="flex-grow">
       <slot />
       <!-- children will go here -->
