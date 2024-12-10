@@ -40,8 +40,6 @@ const filmCollection = defineCollection({
   // type: 'data',
   loader: file('src/content/photos.json'),
   schema: z.object({
-    fileName: z.string(),
-    // title: z.string().datetime(),
     date: z.string().datetime(),
     location: z.string(),
     tags: z
