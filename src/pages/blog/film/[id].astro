@@ -34,7 +34,7 @@ if (!photo)
 ---
 
 <BaseLayout
-  meta_description={photo.data.description || 'This is a photo!'}
+  meta_description={photo.data.description || `I took this picture in ${photo.data.location} using ${photo.data.filmType} film`}
   meta_title={deSlugifyStr(photo.id)}
   previewImgURL={`/src/assets/images/film/${photo.id}.jpg`}
   showNavBar={false}
