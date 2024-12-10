@@ -34,7 +34,7 @@ if (!photo)
 ---
 
 <BaseLayout
-  meta_description="This is a hub for all film photography related content I've created"
+  meta_description={photo.data.description || 'This is a photo!'}
   meta_title={deSlugifyStr(photo.id)}
   previewImgURL={`/src/assets/images/film/${photo.id}.jpg`}
   showNavBar={false}
