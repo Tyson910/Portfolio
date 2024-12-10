@@ -14,6 +14,13 @@
     "filmType": "Kodak Gold 800 (Disposable)"
   },
   {
+    "id": "untitled-1",
+    "date": "2024-11-24T07:00:00.000Z",
+    "location": "Barcelona, Spain",
+    "tags": ["Graffiti", "Architecture"],
+    "filmType": "Kodak UltraMax 400"
+  },
+  {
     "id": "cloud-carpet",
     "date": "2024-11-30T07:00:00.000Z",
     "location": "Somewhere over Greenland",
@@ -21,10 +28,24 @@
     "filmType": "Kodak UltraMax 400"
   },
   {
+    "id": "untitled-2",
+    "date": "2024-11-24T07:00:00.000Z",
+    "location": "Barcelona, Spain",
+    "tags": ["Architecture"],
+    "filmType": "Kodak UltraMax 400"
+  },
+  {
     "id": "misery-loves-company",
     "date": "2024-11-24T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Graffiti"],
+    "filmType": "Kodak UltraMax 400"
+  },
+  {
+    "id": "untitled-3",
+    "date": "2024-11-24T07:00:00.000Z",
+    "location": "Barcelona, Spain",
+    "tags": ["Architecture", "Nature / Wildlife"],
     "filmType": "Kodak UltraMax 400"
   },
   {
