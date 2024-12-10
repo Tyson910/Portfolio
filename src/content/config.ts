@@ -42,6 +42,7 @@ const filmCollection = defineCollection({
   schema: z.object({
     date: z.string().datetime(),
     location: z.string(),
+    description: z.string().optional(),
     tags: z
       .enum([
         'Landscape',
