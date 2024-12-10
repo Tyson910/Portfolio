@@ -117,3 +117,17 @@ export function deSlugifyStr(str: string) {
   });
   return deSlugifiedStr;
 }
+
+export function slugifyString(str: string) {
+  if (typeof str !== 'string') throw new TypeError(`Invalid value passed to slugifyString!: Expected string but received ${typeof str}`);
+  
+  return (
+    str
+      .trim()
+      .toLowerCase()
+      //Remove all characters except alphanumeric characters and spaces
+      .replace(/[^\w\s]/gi, '')
+      //replace all spaces with -
+      .replace(/[^a-z0-9]/gi, '-')
+  );
+}
