@@ -8,13 +8,13 @@
   import SprayCanIcon from '~icons/lucide/spray-can';
   import LeafIcon from '~icons/lucide/leaf';
   import ArtHangingIcon from '~icons/streamline/travel-places-painting-painting-entertainment-display-museum-event-hobby-exhibit';
-  import Share2Icon from '~icons/lucide/share-2';
   import Link2Icon from '~icons/lucide/link-2';
 
   import type { CollectionEntry } from 'astro:content';
   import classNames from 'classnames';
   import { deSlugifyStr } from '@utils/helpers';
   import Detail from './film/Detail.svelte';
+  import ShareButton from './film/ShareButton.svelte';
 
   type PhotoCollectionEntry = CollectionEntry<'photos'>;
 
@@ -106,7 +106,7 @@
 <main
   class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row-dense gap-6"
 >
-  {#each filteredPhotos as { data: photo, id } (id)}
+  {#each filteredPhotos as { data: photo, id, ...rest } (id)}
     {#await import(`../assets/images/film/${id}.jpg`) as Promise<typeof import('*.jpg')> then { default: { src, width, height } }}
       {@const photoTitle = deSlugifyStr(id)}
       <div
@@ -145,12 +145,10 @@
             <div
               class="w-full flex items-center justify-between whitespace-nowrap pt-3 rounded-lg gap-x-5 transition -20"
             >
-              <button
-                class="w-max flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition"
-              >
-                <Share2Icon class="mr-2 size-3.5 lg:size-5" />
-                Share
-              </button>
+              <ShareButton
+                photo={{ id, data: photo }}
+                className="w-max flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition"
+              />
               <a
                 href={`/blog/film/${id}`}
                 class="w-max flex items-center justify-center bg-gray-50 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-200 transition"
