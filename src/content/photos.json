@@ -1,6 +1,7 @@
 [
   {
     "id": "butterfly-building",
+    "src": "../assets/images/film/butterfly-building.jpg",
     "date": "2024-11-05T07:00:00.000Z",
     "location": "Mexico City, Mexico",
     "tags": ["Architecture"],
@@ -8,6 +9,7 @@
   },
   {
     "id": "stay-away",
+    "src": "../assets/images/film/stay-away.jpg",
     "date": "2024-11-05T07:00:00.000Z",
     "location": "Mexico City, Mexico",
     "tags": ["Graffiti"],
@@ -15,6 +17,7 @@
   },
   {
     "id": "untitled-1",
+    "src": "../assets/images/film/untitled-1.jpg",
     "date": "2024-11-24T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Graffiti", "Architecture"],
@@ -22,6 +25,7 @@
   },
   {
     "id": "cloud-carpet",
+    "src": "../assets/images/film/cloud-carpet.jpg",
     "date": "2024-11-30T07:00:00.000Z",
     "location": "Somewhere over Greenland",
     "tags": ["Misc"],
@@ -29,6 +33,7 @@
   },
   {
     "id": "untitled-2",
+    "src": "../assets/images/film/untitled-2.jpg",
     "date": "2024-11-24T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Architecture"],
@@ -36,6 +41,7 @@
   },
   {
     "id": "misery-loves-company",
+    "src": "../assets/images/film/misery-loves-company.jpg",
     "date": "2024-11-24T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Graffiti"],
@@ -43,6 +49,7 @@
   },
   {
     "id": "untitled-3",
+    "src": "../assets/images/film/untitled-3.jpg",
     "date": "2024-11-24T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Architecture", "Nature / Wildlife"],
@@ -50,6 +57,7 @@
   },
   {
     "id": "untitled-4",
+    "src": "../assets/images/film/untitled-4.jpg",
     "date": "2024-11-24T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Architecture"],
@@ -57,6 +65,7 @@
   },
   {
     "id": "untitled-5",
+    "src": "../assets/images/film/untitled-5.jpg",
     "date": "2024-11-24T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Architecture"],
@@ -64,6 +73,7 @@
   },
   {
     "id": "untitled-6",
+    "src": "../assets/images/film/untitled-6.jpg",
     "date": "2024-11-24T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Architecture"],
@@ -71,6 +81,7 @@
   },
   {
     "id": "carousel",
+    "src": "../assets/images/film/carousel.jpg",
     "date": "2024-11-25T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Misc"],
@@ -78,6 +89,7 @@
   },
   {
     "id": "cozy-spanish-room",
+    "src": "../assets/images/film/cozy-spanish-room.jpg",
     "date": "2024-11-25T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Misc"],
@@ -85,6 +97,7 @@
   },
   {
     "id": "meal-fit-for-a-king",
+    "src": "../assets/images/film/meal-fit-for-a-king.jpg",
     "date": "2024-11-25T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Misc"],
@@ -92,6 +105,7 @@
   },
   {
     "id": "botanical-lunch",
+    "src": "../assets/images/film/botanical-lunch.jpg",
     "date": "2024-11-24T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Nature / Wildlife", "Architecture"],
@@ -99,6 +113,7 @@
   },
   {
     "id": "untitled-7",
+    "src": "../assets/images/film/untitled-7.jpg",
     "date": "2024-11-25T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Misc"],
@@ -106,6 +121,7 @@
   },
   {
     "id": "untitled-8",
+    "src": "../assets/images/film/untitled-8.jpg",
     "date": "2024-11-25T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Architecture", "Graffiti"],
@@ -113,6 +129,7 @@
   },
   {
     "id": "bouba",
+    "src": "../assets/images/film/bouba.jpg",
     "date": "2024-11-25T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Art"],
@@ -120,6 +137,7 @@
   },
   {
     "id": "hoop-sesh",
+    "src": "../assets/images/film/hoop-sesh.jpg",
     "date": "2024-11-25T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Graffiti", "Misc"],
@@ -127,6 +145,7 @@
   },
   {
     "id": "sandy-dragon",
+    "src": "../assets/images/film/sandy-dragon.jpg",
     "date": "2024-11-25T07:00:00.000Z",
     "location": "Barcelona, Spain",
     "tags": ["Art"],
@@ -134,6 +153,7 @@
   },
   {
     "id": "thats-a-telly-booth-innit",
+    "src": "../assets/images/film/thats-a-telly-booth-innit.jpg",
     "date": "2024-11-28T07:00:00.000Z",
     "location": "London, England",
     "tags": ["Misc"],
@@ -141,6 +161,7 @@
   },
   {
     "id": "st-pauls-cathedral",
+    "src": "../assets/images/film/st-pauls-cathedral.jpg",
     "date": "2024-11-28T07:00:00.000Z",
     "location": "London, England",
     "tags": ["Architecture"],
@@ -148,6 +169,7 @@
   },
   {
     "id": "river-thames",
+    "src": "../assets/images/film/river-thames.jpg",
     "date": "2024-11-28T07:00:00.000Z",
     "location": "London, England",
     "tags": ["Architecture", "Nature / Wildlife"],
@@ -155,6 +177,7 @@
   },
   {
     "id": "untitled-9",
+    "src": "../assets/images/film/untitled-9.jpg",
     "date": "2024-11-28T07:00:00.000Z",
     "location": "London, England",
     "tags": ["Nature / Wildlife"],
@@ -162,6 +185,7 @@
   },
   {
     "id": "300-pound-jacket",
+    "src": "../assets/images/film/300-pound-jacket.jpg",
     "date": "2024-11-29T07:00:00.000Z",
     "location": "London, England",
     "tags": ["Misc"],
@@ -169,6 +193,7 @@
   },
   {
     "id": "untitled-10",
+    "src": "../assets/images/film/untitled-10.jpg",
     "date": "2024-11-29T07:00:00.000Z",
     "location": "London, England",
     "tags": ["Graffiti","Architecture", "Misc"],
@@ -176,6 +201,7 @@
   },
   {
     "id": "untitled-11",
+    "src": "../assets/images/film/untitled-11.jpg",
     "date": "2024-11-29T07:00:00.000Z",
     "location": "London, England",
     "tags": ["Graffiti"],
@@ -183,6 +209,7 @@
   },
   {
     "id": "untitled-12",
+    "src": "../assets/images/film/untitled-12.jpg",
     "date": "2024-11-29T07:00:00.000Z",
     "location": "London, England",
     "tags": ["Art"],
@@ -190,6 +217,7 @@
   },
   {
     "id": "neon",
+    "src": "../assets/images/film/neon.jpg",
     "date": "2024-11-29T07:00:00.000Z",
     "location": "London, England",
     "tags": ["Art"],
@@ -197,6 +225,7 @@
   },
   {
     "id": "untitled-13",
+    "src": "../assets/images/film/untitled-13.jpg",
     "date": "2024-11-29T07:00:00.000Z",
     "location": "London, England",
     "tags": ["Art"],
@@ -204,6 +233,7 @@
   },
   {
     "id": "phoenix-indian-school",
+    "src": "../assets/images/film/phoenix-indian-school.jpg",
     "date": "2024-12-01T07:00:00.000Z",
     "location": "Phoenix, AZ USA",
     "tags": ["Architecture"],
@@ -211,6 +241,7 @@
   },
   {
     "id": "untitled-14",
+    "src": "../assets/images/film/untitled-14.jpg",
     "date": "2024-12-04T07:00:00.000Z",
     "location": "Columbia, Missouri",
     "description": "This was taken on a chilly morning on the MKT Trail. Not sure what MKT stands for.",
@@ -219,6 +250,7 @@
   },
   {
     "id": "columns",
+    "src": "../assets/images/film/columns.jpg",
     "date": "2024-12-04T07:00:00.000Z",
     "location": "Columbia, Missouri",
     "tags": ["Architecture"],
@@ -226,6 +258,7 @@
   },
   {
     "id": "creep-x-radiohead",
+    "src": "../assets/images/film/creep-x-radiohead.jpg",
     "date": "2024-12-05T07:00:00.000Z",
     "location": "Columbia, Missouri",
     "description": "This tree caught my eye on a walk during a freezing morning (wind chill was about 4 degrees) just outside of Stephens Lake. I don't why but the tree reminds of the song Creep by Radiohead",
@@ -234,6 +267,7 @@
   },
   {
     "id": "alley-a",
+    "src": "../assets/images/film/alley-a.jpg",
     "date": "2024-12-05T07:00:00.000Z",
     "location": "Columbia, Missouri",
     "tags": ["Architecture", "Misc"],
@@ -241,6 +275,7 @@
   },
   {
     "id": "jurassic-park",
+    "src": "../assets/images/film/jurassic-park.jpg",
     "date": "2024-12-05T07:00:00.000Z",
     "location": "Cafe Berlin (Columbia, Missouri)",
     "tags": ["Misc"],
