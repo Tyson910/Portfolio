@@ -8,6 +8,8 @@
   import SprayCanIcon from '~icons/lucide/spray-can';
   import LeafIcon from '~icons/lucide/leaf';
   import ArtHangingIcon from '~icons/streamline/travel-places-painting-painting-entertainment-display-museum-event-hobby-exhibit';
+  import Share2Icon from '~icons/lucide/share-2';
+  import Link2Icon from '~icons/lucide/link-2';
 
   import type { CollectionEntry } from 'astro:content';
   import classNames from 'classnames';
@@ -109,7 +111,7 @@
       {@const photoTitle = deSlugifyStr(id)}
       <div
         class={classNames(
-          'bg-white shadow-md rounded-lg overflow-hidden transition hover:shadow-xl px-5 pt-6',
+          'bg-white dark:bg-slate-600 shadow-md rounded-lg overflow-hidden transition hover:shadow-xl px-5 pt-6',
           height > width && 'row-span-2 h-max my-auto,'
         )}
       >
@@ -121,9 +123,10 @@
           )}
         />
         <!-- TODO: add 404 image here  -->
-
         <div class="p-4">
-          <h2 class="text-xl font-semibold text-gray-800">
+          <h2
+            class="text-xl font-semibold text-gray-800 dark:text-gray-50"
+          >
             {photoTitle}
           </h2>
           <div class="mt-2 space-y-1">
@@ -139,6 +142,23 @@
             <Detail Icon={FilmIcon}>
               {photo.filmType}
             </Detail>
+            <div
+              class="w-full flex items-center justify-between whitespace-nowrap pt-3 rounded-lg gap-x-5 transition -20"
+            >
+              <button
+                class="w-max flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition"
+              >
+                <Share2Icon class="mr-2 size-3.5 lg:size-5" />
+                Share
+              </button>
+              <a
+                href={`/blog/film/${id}`}
+                class="w-max flex items-center justify-center bg-gray-50 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-200 transition"
+              >
+                <Link2Icon class="mr-2 size-3.5 lg:size-5" />
+                View Details
+              </a>
+            </div>
           </div>
         </div>
       </div>
