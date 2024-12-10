@@ -1,0 +1,112 @@
+---
+import MapPinIcon from '~icons/ri/map-pin-2-line';
+import CalendarIcon from '~icons/ri/calendar-line';
+import FilmIcon from '~icons/ri/film-line';
+import ArrowLeftIcon from '~icons/lucide/arrow-left';
+// import DownloadIcon from '~icons/lucide/download';
+
+import { deSlugifyStr, slugifyString } from '@utils/helpers';
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Detail from '@components/film/Detail.svelte';
+import ShareButton from '@components/film/ShareButton.svelte';
+
+export async function getStaticPaths() {
+  const allPhotos = await getCollection('photos');
+  return allPhotos.map((photo) => {
+    return {
+      params: {
+        id: slugifyString(deSlugifyStr(photo.id)),
+      },
+    };
+  });
+}
+
+const photo = await getEntry(
+  'photos',
+  slugifyString(deSlugifyStr(Astro.params.id))
+);
+
+if (!photo)
+  throw new Error(
+    `No photo with the id: ${slugifyString(deSlugifyStr(Astro.params.id))} found`
+  );
+---
+
+<BaseLayout
+  meta_description="This is a hub for all film photography related content I've created"
+  meta_title={deSlugifyStr(photo.id)}
+  showNavBar={false}
+>
+  <!-- Header with back and share buttons  -->
+  <div class="sticky top-0 z-10, bg-gray-50 shadow-sm">
+    <div
+      class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between"
+    >
+      <a
+        href="/blog/film"
+        class="flex items-center text-gray-700 hover:text-black"
+      >
+        <ArrowLeftIcon class="mr-2" />
+        Back to Gallery
+      </a>
+      <ShareButton client:load photo={photo} />
+    </div>
+  </div>
+
+  {/* Mobile-first layout */}
+  <div class="max-w-5xl mx-auto">
+    {/* Image Container - Optimized for mobile */}
+    <div
+      class="w-full bg-white flex items-center justify-center overflow-hidden mt-8"
+    >
+      <img
+        src={`/src/assets/images/film/${photo.id}.jpg`}
+        alt={deSlugifyStr(photo.id) || 'Untitled'}
+        class="w-full h-full object-contain"
+      />
+    </div>
+
+    {/* Content Container */}
+    <div class="px-4 py-6 space-y-6">
+      <h1 class="text-2xl font-bold">
+        {deSlugifyStr(photo.id) || 'Untitled'}
+      </h1>
+
+      {/* Details Grid */}
+      <div class="grid grid-cols-2 gap-4">
+        <Detail Icon={MapPinIcon}>
+          {photo.data.location || 'Unknown'}
+        </Detail>
+        <Detail Icon={CalendarIcon}>
+          {
+            new Date(photo.data.date).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+            })
+          }
+        </Detail>
+        <Detail Icon={FilmIcon}>
+          <span>{photo.data.filmType}</span>
+        </Detail>
+      </div>
+
+      {/* Photo Story */}
+      <div>
+        <p class="text-sm text-gray-700">
+          {photo.data.description}
+        </p>
+      </div>
+
+      {/* Action Buttons */}
+      <!-- <div class="space-y-4">
+          <button
+            class="w-full flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition"
+          >
+            <DownloadIcon class="mr-2" />
+            Download High-Res
+          </button>
+        </div> -->
+    </div>
+  </div>
+</BaseLayout>
