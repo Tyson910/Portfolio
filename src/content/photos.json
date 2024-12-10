@@ -98,6 +98,20 @@
     "filmType": "Kodak UltraMax 400"
   },
   {
+    "id": "untitled-7",
+    "date": "2024-11-25T07:00:00.000Z",
+    "location": "Barcelona, Spain",
+    "tags": ["Misc"],
+    "filmType": "Kodak Gold 200"
+  },
+  {
+    "id": "untitled-8",
+    "date": "2024-11-25T07:00:00.000Z",
+    "location": "Barcelona, Spain",
+    "tags": ["Architecture", "Graffiti"],
+    "filmType": "Kodak Gold 200"
+  },
+  {
     "id": "bouba",
     "date": "2024-11-25T07:00:00.000Z",
     "location": "Barcelona, Spain",
