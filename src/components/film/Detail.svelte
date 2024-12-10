@@ -11,7 +11,7 @@
   } = $props();
 </script>
 
-<div class="flex items-center text-sm text-gray-600">
+<div class="flex items-center text-sm text-gray-600 dark:text-gray-100">
   <Icon class="mr-2 size-4 text-gray-500" />
   <span>
     {@render children()}
