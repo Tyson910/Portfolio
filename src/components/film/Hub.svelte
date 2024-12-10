@@ -13,8 +13,8 @@
   import type { CollectionEntry } from 'astro:content';
   import classNames from 'classnames';
   import { deSlugifyStr } from '@utils/helpers';
-  import Detail from './film/Detail.svelte';
-  import ShareButton from './film/ShareButton.svelte';
+  import Detail from './Detail.svelte';
+  import ShareButton from './ShareButton.svelte';
 
   type PhotoCollectionEntry = CollectionEntry<'photos'>;
 
@@ -107,7 +107,7 @@
   class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row-dense gap-6"
 >
   {#each filteredPhotos as { data: photo, id, ...rest } (id)}
-    {#await import(`../assets/images/film/${id}.jpg`) as Promise<typeof import('*.jpg')> then { default: { src, width, height } }}
+    {#await import(`../../assets/images/film/${id}.jpg`) as Promise<typeof import('*.jpg')> then { default: { src, width, height } }}
       {@const photoTitle = deSlugifyStr(id)}
       <div
         class={classNames(
