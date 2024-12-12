@@ -15,23 +15,19 @@
     className?: string;
   } = $props();
 
-  function getShareDataFromImage(photoProp: typeof photo) {
-    return {
-      title: deSlugifyStr(photoProp.id) || 'Shared Photo',
-      text:
-        photoProp.data.description || 'Check out this amazing photograph!',
-      url: `${window.location.origin}/blog/film/${photo.id}`,
-    };
-  }
-
   async function shareImage() {
     try {
-      const bread = getShareDataFromImage(photo);
-      await navigator.share(bread);
+      const shareData = {
+        title: deSlugifyStr(photo.id) || 'Shared Photo',
+        text: 'Check out this amazing photograph!',
+        url: `${window.location.origin}/blog/film/${photo.id}`,
+      } as const satisfies ShareData;
+
+      await navigator.share(shareData);
       console.log('Photo shared successfully');
     } catch (error) {
       console.error('Error sharing photo:', error);
-      // alert('Web Share API not supported. Please copy the link manually.');
+      alert('Web Share API not supported. Please copy the link manually.');
     }
   }
 </script>
