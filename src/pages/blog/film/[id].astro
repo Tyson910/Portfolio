@@ -33,12 +33,11 @@ if (!photo)
   );
 ---
 
-<!-- @ts-expect-error collection typescript missing for images -->
 <BaseLayout
   meta_description={photo.data.description ||
     `I took this picture in ${photo.data.location} using ${photo.data.filmType} film`}
   meta_title={deSlugifyStr(photo.id)}
-  previewImgURL={photo.data?.src?.src}
+  previewImgURL={photo.data.src.src}
   showNavBar={false}
 >
   <!-- Header with back and share buttons  -->
@@ -63,9 +62,8 @@ if (!photo)
     <div
       class="w-full bg-white flex items-center justify-center overflow-hidden mt-8"
     >
-      <!-- @ts-expect-error collection typescript missing for images -->
       <img
-        src={photo.data?.src?.src}
+        src={photo.data.src.src}
         alt={deSlugifyStr(photo.id) || 'Untitled'}
         class="w-full h-full object-contain"
       />
