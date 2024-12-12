@@ -106,7 +106,7 @@
 <main
   class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row-dense gap-6"
 >
-  {#each filteredPhotos as { data: photo, id, ...rest } (id)}
+  {#each filteredPhotos as { data: photo, id } (id)}
     {#await import(`../../assets/images/film/${id}.jpg`) as Promise<typeof import('*.jpg')> then { default: { src, width, height } }}
       {@const photoTitle = deSlugifyStr(id)}
       <div
