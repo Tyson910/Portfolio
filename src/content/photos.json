@@ -280,5 +280,41 @@
     "location": "Cafe Berlin (Columbia, Missouri)",
     "tags": ["Misc"],
     "filmType": "Fuji Film 400"
+  },
+  {
+    "id": "christmas-in-detroit",
+    "src": "../assets/images/film/christmas-in-detroit.jpg",
+    "date": "2024-12-07T07:00:00.000Z",
+    "location": "Detroit, MI USA",
+    "description": "",
+    "tags": ["Misc"],
+    "filmType": "Kodak Gold 200"
+  },
+  {
+    "id": "sing-about-me-im-dying-of-thirst",
+    "src": "../assets/images/film/sing-about-me-im-dying-of-thirst.jpg",
+    "date": "2024-12-10T07:00:00.000Z",
+    "location": "Phoenix, AZ USA",
+    "description": "",
+    "tags": ["Nature / Wildlife"],
+    "filmType": "Kodak Gold 200"
+  },
+  {
+    "id": "a-grand-canal",
+    "src": "../assets/images/film/a-grand-canal.jpg",
+    "date": "2024-12-10T07:00:00.000Z",
+    "location": "Phoenix, AZ USA",
+    "description": "",
+    "tags": ["Misc"],
+    "filmType": "Kodak Gold 200"
+  },
+  {
+    "id": "untitled-15",
+    "src": "../assets/images/film/untitled-15.jpg",
+    "date": "2024-12-12T07:00:00.000Z",
+    "location": "Phoenix, AZ USA",
+    "description": "",
+    "tags": ["Graffiti"],
+    "filmType": "Kodak Gold 200"
   }
 ] 
