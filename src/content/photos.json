@@ -282,6 +282,15 @@
     "filmType": "Fuji Film 400"
   },
   {
+    "id": "detroit-fist",
+    "src": "../assets/images/film/detroit-fist.jpg",
+    "date": "2024-12-07T07:00:00.000Z",
+    "location": "Detroit, MI USA",
+    "description": "",
+    "tags": ["Art"],
+    "filmType": "Kodak Gold 200"
+  },
+  {
     "id": "christmas-in-detroit",
     "src": "../assets/images/film/christmas-in-detroit.jpg",
     "date": "2024-12-07T07:00:00.000Z",
