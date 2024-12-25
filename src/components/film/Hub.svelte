@@ -15,7 +15,6 @@
   import { deSlugifyStr } from '@utils/helpers';
   import Detail from './Detail.svelte';
   import ShareButton from './ShareButton.svelte';
-  import Pagination from './Pagination.svelte';
 
   type PhotoCollectionEntry = CollectionEntry<'photos'>;
 
@@ -55,8 +54,6 @@
   let { photos }: { photos: CollectionEntry<'photos'>[] } = $props();
 
   let selectedCategory = $state<'all' | PhotoCategory['name']>('all');
-  let currentPageNum = $state(1);
-  const photosPerPage = 6;
 
   const filteredPhotos = $derived.by(() => {
     if (selectedCategory == 'all') {
@@ -109,7 +106,7 @@
 <main
   class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row-dense gap-6"
 >
-  {#each filteredPhotos.slice((currentPageNum - 1) * photosPerPage, (currentPageNum - 1) * photosPerPage + photosPerPage) as { data: photo, id } (id)}
+  {#each filteredPhotos as { data: photo, id } (id)}
     {#await import(`../../assets/images/film/${id}.jpg`) as Promise<typeof import('*.jpg')> then { default: { src, width, height } }}
       {@const photoTitle = deSlugifyStr(id)}
       <div
@@ -167,8 +164,3 @@
     {/await}
   {/each}
 </main>
-<Pagination
-  totalPages={filteredPhotos.length / photosPerPage}
-  currentPage={currentPageNum}
-  onPageChange={(page) => (currentPageNum = page)}
-/>
