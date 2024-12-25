@@ -1,0 +1,42 @@
+---
+
+import { getCollection } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import FilmHub from '@components/film/Hub.svelte';
+import Pagination from '@components/film/Pagination.svelte';
+
+// @ts-expect-error idk why im missing pagination types
+export async function getStaticPaths({ paginate }) {
+  // Load your data with fetch(), getCollection(), etc.
+  const allPhotos = await getCollection('photos');
+  // Return a paginated collection of paths for all items
+  return paginate(allPhotos, { pageSize: 9 });
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout
+  meta_description="This is a hub for all film photography related content I've created"
+  meta_title={'Welcome to my Film Page'}
+>
+  <div class="pb-12 px-6 pt-6 lg:py-10">
+    <header class="max-w-6xl mx-auto mb-8">
+      <h1 class="text-4xl font-bold text-zinc-800 dark:text-zinc-100 mb-4">
+        Film Photography Journal
+      </h1>
+      <p class="text-gray-600 dark:text-zinc-200 max-w-2xl">
+        Capturing moments on film, one frame at a time. Exploring the world
+        through my lens and sharing stories beyond pixels.
+      </p>
+    </header>
+    <!-- @ts-expect-error idk why im missing pagination types -->
+    <FilmHub photos={page?.data} client:load />
+    <!-- @ts-expect-error idk why im missing pagination types -->
+    <Pagination
+      client:load
+      totalPages={page.lastPage}
+      currentPage={page.currentPage}
+    />
+  </div>
+</BaseLayout>
