@@ -10,6 +10,7 @@ import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Detail from '@components/film/Detail.svelte';
 import ShareButton from '@components/film/ShareButton.svelte';
+import BackToGalleryBtn from '@components/film/BackToGalleryBtn.svelte';
 
 export async function getStaticPaths() {
   const allPhotos = await getCollection('photos');
@@ -45,13 +46,7 @@ if (!photo)
     <div
       class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between"
     >
-      <a
-        href="/blog/film"
-        class="flex items-center text-gray-700 hover:text-black"
-      >
-        <ArrowLeftIcon class="mr-2" />
-        Back to Gallery
-      </a>
+      <BackToGalleryBtn client:load />
       <ShareButton client:load photo={photo} />
     </div>
   </div>
