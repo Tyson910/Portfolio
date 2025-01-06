@@ -9,6 +9,12 @@ import Icons from 'unplugin-icons/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  redirects: {
+    '/blog/film': {
+      status: 301,
+      destination: '/film'
+    }
+  },
   prefetch: true,
   integrations: [
     react(),
