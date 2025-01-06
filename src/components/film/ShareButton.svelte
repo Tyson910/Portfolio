@@ -20,7 +20,7 @@
       const shareData = {
         title: deSlugifyStr(photo.id) || 'Shared Photo',
         text: 'Check out this amazing photograph!',
-        url: `${window.location.origin}/blog/film/${photo.id}`,
+        url: `${window.location.origin}/film/post/${photo.id}`,
       } as const satisfies ShareData;
 
       await navigator.share(shareData);

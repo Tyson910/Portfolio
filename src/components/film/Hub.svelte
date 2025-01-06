@@ -151,7 +151,7 @@
                 className="w-max flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition"
               />
               <a
-                href={`/blog/film/${id}`}
+                href={`/film/post/${id}`}
                 class="w-max flex items-center justify-center bg-gray-50 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-200 transition"
               >
                 <Link2Icon class="mr-2 size-3.5 lg:size-5" />

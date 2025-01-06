@@ -20,7 +20,7 @@
     {#each { length: totalPages }, pageNumberIdx}
       {@const pageNumber = pageNumberIdx + 1}
       <a
-        href={`/blog/film/page/${pageNumber}`}
+        href={`/film/${pageNumber}`}
         class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors
       ${
         currentPage === pageNumber

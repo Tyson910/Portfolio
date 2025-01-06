@@ -12,7 +12,11 @@ export default defineConfig({
   redirects: {
     '/blog/film': {
       status: 301,
-      destination: '/film'
+      destination: '/film/1'
+    },
+    '/film': {
+      status: 301,
+      destination: '/film/1'
     }
   },
   prefetch: true,

@@ -13,7 +13,7 @@
 
 {#if isFirstVisit}
   <a
-    href="/blog/film/page/1"
+    href="/film/page/1"
     class="flex items-center text-gray-700 hover:text-black"
   >
     <ArrowLeftIcon class="mr-2" />
