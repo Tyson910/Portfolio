@@ -59,6 +59,7 @@ const filmCollection = defineCollection({
         'Kodak UltraMax 400',
         'Kodak Gold 800 (Disposable)',
         'Fuji Film 400',
+        "Kodak Professional T-Max 400 Black and White"
       ]),
     }),
 });
