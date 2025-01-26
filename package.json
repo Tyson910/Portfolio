@@ -1,62 +1,37 @@
 {
   "name": "portfolio",
   "description": "",
-  "version": "2.3.0",
+  "type": "module",
+  "version": "3.0.0",
   "packageManager": "pnpm@8.15.1+sha1.8adba2d20330c02d3856e18c4eb3819d1d3ca6aa",
   "private": true,
-  "homepage": "https://github.com/Tyson910/Portfolio#readme",
-  "directories": {
-    "doc": "docs"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tyson910/Portfolio.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Tyson910/Portfolio/issues"
   },
   "scripts": {
-    "dev": "astro dev --host",
-    "start": "astro dev",
-    "build": "npm run check && astro build",
-    "check": "tsc --noEmit",
-    "format": "npx prettier --write ./src/**/**",
-    "preview": "astro preview --host"
+    "build": "nuxt build",
+    "check": "nuxt typecheck",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.13",
-    "astro-expressive-code": "^0.38.3",
-    "classnames": "^2.2.6",
     "mdast-util-to-string": "^3.1.0",
+    "nuxt": "^3.15.3",
     "reading-time": "^1.5.0",
-    "remark-emoji": "^3.0.2"
+    "remark-emoji": "^3.0.2",
+    "vue": "latest",
+    "vue-router": "latest"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^4.0.3",
-    "@astrojs/react": "^4.1.2",
-    "@astrojs/svelte": "^7.0.3",
-    "@astrojs/tailwind": "^5.1.4",
-    "@iconify-json/lucide": "^1.2.17",
-    "@iconify-json/ri": "^1.2.3",
-    "@iconify-json/streamline": "^1.2.1",
-    "@svgr/core": "^8.1.0",
-    "@svgr/plugin-jsx": "^8.1.0",
-    "@tailwindcss/typography": "^0.5.7",
-    "@types/node": "^18.7.14",
-    "@types/react": "^18.0.18",
-    "astro": "^5.1.2",
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.3.11",
     "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sharp": "^0.33.5",
-    "svelte": "^5.16.0",
-    "tailwindcss": "^3.1.8",
-    "typescript": "^5.5.2",
-    "unplugin-icons": "^0.20.1"
+    "typescript": "^5.7.3",
+    "vue-tsc": "~2.1.6"
   }
 }
