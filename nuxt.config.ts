@@ -1,9 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   future: {
     compatibilityVersion: 4,
   },
-  modules: ['@nuxt/ui', '@nuxt/content'],
+  modules: [
+    "@nuxt/ui",
+    [
+      "@nuxt/content",
+      {
+        build: {
+          markdown: {
+            highlight: {
+              theme: 'night-owl'
+            },
+          },
+        },
+      },
+    ],
+  ],
 });
