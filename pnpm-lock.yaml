@@ -11,6 +11,12 @@ dependencies:
   '@nuxt/ui':
     specifier: 2.21.0
     version: 2.21.0(typescript@5.7.3)(vite@6.0.11)(vue@3.5.13)
+  '@vueuse/core':
+    specifier: ^12.5.0
+    version: 12.5.0(typescript@5.7.3)
+  '@vueuse/nuxt':
+    specifier: 12.5.0
+    version: 12.5.0(nuxt@3.15.3)(typescript@5.7.3)
   mdast-util-to-string:
     specifier: ^3.1.0
     version: 3.2.0
@@ -2055,7 +2061,7 @@ packages:
   /@types/hast@3.0.4:
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
     dependencies:
-      '@types/unist': 2.0.11
+      '@types/unist': 3.0.3
     dev: false
 
   /@types/http-proxy@1.17.15:
@@ -2073,7 +2079,7 @@ packages:
   /@types/mdast@4.0.4:
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
     dependencies:
-      '@types/unist': 2.0.11
+      '@types/unist': 3.0.3
     dev: false
 
   /@types/ms@2.1.0:
@@ -2504,6 +2510,24 @@ packages:
 
   /@vueuse/metadata@12.5.0:
     resolution: {integrity: sha512-Ui7Lo2a7AxrMAXRF+fAp9QsXuwTeeZ8fIB9wsLHqzq9MQk+2gMYE2IGJW48VMJ8ecvCB3z3GsGLKLbSasQ5Qlg==}
+    dev: false
+
+  /@vueuse/nuxt@12.5.0(nuxt@3.15.3)(typescript@5.7.3):
+    resolution: {integrity: sha512-daqSOlXv5ilAiT5GlRBtfqdkYjeMO9P6n50OpbEVm9hXmfXmZoXK3YMND8l5n5KcscD4pnD66IrYPqqOW5eH1Q==}
+    peerDependencies:
+      nuxt: ^3.0.0
+    dependencies:
+      '@nuxt/kit': 3.15.3(magicast@0.3.5)
+      '@vueuse/core': 12.5.0(typescript@5.7.3)
+      '@vueuse/metadata': 12.5.0
+      local-pkg: 1.0.0
+      nuxt: 3.15.3(@libsql/client@0.14.0)(typescript@5.7.3)(vite@6.0.11)(vue-tsc@2.1.10)
+      vue: 3.5.13(typescript@5.7.3)
+    transitivePeerDependencies:
+      - magicast
+      - rollup
+      - supports-color
+      - typescript
     dev: false
 
   /@vueuse/shared@12.5.0(typescript@5.7.3):
