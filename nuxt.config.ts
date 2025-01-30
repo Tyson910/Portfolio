@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/ui",
     "@vueuse/nuxt",
+    "@nuxt/image",
     [
       "@nuxt/content",
       {
