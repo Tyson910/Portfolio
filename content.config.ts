@@ -37,6 +37,7 @@ export default defineContentConfig({
         title: z.string(),
         location: z.string(),
         description: z.string().optional(),
+        isPotraitOrientation: z.boolean().default(false),
         tags: z
           .enum([
             "Landscape",

@@ -8,5 +8,6 @@
   "tags": [
     "Graffiti"
   ],
-  "filmType": "Kodak Gold 200"
+  "filmType": "Kodak Gold 200",
+  "isPotraitOrientation": false
 }

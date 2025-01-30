@@ -7,5 +7,6 @@
   "tags": [
     "Graffiti"
   ],
-  "filmType": "Kodak UltraMax 400"
+  "filmType": "Kodak UltraMax 400",
+  "isPotraitOrientation": false
 }

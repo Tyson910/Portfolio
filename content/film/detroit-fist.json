@@ -8,5 +8,6 @@
   "tags": [
     "Art"
   ],
-  "filmType": "Kodak Gold 200"
+  "filmType": "Kodak Gold 200",
+  "isPotraitOrientation": false
 }

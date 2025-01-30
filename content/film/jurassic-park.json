@@ -7,5 +7,6 @@
   "tags": [
     "Misc"
   ],
-  "filmType": "Fuji Film 400"
+  "filmType": "Fuji Film 400",
+  "isPotraitOrientation": false
 }
