@@ -16,5 +16,17 @@ export default defineContentConfig({
         isFeaturedPost: z.boolean(),
       }),
     }),
+    projects: defineCollection({
+      source: 'projects/**/*.yml',
+      type: "data",
+      schema: z.object({
+        name: z.string(),
+        imageURL: z.string().url(),
+        description: z.string(),
+        techUsed: z.array(z.string()),
+        deployURL: z.string().url(),
+        sourceCodeURL: z.string().url().nullable(),
+      }),
+    }),
   },
 });

@@ -1,0 +1,11 @@
+name: NBA Stats Tool 2.0
+imageURL: /img/projects/v2-nba-react-app.png
+description: Converted my React app to a Svelte app powered by Typescript and Vite.
+techUsed:
+  - Svelte
+  - TailwindCSS
+  - Typescript
+  - Chart.js
+  - Balldontlie API
+deployURL: https://nba-stats-tool.netlify.app/
+sourceCodeURL: https://github.com/Tyson910/nba-stats-tool

@@ -1,0 +1,10 @@
+name: NBA Stats Tool 1.0
+imageURL: /img/projects/v1-nba-react-app.png
+description: Created a react app to compare up to 5 NBA players stats visually by using a graph either throughout the entire season or between a given date range.
+techUsed:
+  - React
+  - Victory Charts
+  - Vanilla CSS
+  - Balldontlie API
+deployURL: https://v1-nba-stats-tool.netlify.app/
+sourceCodeURL: https://github.com/Tyson910/nba-stats-tool/tree/v0

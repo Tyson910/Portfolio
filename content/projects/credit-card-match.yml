@@ -1,0 +1,12 @@
+ 
+name: Credit Card Match
+imageURL: null
+description: Created an app that provides personalized credit card recommendations tailored to your finances. Discover the best cards for rewards cashback and low interest rates all based on your unique financial situation.
+techUsed: 
+  - Nuxt
+  - Vue
+  - TailwindCSS
+  - SQLite
+deployURL: https://creditcardmatch.org/
+sourceCodeURL: null
+  

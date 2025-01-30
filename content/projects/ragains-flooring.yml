@@ -1,0 +1,9 @@
+name: Ragain’s Flooring
+imageURL: /img/projects/ragains-flooring.png
+description: A website for a local flooring company in Jeff City, MO. Features a gallery of completed flooring projects, a contact form for requesting estimates, and info about the company's services.
+techUsed:
+  - Vanilla HTML
+  - Vanilla CSS
+  - Vanilla JavaScript
+deployURL: https://www.RagainsFlooring.com
+sourceCodeURL: null
