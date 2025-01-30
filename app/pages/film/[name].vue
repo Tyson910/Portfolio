@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const route = useRoute();
-const { share, isSupported } = useShare();
 
 definePageMeta({
+  layout: 'film-detail',
   validate: async (route) => {
     if (typeof route.params.name != "string") return false;
     const photo = await queryCollection("photos")
@@ -19,47 +19,10 @@ const { data: photo } = await useAsyncData(route.path, () => {
     .first();
 });
 
-const links = [
-  {
-    label: "Home",
-    icon: "i-ri-home-4-line",
-    to: "/",
-  },
-  {
-    label: "Film Hub",
-    icon: "i-ri-film-line",
-    to: "/film",
-  },
-  {
-    label: photo.value?.title || "Photo",
-    to: route.path,
-  },
-];
 </script>
 
 <template>
   <div v-if="photo">
-    <!-- Header with breadcrumbs and share buttons  -->
-    <div class="sticky top-0 bg-gray-50 shadow-sm">
-      <div class="max-w-5xl mx-auto p-4 flex items-center justify-between">
-        <div>
-          <UBreadcrumb :links="links" />
-        </div>
-
-        <UButton
-          v-if="isSupported"
-          label="Share"
-          @click="
-            share({
-              url: useRequestURL().toString(),
-              title: photo.title,
-              text: 'Check out this amazing photograph!',
-            })
-          "
-        />
-      </div>
-    </div>
-
     <!--  Mobile-first layout  -->
     <div class="max-w-6xl mx-auto">
       <!--  Image Container - Optimized for mobile  -->
