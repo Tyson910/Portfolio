@@ -25,3 +25,9 @@ const { data: featuredSnippets } = await useAsyncData(
     </div>
   </section>
 </template>
+
+<style lang="postcss" scoped>
+.container {
+  @apply max-w-screen-lg mx-auto px-10 md:px-0;
+}
+</style>
