@@ -34,8 +34,8 @@ const cardDetailFields = [
       v-for="photo in photos"
       :key="photo.id"
       class="bg-white dark:bg-slate-600 h-max shadow-md rounded-lg overflow-hidden transition hover:shadow-xl px-5 pt-6"
+      :class="{'row-span-2 h-max my-auto': photo.isPotraitOrientation }"
     >
-      <!-- height > width && 'row-span-2 h-max my-auto,' -->
       <img
         :src="photo.src"
         loading="lazy"
