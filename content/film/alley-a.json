@@ -1,0 +1,12 @@
+{
+  "id": "alley-a",
+  "title": "Alley A",
+  "src": "/img/film/alley-a.jpg",
+  "date": "2024-12-05T07:00:00.000Z",
+  "location": "Columbia, Missouri",
+  "tags": [
+    "Architecture",
+    "Misc"
+  ],
+  "filmType": "Fuji Film 400"
+}

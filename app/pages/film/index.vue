@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import type { PhotosCollectionItem } from "@nuxt/content";
 
+
 const { data: photos } = await useAsyncData("all-photos", () => {
-  return queryCollection("photos").order('date', 'ASC').all();
+  return queryCollection("photos").order("date", "ASC").all();
 });
 
 const cardDetailFields = [
@@ -31,7 +32,7 @@ const cardDetailFields = [
     <div
       v-for="photo in photos"
       :key="photo.id"
-      class="bg-white dark:bg-slate-600 shadow-md rounded-lg overflow-hidden transition hover:shadow-xl px-5 pt-6"
+      class="bg-white dark:bg-slate-600 h-max shadow-md rounded-lg overflow-hidden transition hover:shadow-xl px-5 pt-6"
     >
       <!-- height > width && 'row-span-2 h-max my-auto,' -->
       <img
@@ -40,7 +41,12 @@ const cardDetailFields = [
         :alt="photo.title"
         class="rounded-sm bg-gray-200 object-cover group-hover:opacity-75"
       />
-      <!-- TODO: add 404 image here  -->
+      <!-- TODO use nuxt image -->
+      <!-- <NuxtImg
+        placeholder="https://placehold.co/400x400"
+        :src="photo.src"
+        :alt="photo.title"
+      /> -->
       <div class="p-4">
         <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-50">
           {{ photo.title }}
