@@ -19,7 +19,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "migrate": "tsx ./migrate.ts"
   },
   "dependencies": {
     "@nuxt/content": "^3.0.0",
@@ -37,6 +38,7 @@
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.25",
     "@iconify-json/ri": "^1.2.5",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "vue-tsc": "~2.1.6"
   }
