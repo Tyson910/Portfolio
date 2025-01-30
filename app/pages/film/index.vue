@@ -1,29 +1,12 @@
 <script setup lang="ts">
-import type { PhotosCollectionItem } from "@nuxt/content";
+// import type { PhotosCollectionItem } from "@nuxt/content";
+import PhotoDetail from "~/components/PhotoDetail.vue";
 
 const { share, isSupported } = useShare();
 
 const { data: photos } = await useAsyncData("all-photos", () => {
   return queryCollection("photos").order("date", "ASC").all();
 });
-
-const cardDetailFields = [
-  {
-    name: "location",
-    Icon: "ri:map-pin-2-line",
-  },
-  {
-    name: "date",
-    Icon: "ri:calendar-line",
-  },
-  {
-    name: "filmType",
-    Icon: "ri:film-line",
-  },
-] as const satisfies {
-  name: keyof PhotosCollectionItem;
-  Icon: string;
-}[];
 </script>
 
 <template>
@@ -34,7 +17,7 @@ const cardDetailFields = [
       v-for="photo in photos"
       :key="photo.id"
       class="bg-white dark:bg-slate-600 h-max shadow-md rounded-lg overflow-hidden transition hover:shadow-xl px-5 pt-6"
-      :class="{'row-span-2 h-max my-auto': photo.isPotraitOrientation }"
+      :class="{ 'row-span-2 h-max my-auto': photo.isPotraitOrientation }"
     >
       <img
         :src="photo.src"
@@ -53,25 +36,20 @@ const cardDetailFields = [
           {{ photo.title }}
         </h2>
         <div class="mt-2 space-y-1">
-          <div
-            v-for="detail in cardDetailFields"
-            :icon-name="detail.Icon"
-            :key="detail.name"
-            class="flex items-center text-sm text-gray-600 dark:text-gray-100"
-          >
-            <Icon :name="detail.Icon" class="mr-2 size-4 text-gray-500" />
-            <span v-if="detail.name == 'date'">
-              {{
-                new Date(photo.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                })
-              }}
-            </span>
-            <span v-else>
-              {{ photo[detail.name] }}
-            </span>
-          </div>
+          <PhotoDetail icon="ri:map-pin-2-line">
+            {{ photo.location }}
+          </PhotoDetail>
+          <PhotoDetail icon="ri:calendar-line">
+            {{
+              new Date(photo.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+              })
+            }}
+          </PhotoDetail>
+          <PhotoDetail icon="ri:film-line">
+            {{ photo.filmType }}
+          </PhotoDetail>
           <div class="flex flex-col items-center pt-3 rounded-lg gap-y-3">
             <UButton label="View Details" block :to="photo.stem" />
             <UButton
