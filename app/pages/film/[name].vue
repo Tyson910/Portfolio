@@ -1,13 +1,15 @@
 <script setup lang="ts">
 const route = useRoute();
 
+
+
 definePageMeta({
-  layout: 'film-detail',
+  layout: "film-detail",
   validate: async (route) => {
     if (typeof route.params.name != "string") return false;
     const photo = await queryCollection("photos")
-      .where("stem", "=", route.path.slice(1))
-      .first();
+    .where("stem", "=", route.path.slice(1))
+    .first();
     // Check if the photo exists in collection
     return !!photo.id;
   },
@@ -15,10 +17,14 @@ definePageMeta({
 
 const { data: photo } = await useAsyncData(route.path, () => {
   return queryCollection("photos")
-    .where("stem", "=", route.path.slice(1))
-    .first();
+  .where("stem", "=", route.path.slice(1))
+  .first();
 });
 
+useSeoMeta({
+  title: photo.value?.title,
+  description: photo.value?.description || null,
+});
 </script>
 
 <template>

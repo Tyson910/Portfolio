@@ -1,6 +1,11 @@
 <script setup lang="ts">
-// import type { PhotosCollectionItem } from "@nuxt/content";
 import PhotoDetail from "~/components/PhotoDetail.vue";
+
+useSeoMeta({
+  description:
+    "This is a hub for all film photography related content I've created",
+  title: "Welcome to my Film Page",
+});
 
 const { share, isSupported } = useShare();
 

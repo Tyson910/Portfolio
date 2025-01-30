@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import FeaturedSnippets from "~/components/FeaturedSnippets.vue";
 import SnippetDetail from "~/components/SnippetDetail.vue";
 import { socialLinks } from "~/utils/social-links";
+
+useSeoMeta({
+  title: "Tyson Suttle",
+  description: "Learn about Tyson Suttle",
+});
 
 const { data: projects } = await useAsyncData("projects", () => {
   return queryCollection("projects").all();

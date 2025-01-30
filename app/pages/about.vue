@@ -1,3 +1,9 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: "About Me",
+  description: "Learn more about me",
+});
+</script>
 <template>
   <div>
     <div
@@ -49,8 +55,8 @@
 
         <p>
           I love learning new things, and trying new techonologies. This website
-          was built using&nbsp;a combination of Nuxt, VueJS, TailwindCSS
-          & Markdown.&nbsp; My next goal is to start a blog writing about new
+          was built using&nbsp;a combination of Nuxt, VueJS, TailwindCSS &
+          Markdown.&nbsp; My next goal is to start a blog writing about new
           techonologies I'm learning. Hosted on this same site!
         </p>
 

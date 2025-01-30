@@ -1,4 +1,8 @@
 <script setup lang="ts">
+useSeoMeta({
+  description: "This is a hub for all Tech related content I've created",
+  title: "Welcome to my Blog",
+});
 const { data: featuredSnippets } = await useAsyncData(
   "featured-snippets",
   () => {

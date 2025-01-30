@@ -4,6 +4,8 @@ const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection("snippets").path(route.path).first();
 });
+
+useSeoMeta(page.value?.seo || {});
 </script>
 
 <template>
