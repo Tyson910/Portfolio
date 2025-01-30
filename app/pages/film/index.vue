@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { PhotosCollectionItem } from "@nuxt/content";
 
+const { share, isSupported } = useShare();
 
 const { data: photos } = await useAsyncData("all-photos", () => {
   return queryCollection("photos").order("date", "ASC").all();
@@ -59,24 +60,33 @@ const cardDetailFields = [
             class="flex items-center text-sm text-gray-600 dark:text-gray-100"
           >
             <Icon :name="detail.Icon" class="mr-2 size-4 text-gray-500" />
-            <span>
+            <span v-if="detail.name == 'date'">
+              {{
+                new Date(photo.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                })
+              }}
+            </span>
+            <span v-else>
               {{ photo[detail.name] }}
             </span>
           </div>
-          <div
-            class="w-full flex items-center justify-between whitespace-nowrap pt-3 rounded-lg gap-x-5 transition -20"
-          >
-            <!-- <ShareButton
-                photo={{ id, data: photo }}
-                className="w-max flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition"
-              /> -->
-            <!-- <a
-              :href="`/film/post/${id}`"
-              class="w-max flex items-center justify-center bg-gray-50 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-200 transition"
-            >
-              <Link2Icon class="mr-2 size-3.5 lg:size-5" />
-              View Details
-            </a> -->
+          <div class="flex flex-col items-center pt-3 rounded-lg gap-y-3">
+            <UButton label="View Details" block :to="photo.stem" />
+            <UButton
+              v-if="isSupported"
+              label="Share"
+              variant="outline"
+              block
+              @click="
+                share({
+                  url: photo.stem,
+                  title: photo.title,
+                  text: 'Check out this amazing photograph!',
+                })
+              "
+            />
           </div>
         </div>
       </div>
