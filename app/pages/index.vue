@@ -1,10 +1,18 @@
 <script setup lang="ts">
 import FeaturedSnippets from "~/components/FeaturedSnippets.vue";
+import SnippetDetail from "~/components/SnippetDetail.vue";
 import { socialLinks } from "~/utils/social-links";
 
 const { data: projects } = await useAsyncData("projects", () => {
   return queryCollection("projects").all();
 });
+
+const { data: featuredSnippets } = await useAsyncData(
+  "featured-snippets",
+  () => {
+    return queryCollection("snippets").all();
+  }
+);
 </script>
 
 <template>
@@ -53,9 +61,14 @@ const { data: projects } = await useAsyncData("projects", () => {
           </div>
         </div>
       </div>
-      <div class="flex flex-col gap-16">
-        <FeaturedSnippets />
-      </div>
+      <ul role="list" class="divide-y divide-zinc-100">
+        <li v-for="snippet in featuredSnippets">
+          <SnippetDetail :snippet="snippet" />
+        </li>
+        <li class="pl-4 pt-4 shrink-0 text-center dark:text-zinc-200">
+          <NuxtLink href="/blog" class="underline">View All Posts</NuxtLink>
+        </li>
+      </ul>
     </div>
     <div>
       <div class="border-b border-zinc-200 py-5">
