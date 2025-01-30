@@ -1,3 +1,11 @@
+<script setup>
+onMounted(() => {
+  console.log(`Thanks for visiting my portfolio site! Please, feel free to contact me using any of these options: 
+    📧 Email: TysonS.417@gmail.com 
+    👨🏿‍💻 Github: https://github.com/Tyson910 
+    👨🏿‍💼 LinkedIn: https://linkedin.com/in/tyson-suttle`);
+});
+</script>
 <template>
   <div>
     <NuxtRouteAnnouncer />
