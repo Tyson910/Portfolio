@@ -14,7 +14,7 @@
     "url": "https://github.com/Tyson910/Portfolio/issues"
   },
   "scripts": {
-    "build": "nuxt build",
+    "build": "nuxt build --prerender",
     "check": "nuxt typecheck",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
