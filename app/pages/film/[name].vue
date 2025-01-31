@@ -1,24 +1,18 @@
 <script setup lang="ts">
 const route = useRoute();
 
-
-
 definePageMeta({
   layout: "film-detail",
   validate: async (route) => {
     if (typeof route.params.name != "string") return false;
-    const photo = await queryCollection("photos")
-    .where("stem", "=", route.path.slice(1))
-    .first();
+    const photo = await queryCollection("photos").path(route.path).first();
     // Check if the photo exists in collection
     return !!photo.id;
   },
 });
 
 const { data: photo } = await useAsyncData(route.path, () => {
-  return queryCollection("photos")
-  .where("stem", "=", route.path.slice(1))
-  .first();
+  return queryCollection("photos").path(route.path).first();
 });
 
 useSeoMeta({
