@@ -20,7 +20,7 @@ const { data: featuredSnippets } = await useAsyncData(
 </script>
 
 <template>
-  <div class="max-w-screen-lg mx-auto px-10 md:px-0 pt-10">
+  <div class="container pt-10">
     <div class="max-w-2xl">
       <h1
         class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100"
@@ -47,7 +47,7 @@ const { data: featuredSnippets } = await useAsyncData(
     </div>
   </div>
   <div
-    class="max-w-screen-lg mx-auto py-16 grid grid-cols-1 lg:grid-cols-2 gap-x-16"
+    class="container py-16 grid grid-cols-1 lg:grid-cols-2 gap-x-16"
   >
     <div>
       <div class="border-b border-zinc-200 py-5">
@@ -145,3 +145,9 @@ const { data: featuredSnippets } = await useAsyncData(
     </div>
   </div>
 </template>
+
+<style lang="postcss" scoped>
+.container {
+  @apply max-w-screen-lg mx-auto px-10 md:px-0;
+}
+</style>

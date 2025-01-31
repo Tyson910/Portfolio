@@ -10,7 +10,7 @@ useSeoMeta(page.value?.seo || {});
 
 <template>
   <section>
-    <UContainer v-if="page" class="max-w-screen-lg mx-auto pb-24">
+    <UContainer v-if="page" class="container pb-24">
       <div class="border-b border-gray-200 pb-5 mb-16">
         <h1 class="text-base font-semibold text-gray-900">{{ page.title }}</h1>
         <p class="mt-2 max-w-4xl text-sm text-gray-500">
@@ -29,3 +29,9 @@ useSeoMeta(page.value?.seo || {});
     </UContainer>
   </section>
 </template>
+
+<style lang="postcss" scoped>
+.container {
+  @apply max-w-screen-lg mx-auto px-10 md:px-0;
+}
+</style>
