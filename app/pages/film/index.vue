@@ -1,6 +1,15 @@
 <script setup lang="ts">
 import type { DropdownItem } from "#ui/types";
 import PhotoDetail from "~/components/PhotoDetail.vue";
+import { z } from "@nuxt/content";
+
+const queryParamSchema = z.object({
+  method: z
+    .enum(["asc", "desc"])
+    .default("desc")
+    .transform((val) => val.toUpperCase() as Uppercase<typeof val>),
+  field: z.enum(["date", "title"]).default("date"),
+});
 
 useSeoMeta({
   description:
@@ -12,12 +21,13 @@ const { share, isSupported } = useShare();
 const route = useRoute();
 
 const { data: photos, refresh } = await useAsyncData("all-photos", () => {
-  return queryCollection("photos")
-    .order(
-      route.query?.field?.toString() || "date",
-      route.query.method?.toString().toUpperCase() || "DESC"
-    )
-    .all();
+  const queryParamResult = queryParamSchema.safeParse(route.params);
+
+  if (!queryParamResult.success) {
+    return queryCollection("photos").order("date", "DESC").all();
+  }
+  const { method, field } = queryParamResult.data;
+  return queryCollection("photos").order(field, method).all();
 });
 
 const { currentPage, currentPageSize } = useOffsetPagination({
@@ -90,7 +100,9 @@ const items = [
 <template>
   <div v-if="photos">
     <div class="text-center mb-8 px-5 md:px-0">
-      <h1 class="text-2xl md:text-4xl font-bold text-zinc-800 dark:text-zinc-100 mb-4">
+      <h1
+        class="text-2xl md:text-4xl font-bold text-zinc-800 dark:text-zinc-100 mb-4"
+      >
         Film Photography Journal
       </h1>
       <p class="text-gray-500 dark:text-zinc-200">
@@ -99,9 +111,9 @@ const items = [
       </p>
     </div>
 
-
-
-    <div class="px-5 py-3 flex justify-end md:max-w-7xl md:mx-auto border-t border-b border-gray-100">
+    <div
+      class="px-5 py-3 flex justify-end md:max-w-7xl md:mx-auto border-t border-b border-gray-100"
+    >
       <UDropdown :items="items">
         <UButton
           color="white"
