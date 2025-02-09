@@ -48,7 +48,7 @@ data.forEach((item) => {
     description: item.description,
     tags: item.tags,
     filmType: item.filmType,
-    isPotraitOrientation: false,
+    isPotraitOrientation: item.isPotraitOrientation,
   };
   fs.writeFileSync(filePath, JSON.stringify(formattedItem, null, 2), "utf8");
   console.log(`Saved: ${filePath}`);
