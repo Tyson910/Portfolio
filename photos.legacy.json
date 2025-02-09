@@ -2,7 +2,7 @@
   {
     "id": "butterfly-building",
     "src": "../assets/images/film/butterfly-building.jpg",
-    "date": "2024-11-05T07:00:00.000Z",
+    "date": "2024-11-05",
     "location": "Mexico City, Mexico",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
@@ -11,7 +11,7 @@
   {
     "id": "stay-away",
     "src": "../assets/images/film/stay-away.jpg",
-    "date": "2024-11-05T07:00:00.000Z",
+    "date": "2024-11-05",
     "location": "Mexico City, Mexico",
     "tags": ["Graffiti"],
     "isPotraitOrientation": false,
@@ -20,7 +20,7 @@
   {
     "id": "untitled-1",
     "src": "../assets/images/film/untitled-1.jpg",
-    "date": "2024-11-24T07:00:00.000Z",
+    "date": "2024-11-24",
     "location": "Barcelona, Spain",
     "tags": ["Graffiti", "Architecture"],
     "isPotraitOrientation": false,
@@ -29,7 +29,7 @@
   {
     "id": "cloud-carpet",
     "src": "../assets/images/film/cloud-carpet.jpg",
-    "date": "2024-11-30T07:00:00.000Z",
+    "date": "2024-11-30",
     "location": "Somewhere over Greenland",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
@@ -38,7 +38,7 @@
   {
     "id": "untitled-2",
     "src": "../assets/images/film/untitled-2.jpg",
-    "date": "2024-11-24T07:00:00.000Z",
+    "date": "2024-11-24",
     "location": "Barcelona, Spain",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
@@ -47,7 +47,7 @@
   {
     "id": "misery-loves-company",
     "src": "../assets/images/film/misery-loves-company.jpg",
-    "date": "2024-11-24T07:00:00.000Z",
+    "date": "2024-11-24",
     "location": "Barcelona, Spain",
     "tags": ["Graffiti"],
     "isPotraitOrientation": false,
@@ -56,7 +56,7 @@
   {
     "id": "untitled-3",
     "src": "../assets/images/film/untitled-3.jpg",
-    "date": "2024-11-24T07:00:00.000Z",
+    "date": "2024-11-24",
     "location": "Barcelona, Spain",
     "tags": ["Architecture", "Nature / Wildlife"],
     "isPotraitOrientation": false,
@@ -65,7 +65,7 @@
   {
     "id": "untitled-4",
     "src": "../assets/images/film/untitled-4.jpg",
-    "date": "2024-11-24T07:00:00.000Z",
+    "date": "2024-11-24",
     "location": "Barcelona, Spain",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
@@ -74,7 +74,7 @@
   {
     "id": "untitled-5",
     "src": "../assets/images/film/untitled-5.jpg",
-    "date": "2024-11-24T07:00:00.000Z",
+    "date": "2024-11-24",
     "location": "Barcelona, Spain",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
@@ -83,7 +83,7 @@
   {
     "id": "untitled-6",
     "src": "../assets/images/film/untitled-6.jpg",
-    "date": "2024-11-24T07:00:00.000Z",
+    "date": "2024-11-24",
     "location": "Barcelona, Spain",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
@@ -92,7 +92,7 @@
   {
     "id": "carousel",
     "src": "../assets/images/film/carousel.jpg",
-    "date": "2024-11-25T07:00:00.000Z",
+    "date": "2024-11-25",
     "location": "Barcelona, Spain",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
@@ -101,7 +101,7 @@
   {
     "id": "cozy-spanish-room",
     "src": "../assets/images/film/cozy-spanish-room.jpg",
-    "date": "2024-11-25T07:00:00.000Z",
+    "date": "2024-11-25",
     "location": "Barcelona, Spain",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
@@ -110,7 +110,7 @@
   {
     "id": "meal-fit-for-a-king",
     "src": "../assets/images/film/meal-fit-for-a-king.jpg",
-    "date": "2024-11-25T07:00:00.000Z",
+    "date": "2024-11-25",
     "location": "Barcelona, Spain",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
@@ -119,7 +119,7 @@
   {
     "id": "botanical-lunch",
     "src": "../assets/images/film/botanical-lunch.jpg",
-    "date": "2024-11-24T07:00:00.000Z",
+    "date": "2024-11-24",
     "location": "Barcelona, Spain",
     "tags": ["Nature / Wildlife", "Architecture"],
     "isPotraitOrientation": false,
@@ -128,7 +128,7 @@
   {
     "id": "untitled-7",
     "src": "../assets/images/film/untitled-7.jpg",
-    "date": "2024-11-25T07:00:00.000Z",
+    "date": "2024-11-25",
     "location": "Barcelona, Spain",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
@@ -137,7 +137,7 @@
   {
     "id": "untitled-8",
     "src": "../assets/images/film/untitled-8.jpg",
-    "date": "2024-11-25T07:00:00.000Z",
+    "date": "2024-11-25",
     "location": "Barcelona, Spain",
     "tags": ["Architecture", "Graffiti"],
     "isPotraitOrientation": false,
@@ -146,7 +146,7 @@
   {
     "id": "bouba",
     "src": "../assets/images/film/bouba.jpg",
-    "date": "2024-11-25T07:00:00.000Z",
+    "date": "2024-11-25",
     "location": "Barcelona, Spain",
     "tags": ["Art"],
     "isPotraitOrientation": false,
@@ -155,7 +155,7 @@
   {
     "id": "hoop-sesh",
     "src": "../assets/images/film/hoop-sesh.jpg",
-    "date": "2024-11-25T07:00:00.000Z",
+    "date": "2024-11-25",
     "location": "Barcelona, Spain",
     "tags": ["Graffiti", "Misc"],
     "isPotraitOrientation": false,
@@ -164,7 +164,7 @@
   {
     "id": "sandy-dragon",
     "src": "../assets/images/film/sandy-dragon.jpg",
-    "date": "2024-11-25T07:00:00.000Z",
+    "date": "2024-11-25",
     "location": "Barcelona, Spain",
     "tags": ["Art"],
     "isPotraitOrientation": false,
@@ -173,7 +173,7 @@
   {
     "id": "thats-a-telly-booth-innit",
     "src": "../assets/images/film/thats-a-telly-booth-innit.jpg",
-    "date": "2024-11-28T07:00:00.000Z",
+    "date": "2024-11-28",
     "location": "London, England",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
@@ -182,7 +182,7 @@
   {
     "id": "st-pauls-cathedral",
     "src": "../assets/images/film/st-pauls-cathedral.jpg",
-    "date": "2024-11-28T07:00:00.000Z",
+    "date": "2024-11-28",
     "location": "London, England",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
@@ -191,7 +191,7 @@
   {
     "id": "river-thames",
     "src": "../assets/images/film/river-thames.jpg",
-    "date": "2024-11-28T07:00:00.000Z",
+    "date": "2024-11-28",
     "location": "London, England",
     "tags": ["Architecture", "Nature / Wildlife"],
     "isPotraitOrientation": false,
@@ -200,7 +200,7 @@
   {
     "id": "untitled-9",
     "src": "../assets/images/film/untitled-9.jpg",
-    "date": "2024-11-28T07:00:00.000Z",
+    "date": "2024-11-28",
     "location": "London, England",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
@@ -209,7 +209,7 @@
   {
     "id": "300-pound-jacket",
     "src": "../assets/images/film/300-pound-jacket.jpg",
-    "date": "2024-11-29T07:00:00.000Z",
+    "date": "2024-11-29",
     "location": "London, England",
     "tags": ["Misc"],
     "isPotraitOrientation": true,
@@ -218,7 +218,7 @@
   {
     "id": "untitled-10",
     "src": "../assets/images/film/untitled-10.jpg",
-    "date": "2024-11-29T07:00:00.000Z",
+    "date": "2024-11-29",
     "location": "London, England",
     "tags": ["Graffiti","Architecture", "Misc"],
     "isPotraitOrientation": false,
@@ -227,7 +227,7 @@
   {
     "id": "untitled-11",
     "src": "../assets/images/film/untitled-11.jpg",
-    "date": "2024-11-29T07:00:00.000Z",
+    "date": "2024-11-29",
     "location": "London, England",
     "tags": ["Graffiti"],
     "isPotraitOrientation": false,
@@ -236,7 +236,7 @@
   {
     "id": "untitled-12",
     "src": "../assets/images/film/untitled-12.jpg",
-    "date": "2024-11-29T07:00:00.000Z",
+    "date": "2024-11-29",
     "location": "London, England",
     "tags": ["Art"],
     "isPotraitOrientation": true,
@@ -245,7 +245,7 @@
   {
     "id": "neon",
     "src": "../assets/images/film/neon.jpg",
-    "date": "2024-11-29T07:00:00.000Z",
+    "date": "2024-11-29",
     "location": "London, England",
     "tags": ["Art"],
     "isPotraitOrientation": true,
@@ -254,7 +254,7 @@
   {
     "id": "untitled-13",
     "src": "../assets/images/film/untitled-13.jpg",
-    "date": "2024-11-29T07:00:00.000Z",
+    "date": "2024-11-29",
     "location": "London, England",
     "tags": ["Art"],
     "isPotraitOrientation": true,
@@ -263,7 +263,7 @@
   {
     "id": "phoenix-indian-school",
     "src": "../assets/images/film/phoenix-indian-school.jpg",
-    "date": "2024-12-01T07:00:00.000Z",
+    "date": "2024-12-01",
     "location": "Phoenix, AZ USA",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
@@ -272,7 +272,7 @@
   {
     "id": "untitled-14",
     "src": "../assets/images/film/untitled-14.jpg",
-    "date": "2024-12-04T07:00:00.000Z",
+    "date": "2024-12-04",
     "location": "Columbia, Missouri",
     "description": "This was taken on a chilly morning on the MKT Trail. Not sure what MKT stands for.",
     "tags": ["Nature / Wildlife"],
@@ -282,7 +282,7 @@
   {
     "id": "columns",
     "src": "../assets/images/film/columns.jpg",
-    "date": "2024-12-04T07:00:00.000Z",
+    "date": "2024-12-04",
     "location": "Columbia, Missouri",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
@@ -291,7 +291,7 @@
   {
     "id": "creep-x-radiohead",
     "src": "../assets/images/film/creep-x-radiohead.jpg",
-    "date": "2024-12-05T07:00:00.000Z",
+    "date": "2024-12-05",
     "location": "Columbia, Missouri",
     "description": "This tree caught my eye on a walk during a freezing morning (wind chill was about 4 degrees) just outside of Stephens Lake. I don't why but the tree reminds of the song Creep by Radiohead",
     "tags": ["Nature / Wildlife"],
@@ -301,7 +301,7 @@
   {
     "id": "alley-a",
     "src": "../assets/images/film/alley-a.jpg",
-    "date": "2024-12-05T07:00:00.000Z",
+    "date": "2024-12-05",
     "location": "Columbia, Missouri",
     "tags": ["Architecture", "Misc"],
     "isPotraitOrientation": false,
@@ -310,7 +310,7 @@
   {
     "id": "jurassic-park",
     "src": "../assets/images/film/jurassic-park.jpg",
-    "date": "2024-12-05T07:00:00.000Z",
+    "date": "2024-12-05",
     "location": "Cafe Berlin (Columbia, Missouri)",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
@@ -319,7 +319,7 @@
   {
     "id": "detroit-fist",
     "src": "../assets/images/film/detroit-fist.jpg",
-    "date": "2024-12-07T07:00:00.000Z",
+    "date": "2024-12-07",
     "location": "Detroit, MI USA",
     "description": "",
     "tags": ["Art"],
@@ -329,7 +329,7 @@
   {
     "id": "christmas-in-detroit",
     "src": "../assets/images/film/christmas-in-detroit.jpg",
-    "date": "2024-12-07T07:00:00.000Z",
+    "date": "2024-12-07",
     "location": "Detroit, MI USA",
     "description": "",
     "tags": ["Misc"],
@@ -339,7 +339,7 @@
   {
     "id": "sing-about-me-im-dying-of-thirst",
     "src": "../assets/images/film/sing-about-me-im-dying-of-thirst.jpg",
-    "date": "2024-12-10T07:00:00.000Z",
+    "date": "2024-12-10",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Nature / Wildlife"],
@@ -349,7 +349,7 @@
   {
     "id": "a-grand-canal",
     "src": "../assets/images/film/a-grand-canal.jpg",
-    "date": "2024-12-10T07:00:00.000Z",
+    "date": "2024-12-10",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Misc"],
@@ -359,7 +359,7 @@
   {
     "id": "untitled-15",
     "src": "../assets/images/film/untitled-15.jpg",
-    "date": "2024-12-12T07:00:00.000Z",
+    "date": "2024-12-12",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Graffiti"],
@@ -369,7 +369,7 @@
   {
     "id": "untitled-16",
     "src": "../assets/images/film/untitled-16.jpg",
-    "date": "2024-12-14T07:00:00.000Z",
+    "date": "2024-12-14",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Misc"],
@@ -379,7 +379,7 @@
   {
     "id": "untitled-17",
     "src": "../assets/images/film/untitled-17.jpg",
-    "date": "2024-12-19T07:00:00.000Z",
+    "date": "2024-12-19",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Nature / Wildlife"],
@@ -389,7 +389,7 @@
   {
     "id": "candy-cane-forest",
     "src": "../assets/images/film/candy-cane-forest.jpg",
-    "date": "2024-12-13T07:00:00.000Z",
+    "date": "2024-12-13",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Misc"],
@@ -399,7 +399,7 @@
   {
     "id": "farewell-shortleash",
     "src": "../assets/images/film/farewell-shortleash.jpg",
-    "date": "2024-12-14T07:00:00.000Z",
+    "date": "2024-12-14",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Graffiti"],
@@ -409,7 +409,7 @@
   {
     "id": "ball-is-life",
     "src": "../assets/images/film/ball-is-life.jpg",
-    "date": "2024-12-21T07:00:00.000Z",
+    "date": "2024-12-21",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Nature / Wildlife"],
@@ -419,7 +419,7 @@
   {
     "id": "grinch",
     "src": "../assets/images/film/grinch.jpg",
-    "date": "2024-12-25T07:00:00.000Z",
+    "date": "2024-12-25",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Misc"],
@@ -429,7 +429,7 @@
   {
     "id": "desert-chihuly",
     "src": "../assets/images/film/desert-chihuly.jpg",
-    "date": "2024-12-27T07:00:00.000Z",
+    "date": "2024-12-27",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Nature / Wildlife", "Art"],
@@ -439,7 +439,7 @@
   {
     "id": "hole-in-the-rock",
     "src": "../assets/images/film/hole-in-the-rock.jpg",
-    "date": "2024-12-27T07:00:00.000Z",
+    "date": "2024-12-27",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Nature / Wildlife"],
@@ -449,7 +449,7 @@
   {
     "id": "let-it-roll",
     "src": "../assets/images/film/let-it-roll.jpg",
-    "date": "2024-12-25T07:00:00.000Z",
+    "date": "2024-12-25",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Misc"],
@@ -459,7 +459,7 @@
   {
     "id": "untitled-18",
     "src": "../assets/images/film/untitled-18.jpg",
-    "date": "2024-12-25T07:00:00.000Z",
+    "date": "2024-12-25",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Misc"],
@@ -469,7 +469,7 @@
   {
     "id": "untitled-19",
     "src": "../assets/images/film/untitled-19.jpg",
-    "date": "2024-12-27T05:00:00.000Z",
+    "date": "2024-12-27",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Nature / Wildlife"],
@@ -479,7 +479,7 @@
   {
     "id": "untitled-20",
     "src": "../assets/images/film/untitled-20.jpg",
-    "date": "2024-12-27T07:00:00.000Z",
+    "date": "2024-12-27",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Nature / Wildlife"],
@@ -489,7 +489,7 @@
   {
     "id": "untitled-21",
     "src": "../assets/images/film/untitled-21.jpg",
-    "date": "2025-01-02T05:00:00.000Z",
+    "date": "2025-01-02",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Nature / Wildlife"],
@@ -499,7 +499,7 @@
   {
     "id": "untitled-22",
     "src": "../assets/images/film/untitled-22.jpg",
-    "date": "2025-01-02T07:00:00.000Z",
+    "date": "2025-01-02",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Nature / Wildlife"],
@@ -509,7 +509,7 @@
   {
     "id": "north-mountain",
     "src": "../assets/images/film/north-mountain.jpg",
-    "date": "2025-01-02T07:00:00.000Z",
+    "date": "2025-01-02",
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Nature / Wildlife"],
@@ -519,7 +519,7 @@
   {
     "id": "silent-guardian",
     "src": "../assets/images/film/silent-guardian.jpg",
-    "date": "2025-01-03T07:00:00.000Z",
+    "date": "2025-01-03",
     "location": "Phoenix, AZ USA",
     "description": "The saguaro looks on as a silent guardian. A watchful protector",
     "tags": ["Nature / Wildlife"],

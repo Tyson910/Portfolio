@@ -36,7 +36,7 @@ export default defineContentConfig({
         source: "film/**/*.json",
         type: "page",
         schema: z.object({
-          date: z.string().datetime(),
+          date: z.string().date(),
           src: z.string().startsWith("/"),
           title: z.string(),
           location: z.string(),
