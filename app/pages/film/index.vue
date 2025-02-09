@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { DropdownItem } from "#ui/types";
 import PhotoDetail from "~/components/PhotoDetail.vue";
 
 useSeoMeta({
@@ -8,9 +9,15 @@ useSeoMeta({
 });
 
 const { share, isSupported } = useShare();
+const route = useRoute();
 
-const { data: photos } = await useAsyncData("all-photos", () => {
-  return queryCollection("photos").order("date", "ASC").all();
+const { data: photos, refresh } = await useAsyncData("all-photos", () => {
+  return queryCollection("photos")
+    .order(
+      route.query?.field?.toString() || "date",
+      route.query.method?.toString().toUpperCase() || "DESC"
+    )
+    .all();
 });
 
 const { currentPage, currentPageSize } = useOffsetPagination({
@@ -33,27 +40,85 @@ const paginatedPhotos = computed(() =>
     currentPageSize.value * (currentPage.value - 1) + currentPageSize.value
   )
 );
+
+async function addSortParam(field: "title" | "date", method: "asc" | "desc") {
+  await navigateTo({
+    query: {
+      field,
+      method,
+    },
+  });
+  await refresh();
+}
+
+const items = [
+  [
+    {
+      label: "Newest",
+      icon: "i-ri-sort-desc",
+      click: async () => {
+        await addSortParam("date", "desc");
+      },
+    },
+    {
+      label: "Oldest",
+      icon: "i-ri-sort-asc",
+      click: async () => {
+        await addSortParam("date", "asc");
+      },
+    },
+  ],
+  [
+    {
+      label: "Name (Asc)",
+      icon: "i-ri-sort-alphabet-asc",
+      click: async () => {
+        await addSortParam("title", "asc");
+      },
+    },
+    {
+      label: "Name (Desc)",
+      icon: "i-ri-sort-alphabet-desc",
+      click: async () => {
+        await addSortParam("title", "desc");
+      },
+    },
+  ],
+] as const satisfies DropdownItem[][];
 </script>
 
 <template>
   <div v-if="photos">
-    <div class="max-w-6xl mx-auto mb-8">
-      <h1 class="text-4xl font-bold text-zinc-800 dark:text-zinc-100 mb-4">
+    <div class="text-center mb-8 px-5 md:px-0">
+      <h1 class="text-2xl md:text-4xl font-bold text-zinc-800 dark:text-zinc-100 mb-4">
         Film Photography Journal
       </h1>
-      <p class="text-gray-600 dark:text-zinc-200 max-w-2xl">
+      <p class="text-gray-500 dark:text-zinc-200">
         Capturing moments on film, one frame at a time. Exploring the world
         through my lens and sharing stories beyond pixels.
       </p>
     </div>
+
+
+
+    <div class="px-5 flex justify-end">
+      <UDropdown :items="items">
+        <UButton
+          color="white"
+          label="Sort By"
+          trailing-icon="i-ri-arrow-down-s-line"
+        />
+      </UDropdown>
+    </div>
+
     <main
       id="links"
-      class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row-dense gap-6 scroll-mt-10"
+      class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row-dense gap-6 scroll-mt-10 mt-10 md:mt-0"
     >
       <div
         v-for="photo in paginatedPhotos"
         :key="photo.id"
-        class="bg-white dark:bg-slate-600 h-max shadow-md rounded-lg overflow-hidden transition hover:shadow-xl px-5 pt-6"
+        class="bg-white dark:bg-slate-600 h-max shadow-md rounded-lg overflow-hidden transition hover:shadow-xl md:px-5 md:pt-6 mx-5 md:mx-0"
         :class="{ 'row-span-2 h-max my-auto': photo.isPotraitOrientation }"
       >
         <img
