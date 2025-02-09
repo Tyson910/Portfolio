@@ -101,7 +101,7 @@ const items = [
 
 
 
-    <div class="px-5 flex justify-end">
+    <div class="px-5 py-3 flex justify-end md:max-w-7xl md:mx-auto border-t border-b border-gray-100">
       <UDropdown :items="items">
         <UButton
           color="white"
@@ -113,7 +113,7 @@ const items = [
 
     <main
       id="links"
-      class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row-dense gap-6 scroll-mt-10 mt-10 md:mt-0"
+      class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row-dense gap-6 scroll-mt-10 mt-10"
     >
       <div
         v-for="photo in paginatedPhotos"
