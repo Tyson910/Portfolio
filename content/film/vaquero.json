@@ -1,0 +1,14 @@
+{
+  "id": "vaquero",
+  "title": "Vaquero",
+  "src": "/img/film/vaquero.jpg",
+  "date": "2025-01-12T07:20:00.000Z",
+  "location": "Phoenix, AZ USA",
+  "description": "",
+  "tags": [
+    "Art",
+    "Graffiti"
+  ],
+  "filmType": "Kodak Gold 200",
+  "isPotraitOrientation": false
+}
