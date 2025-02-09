@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { DropdownItem } from "#ui/types";
+import { z } from "zod";
 import PhotoDetail from "~/components/PhotoDetail.vue";
-import { z } from "@nuxt/content";
+import PhotoSort from "~/components/PhotoSort.vue";
 
 const queryParamSchema = z.object({
   method: z
@@ -21,7 +21,7 @@ const { share, isSupported } = useShare();
 const route = useRoute();
 
 const { data: photos, refresh } = await useAsyncData("all-photos", () => {
-  const queryParamResult = queryParamSchema.safeParse(route.params);
+  const queryParamResult = queryParamSchema.safeParse(route.query);
 
   if (!queryParamResult.success) {
     return queryCollection("photos").order("date", "DESC").all();
@@ -50,51 +50,6 @@ const paginatedPhotos = computed(() =>
     currentPageSize.value * (currentPage.value - 1) + currentPageSize.value
   )
 );
-
-async function addSortParam(field: "title" | "date", method: "asc" | "desc") {
-  await navigateTo({
-    query: {
-      field,
-      method,
-    },
-  });
-  await refresh();
-}
-
-const items = [
-  [
-    {
-      label: "Newest",
-      icon: "i-ri-sort-desc",
-      click: async () => {
-        await addSortParam("date", "desc");
-      },
-    },
-    {
-      label: "Oldest",
-      icon: "i-ri-sort-asc",
-      click: async () => {
-        await addSortParam("date", "asc");
-      },
-    },
-  ],
-  [
-    {
-      label: "Name (Asc)",
-      icon: "i-ri-sort-alphabet-asc",
-      click: async () => {
-        await addSortParam("title", "asc");
-      },
-    },
-    {
-      label: "Name (Desc)",
-      icon: "i-ri-sort-alphabet-desc",
-      click: async () => {
-        await addSortParam("title", "desc");
-      },
-    },
-  ],
-] as const satisfies DropdownItem[][];
 </script>
 
 <template>
@@ -114,13 +69,19 @@ const items = [
     <div
       class="px-5 py-3 flex justify-end md:max-w-7xl md:mx-auto border-t border-b border-gray-100"
     >
-      <UDropdown :items="items">
-        <UButton
-          color="white"
-          label="Sort By"
-          trailing-icon="i-ri-arrow-down-s-line"
-        />
-      </UDropdown>
+      <PhotoSort
+        :handle-click="
+          async (field, method) => {
+            await navigateTo({
+              query: {
+                field,
+                method,
+              },
+            });
+            await refresh();
+          }
+        "
+      />
     </div>
 
     <main
