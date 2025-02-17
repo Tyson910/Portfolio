@@ -6,9 +6,8 @@ import PhotoSort from "~/components/PhotoSort.vue";
 const queryParamSchema = z.object({
   method: z
     .enum(["asc", "desc"])
-    .default("desc")
     .transform((val) => val.toUpperCase() as Uppercase<typeof val>),
-  field: z.enum(["date", "title"]).default("date"),
+  field: z.enum(["date", "title"]),
 });
 
 useSeoMeta({
@@ -24,7 +23,10 @@ const { data: photos, refresh } = await useAsyncData("all-photos", () => {
   const queryParamResult = queryParamSchema.safeParse(route.query);
 
   if (!queryParamResult.success) {
-    return queryCollection("photos").order("date", "DESC").all();
+    return queryCollection("photos")
+      .order("date", "DESC")
+      .order("id", "DESC")
+      .all();
   }
   const { method, field } = queryParamResult.data;
   return queryCollection("photos").order(field, method).all();
@@ -100,12 +102,6 @@ const paginatedPhotos = computed(() =>
           :alt="photo.title"
           class="rounded-sm bg-gray-200 object-cover group-hover:opacity-75"
         />
-        <!-- TODO use nuxt image -->
-        <!-- <NuxtImg
-          placeholder="https://placehold.co/400x400"
-          :src="photo.src"
-          :alt="photo.title"
-        /> -->
         <div class="p-4">
           <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-50">
             {{ photo.title }}
