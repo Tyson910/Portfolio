@@ -4,9 +4,7 @@ import { socialLinks } from "~/utils/social-links";
 
 <template>
   <footer class="border-t border-zinc-100 dark:border-zinc-700/40">
-    <div
-      class="container py-12 md:flex md:items-center md:justify-between"
-    >
+    <UContainer class="py-12 md:flex md:items-center md:justify-between">
       <div class="flex justify-center gap-x-6 md:order-2">
         <a
           v-for="{ href, Icon, ariaLabel } in socialLinks"
@@ -23,12 +21,6 @@ import { socialLinks } from "~/utils/social-links";
       >
         &copy; {{ new Date().getFullYear() }} Tyson Suttle. All rights reserved.
       </p>
-    </div>
+    </UContainer>
   </footer>
 </template>
-
-<style lang="postcss" scoped>
-.container {
-  @apply max-w-screen-lg mx-auto px-10 md:px-0;
-}
-</style>

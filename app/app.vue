@@ -15,10 +15,11 @@ onMounted(() => {
     <Body class="min-h-full flex flex-col scroll-smooth">
       <main class="flex-grow selection:bg-primary selection:text-white">
         <NuxtLoadingIndicator />
-        <NuxtLayout>
-          <NuxtPage />
-        </NuxtLayout>
-        <UNotifications />
+        <UApp>
+          <NuxtLayout>
+            <NuxtPage />
+          </NuxtLayout>
+        </UApp>
       </main>
     </Body>
   </div>

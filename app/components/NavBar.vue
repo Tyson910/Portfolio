@@ -32,7 +32,7 @@ const navigationLinks = [
 <template>
   <header class="py-4 w-full sticky top-0 z-10">
     <nav
-      class="w-max mx-auto gap-x-6 px-8 flex justify-evenly bg-primary shadow-md lg:shadow-sm rounded-full"
+      class="w-max mx-auto gap-x-6 px-8 flex justify-evenly bg-(--ui-primary) shadow-md lg:shadow-sm rounded-full"
     >
       <a
         v-for="{ href, text } in navigationLinks"

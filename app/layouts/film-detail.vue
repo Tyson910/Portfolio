@@ -34,7 +34,7 @@ const links = [
     <div class="sticky top-0 bg-gray-50 shadow-sm">
       <div class="max-w-5xl mx-auto p-4 flex items-center justify-between">
         <div>
-          <UBreadcrumb :links="links" divider="i-ri-arrow-drop-right-line" />
+          <UBreadcrumb :items="links" separator-icon="i-ri-arrow-drop-right-line" />
         </div>
 
         <UButton

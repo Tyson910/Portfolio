@@ -16,7 +16,7 @@ useSeoMeta({
         class="rounded-full h-full w-full object-cover"
       />
     </div>
-    <section class="text-lg pb-12 lg:pb-30 container">
+    <UContainer class="text-lg pb-12 lg:pb-30">
       <h1 class="text-4xl pb-16 font-semibold pt-20" id="about">About Me</h1>
       <div class="space-y-10">
         <p>
@@ -66,12 +66,6 @@ useSeoMeta({
           basketball.&nbsp;
         </p>
       </div>
-    </section>
+    </UContainer>
   </div>
 </template>
-
-<style lang="postcss" scoped>
-.container {
-  @apply max-w-screen-lg mx-auto px-10 md:px-0;
-}
-</style>

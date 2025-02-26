@@ -1,6 +1,11 @@
 export default defineAppConfig({
   ui: {
-    primary: 'purple',
-    gray: 'cool'
+    colors:{
+      primary: 'purple',
+      gray: 'cool'
+    },
+    container: {
+      base: 'max-w-screen-lg mx-auto px-10 md:px-0;'
+    }
   }
 })

@@ -15,6 +15,7 @@ export default defineNuxtConfig({
       routes: ["/sitemap.xml"],
     },
   },
+  css: ['~/assets/css/tailwind.css'],
   modules: [
     "@nuxt/ui",
     "@vueuse/nuxt",

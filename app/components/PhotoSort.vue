@@ -13,14 +13,14 @@ const items = [
     {
       label: "Newest",
       icon: "i-ri-sort-desc",
-      click: async () => {
+      onSelect: async () => {
         await handleClick("date", "desc");
       },
     },
     {
       label: "Oldest",
       icon: "i-ri-sort-asc",
-      click: async () => {
+      onSelect: async () => {
         await handleClick("date", "asc");
       },
     },
@@ -29,14 +29,14 @@ const items = [
     {
       label: "Name (Asc)",
       icon: "i-ri-sort-alphabet-asc",
-      click: async () => {
+      onSelect: async () => {
         await handleClick("title", "asc");
       },
     },
     {
       label: "Name (Desc)",
       icon: "i-ri-sort-alphabet-desc",
-      click: async () => {
+      onSelect: async () => {
         await handleClick("title", "desc");
       },
     },
@@ -45,13 +45,14 @@ const items = [
 </script>
 
 <template>
-  <div>
-    <UDropdown :items="items">
+  <div class="space-x-5">
+    <UDropdownMenu :items="items">
       <UButton
-        color="white"
+        color="neutral"
+        variant="outline"
         label="Sort By"
         trailing-icon="i-ri-arrow-down-s-line"
       />
-    </UDropdown>
+    </UDropdownMenu>
   </div>
 </template>
