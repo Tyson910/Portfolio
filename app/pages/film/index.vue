@@ -143,9 +143,10 @@ const paginatedPhotos = computed(() =>
     </main>
     <UPagination
       class="mx-auto max-w-max mt-16"
-      v-model="currentPage"
+      v-model:page="currentPage"
       :total="photos.length"
       :page-count="currentPageSize"
+      size="xl"
     />
   </div>
 </template>
