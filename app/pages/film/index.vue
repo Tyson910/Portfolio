@@ -32,7 +32,7 @@ const { data: photos, refresh } = await useAsyncData("all-photos", () => {
   return queryCollection("photos").order(field, method).all();
 });
 
-const { currentPage, currentPageSize } = useOffsetPagination({
+const { currentPage, currentPageSize, pageCount } = useOffsetPagination({
   total: photos.value?.length,
   page: Number(useRoute().query?.page) || 1,
   pageSize: 6,
@@ -46,12 +46,12 @@ const { currentPage, currentPageSize } = useOffsetPagination({
   },
 });
 
-const paginatedPhotos = computed(() =>
-  photos.value?.slice(
-    currentPageSize.value * (currentPage.value - 1),
-    currentPageSize.value * (currentPage.value - 1) + currentPageSize.value
-  )
-);
+const paginatedPhotos = computed(() => {
+  if (!photos.value) return [];
+  const start = currentPageSize.value * (currentPage.value - 1);
+  const end = start + currentPageSize.value;
+  return photos.value.slice(start, end);
+});
 </script>
 
 <template>
@@ -145,7 +145,8 @@ const paginatedPhotos = computed(() =>
       class="mx-auto max-w-max mt-16"
       v-model:page="currentPage"
       :total="photos.length"
-      :page-count="currentPageSize"
+      :page-count="pageCount"
+      :items-per-page="currentPageSize"
       size="xl"
     />
   </div>
