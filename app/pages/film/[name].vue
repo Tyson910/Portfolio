@@ -18,6 +18,9 @@ const { data: photo } = await useAsyncData(route.path, () => {
 useSeoMeta({
   title: photo.value?.title,
   description: photo.value?.description || null,
+  ogTitle: photo.value?.title,
+  ogDescription: photo.value?.description || null,
+  ogImage: { url: photo.value?.src },
 });
 </script>
 
