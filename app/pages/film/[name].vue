@@ -20,7 +20,7 @@ useSeoMeta({
   description: photo.value?.description || null,
   ogTitle: photo.value?.title,
   ogDescription: photo.value?.description || null,
-  ogImage: { url: photo.value?.src },
+  ogImage: `https://tyson-suttle.com${photo.value?.src}`,
 });
 </script>
 
