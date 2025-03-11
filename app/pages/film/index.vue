@@ -132,7 +132,6 @@ const paginatedPhotos = computed(() => {
                   share({
                     url: photo.stem,
                     title: photo.title,
-                    text: 'Check out this amazing photograph!',
                   })
                 "
               />

@@ -44,7 +44,6 @@ const links = [
             share({
               url: useRequestURL().toString(),
               title: photo?.title,
-              text: 'Check out this amazing photograph!',
             })
           "
         />
