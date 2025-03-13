@@ -100,7 +100,8 @@ const paginatedPhotos = computed(() => {
           :src="photo.src"
           loading="lazy"
           :alt="photo.title"
-          class="rounded-sm bg-gray-200 object-cover group-hover:opacity-75"
+          class="rounded-sm object-cover group-hover:opacity-75 bg-(--ui-bg-elevated)"
+          :class="photo.isPotraitOrientation ? 'min-h-135' : 'min-h-64'"
         />
         <div class="p-4">
           <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-50">
