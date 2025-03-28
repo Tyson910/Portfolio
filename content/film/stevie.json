@@ -1,0 +1,13 @@
+{
+  "id": "stevie",
+  "title": "Stevie",
+  "src": "/img/film/stevie.jpg",
+  "date": "2025-03-08T07:20:00.000Z",
+  "location": "San Diego, CA USA",
+  "description": "",
+  "tags": [
+    "Nature / Wildlife"
+  ],
+  "filmType": "Kodak Professional Ektar 100",
+  "isPotraitOrientation": false
+}
