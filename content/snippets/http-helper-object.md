@@ -11,6 +11,8 @@ isFeaturedPost: true
 ---
 
 
+This is the HTTP Server Error Codes helper object I use in NodeJS projects.
+
 ```ts
 export const HTTP_SERVER_ERROR_CODES = {
   BAD_REQUEST: {
@@ -235,4 +237,9 @@ export const HTTP_SERVER_ERROR_CODES = {
     message: string;
   }
 >;
+```
+
+
+
+```ts
 ```

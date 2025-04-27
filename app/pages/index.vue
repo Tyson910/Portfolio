@@ -14,7 +14,7 @@ const { data: projects } = await useAsyncData("projects", () => {
 const { data: featuredSnippets } = await useAsyncData(
   "featured-snippets",
   () => {
-    return queryCollection("snippets").all();
+    return queryCollection("snippets").order("dateCreated", "DESC").all();
   }
 );
 </script>
