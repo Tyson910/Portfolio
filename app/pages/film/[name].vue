@@ -49,12 +49,7 @@ useSeoMeta({
             {{ photo.location }}
           </PhotoDetail>
           <PhotoDetail icon="ri:calendar-line">
-            {{
-              new Date(photo.date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-              })
-            }}
+            <NuxtTime :datetime="photo.date" year="numeric" month="long" />
           </PhotoDetail>
           <PhotoDetail icon="ri:film-line">
             <span>{{ photo.filmType }}</span>

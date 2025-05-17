@@ -18,17 +18,13 @@ const { snippet } = defineProps<{
         {{ snippet.title }}
       </p>
       <p class="text-xs text-zinc-600 dark:text-zinc-300 -mt-1 mb-2">
-        <time datetime="{post.data.dateCreated}">
-          Created on
-          {{
-            new Date(snippet.dateCreated).toLocaleDateString("en-US", {
-              weekday: "long",
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })
-          }}
-        </time>
+        Created on
+        <NuxtTime
+          :datetime="snippet.dateCreated"
+          year="numeric"
+          month="long"
+          day="numeric"
+        />
       </p>
       <div class="flex flex-col md:flex-row gap-2 whitespace-nowrap">
         <span

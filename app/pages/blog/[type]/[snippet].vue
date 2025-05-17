@@ -15,14 +15,12 @@ useSeoMeta(page.value?.seo || {});
         <h1 class="text-base font-semibold text-gray-900">{{ page.title }}</h1>
         <p class="mt-2 max-w-4xl text-sm text-gray-500">
           Last updated:
-          {{
-            new Date(page.dateCreated).toLocaleDateString("en-US", {
-              weekday: "long",
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })
-          }}
+          <NuxtTime
+            :datetime="page.dateCreated"
+            year="numeric"
+            month="long"
+            day="numeric"
+          />
         </p>
       </div>
       <ContentRenderer :value="page" />
