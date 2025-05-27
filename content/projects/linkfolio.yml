@@ -1,0 +1,11 @@
+name: Linkfolio
+imageURL: https://link-folio.com/__og-image__/static/og.png
+description: Created a link sharing web app in order to learn passwordless flows via the Web Authentication API.
+techUsed: 
+  - Nuxt
+  - Vue
+  - TailwindCSS
+  - Postgres
+deployURL: https://link-folio.com
+sourceCodeURL: null
+  
