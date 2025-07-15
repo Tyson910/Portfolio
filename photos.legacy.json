@@ -6,6 +6,7 @@
     "location": "Mexico City, Mexico",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 800 (Disposable)"
   },
   {
@@ -15,6 +16,7 @@
     "location": "Mexico City, Mexico",
     "tags": ["Graffiti"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 800 (Disposable)"
   },
   {
@@ -24,6 +26,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Graffiti", "Architecture"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak UltraMax 400"
   },
   {
@@ -33,6 +36,7 @@
     "location": "Somewhere over Greenland",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak UltraMax 400"
   },
   {
@@ -42,6 +46,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak UltraMax 400"
   },
   {
@@ -51,6 +56,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Graffiti"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak UltraMax 400"
   },
   {
@@ -60,6 +66,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Architecture", "Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak UltraMax 400"
   },
   {
@@ -69,6 +76,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak UltraMax 400"
   },
   {
@@ -78,6 +86,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak UltraMax 400"
   },
   {
@@ -87,6 +96,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak UltraMax 400"
   },
   {
@@ -96,6 +106,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak UltraMax 400"
   },
   {
@@ -105,6 +116,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak UltraMax 400"
   },
   {
@@ -114,6 +126,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak UltraMax 400"
   },
   {
@@ -123,6 +136,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Nature / Wildlife", "Architecture"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak UltraMax 400"
   },
   {
@@ -132,6 +146,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -141,6 +156,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Architecture", "Graffiti"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -150,6 +166,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Art"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -159,6 +176,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Graffiti", "Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -168,6 +186,7 @@
     "location": "Barcelona, Spain",
     "tags": ["Art"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -177,6 +196,7 @@
     "location": "London, England",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -186,6 +206,7 @@
     "location": "London, England",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -195,6 +216,7 @@
     "location": "London, England",
     "tags": ["Architecture", "Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -204,6 +226,7 @@
     "location": "London, England",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -213,6 +236,7 @@
     "location": "London, England",
     "tags": ["Misc"],
     "isPotraitOrientation": true,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -222,6 +246,7 @@
     "location": "London, England",
     "tags": ["Graffiti", "Architecture", "Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -231,6 +256,7 @@
     "location": "London, England",
     "tags": ["Graffiti"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -240,6 +266,7 @@
     "location": "London, England",
     "tags": ["Art"],
     "isPotraitOrientation": true,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -249,6 +276,7 @@
     "location": "London, England",
     "tags": ["Art"],
     "isPotraitOrientation": true,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -258,6 +286,7 @@
     "location": "London, England",
     "tags": ["Art"],
     "isPotraitOrientation": true,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -267,6 +296,7 @@
     "location": "Phoenix, AZ USA",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak UltraMax 400"
   },
   {
@@ -277,6 +307,7 @@
     "description": "This was taken on a chilly morning on the MKT Trail. Not sure what MKT stands for.",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -286,6 +317,7 @@
     "location": "Columbia, Missouri",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -296,6 +328,7 @@
     "description": "This tree caught my eye on a walk during a freezing morning (wind chill was about 4 degrees) just outside of Stephens Lake. I don't why but the tree reminds of the song Creep by Radiohead",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -305,6 +338,7 @@
     "location": "Columbia, Missouri",
     "tags": ["Architecture", "Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -314,6 +348,7 @@
     "location": "Cafe Berlin (Columbia, Missouri)",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 400"
   },
   {
@@ -324,6 +359,7 @@
     "description": "",
     "tags": ["Art"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -334,6 +370,7 @@
     "description": "",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -344,6 +381,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -354,6 +392,7 @@
     "description": "",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -364,6 +403,7 @@
     "description": "",
     "tags": ["Graffiti"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -374,6 +414,7 @@
     "description": "",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -384,6 +425,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -394,6 +436,7 @@
     "description": "",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -404,6 +447,7 @@
     "description": "",
     "tags": ["Graffiti"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -414,6 +458,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -424,6 +469,7 @@
     "description": "",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -434,6 +480,7 @@
     "description": "",
     "tags": ["Nature / Wildlife", "Art"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -444,6 +491,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -454,6 +502,7 @@
     "description": "",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -464,6 +513,7 @@
     "description": "",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -474,6 +524,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -484,6 +535,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -494,6 +546,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -504,6 +557,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -514,6 +568,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -524,6 +579,7 @@
     "description": "The saguaro looks on as a silent guardian. A watchful protector",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": true,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional T-Max 400 Black and White"
   },
   {
@@ -534,6 +590,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional T-Max 400 Black and White"
   },
   {
@@ -544,6 +601,7 @@
     "description": "",
     "tags": ["Nature / Wildlife", "Architecture"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional T-Max 400 Black and White"
   },
   {
@@ -554,6 +612,7 @@
     "description": "",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional T-Max 400 Black and White"
   },
   {
@@ -564,6 +623,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -574,6 +634,7 @@
     "description": "",
     "tags": ["Graffiti"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -584,6 +645,7 @@
     "description": "",
     "tags": ["Art", "Graffiti"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -594,6 +656,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -604,6 +667,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -614,6 +678,7 @@
     "description": "",
     "tags": ["Graffiti"],
     "isPotraitOrientation": true,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 200"
   },
   {
@@ -624,6 +689,7 @@
     "description": "",
     "tags": ["Architecture"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 200"
   },
   {
@@ -634,6 +700,7 @@
     "description": "",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 200"
   },
   {
@@ -644,6 +711,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -654,6 +722,7 @@
     "description": "",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Fuji Film 200"
   },
   {
@@ -664,6 +733,7 @@
     "description": "",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -674,6 +744,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -684,6 +755,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -694,6 +766,7 @@
     "description": "",
     "tags": ["Nature / Wildlife", "Graffiti"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -704,6 +777,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -714,6 +788,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -724,6 +799,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -734,6 +810,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -744,6 +821,7 @@
     "description": "",
     "tags": ["Graffiti"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -754,6 +832,7 @@
     "description": "",
     "tags": ["Misc"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -764,6 +843,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -774,6 +854,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -784,6 +865,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -794,6 +876,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Gold 200"
   },
   {
@@ -804,6 +887,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -814,6 +898,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -824,6 +909,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -834,6 +920,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -844,6 +931,7 @@
     "description": "",
     "tags": ["Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -854,6 +942,7 @@
     "description": "",
     "tags": ["Architecture", "Nature / Wildlife"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   },
   {
@@ -864,6 +953,7 @@
     "description": "",
     "tags": ["Art"],
     "isPotraitOrientation": false,
+    "cameraType": "Canon Auto Boy",
     "filmType": "Kodak Professional Ektar 100"
   }
 ]
