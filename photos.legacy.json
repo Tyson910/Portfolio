@@ -996,7 +996,7 @@
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Graffiti"],
-    "isPotraitOrientation": false,
+    "isPotraitOrientation": true,
     "cameraType": "Pentax Super Program",
     "filmType": "Kodak Gold 200"
   },
@@ -1018,7 +1018,7 @@
     "location": "Phoenix, AZ USA",
     "description": "",
     "tags": ["Nature / Wildlife"],
-    "isPotraitOrientation": false,
+    "isPotraitOrientation": true,
     "cameraType": "Pentax Super Program",
     "filmType": "Kodak Gold 200"
   },
