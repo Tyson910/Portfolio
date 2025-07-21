@@ -2,9 +2,6 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  future: {
-    compatibilityVersion: 4,
-  },
   site: {
     url: "https://tyson-suttle.com",
     name: "My Portolio Site",

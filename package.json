@@ -23,13 +23,14 @@
     "migrate": "tsx ./migrate.ts"
   },
   "dependencies": {
-    "@nuxt/content": "^3.0.0",
-    "@nuxt/image": "1.9.0",
-    "@nuxt/ui": "^3.1.2",
-    "@nuxtjs/sitemap": "7.2.4",
-    "@vueuse/core": "^12.5.0",
-    "@vueuse/nuxt": "12.5.0",
-    "nuxt": "^3.17.0",
+    "@nuxt/content": "^3.6.3",
+    "@nuxt/image": "1.10.0",
+    "@nuxt/ui": "^3.2.0",
+    "@nuxtjs/sitemap": "7.4.3",
+    "@vueuse/core": "^13.5.0",
+    "@vueuse/nuxt": "13.5.0",
+    "better-sqlite3": "^12.2.0",
+    "nuxt": "^4.0.0",
     "vue": "latest",
     "vue-router": "latest",
     "zod": "^3.25.1"
@@ -41,7 +42,7 @@
     "nitro-cloudflare-dev": "0.2.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
-    "vue-tsc": "~2.2.6",
+    "vue-tsc": "~2.2.12",
     "wrangler": "^4.20.0"
   }
 }
