@@ -39,7 +39,7 @@ const { data: photos, refresh } = await useAsyncData("all-photos", () => {
 const { currentPage, currentPageSize, pageCount } = useOffsetPagination({
   total: photos.value?.length,
   page: Number(useRoute().query?.page) || 1,
-  pageSize: 6,
+  pageSize: 10,
   onPageChange: async (v) => {
     await navigateTo({
       query: {
