@@ -13,6 +13,10 @@ const queryParamSchema = z.object({
 useSeoMeta({
   description:
     "This is a hub for all film photography related content I've created",
+  ogDescription:
+    "This is a hub for all film photography related content I've created",
+  ogUrl: "https://tyson-suttle.com/film",
+  ogTitle: "Welcome to my Film Page",
   title: "Welcome to my Film Page",
 });
 
