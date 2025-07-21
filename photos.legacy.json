@@ -1,5 +1,25 @@
 [
   {
+    "id": "pasado-y-presente",
+    "src": "../assets/images/film/pasado-y-presente.jpg",
+    "date": "2024-11-04",
+    "location": "Mexico City, Mexico",
+    "tags": ["Architecture", "Art"],
+    "isPotraitOrientation": false,
+    "cameraType": "Kodak Disposable",
+    "filmType": "Kodak Gold 800 (Disposable)"
+  },
+  {
+    "id": "delicioso",
+    "src": "../assets/images/film/delicioso.jpg",
+    "date": "2024-11-05",
+    "location": "Mexico City, Mexico",
+    "tags": ["Food", "Misc"],
+    "isPotraitOrientation": false,
+    "cameraType": "Kodak Disposable",
+    "filmType": "Kodak Gold 800 (Disposable)"
+  },
+  {
     "id": "butterfly-building",
     "src": "../assets/images/film/butterfly-building.jpg",
     "date": "2024-11-05",
@@ -17,6 +37,16 @@
     "tags": ["Graffiti"],
     "isPotraitOrientation": false,
     "cameraType": "Canon Auto Boy",
+    "filmType": "Kodak Gold 800 (Disposable)"
+  },
+    {
+    "id": "palacio-de-bellas-artes",
+    "src": "../assets/images/film/palacio-de-bellas-artes.jpg",
+    "date": "2024-11-05",
+    "location": "Mexico City, Mexico",
+    "tags": ["Architecture"],
+    "isPotraitOrientation": false,
+    "cameraType": "Kodak Disposable",
     "filmType": "Kodak Gold 800 (Disposable)"
   },
   {

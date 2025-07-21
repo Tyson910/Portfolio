@@ -1,0 +1,13 @@
+{
+  "id": "delicioso",
+  "title": "Delicioso",
+  "src": "/img/film/delicioso.jpg",
+  "date": "2024-11-05",
+  "location": "Mexico City, Mexico",
+  "tags": [
+    "Food",
+    "Misc"
+  ],
+  "filmType": "Kodak Gold 800 (Disposable)",
+  "isPotraitOrientation": false
+}
