@@ -49,6 +49,7 @@ export default defineContentConfig({
               "Art",
               "Graffiti",
               "Nature / Wildlife",
+              "Food",
               "Misc",
             ])
             .array(),
