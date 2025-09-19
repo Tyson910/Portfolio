@@ -11,6 +11,7 @@ isFeaturedPost: true
 ```ts
 
 function capitalizeFirstLetter(str: string) {
+  if (!str) return ""
   return str[0].toUpperCase() + str.substring(1);
 }
 
