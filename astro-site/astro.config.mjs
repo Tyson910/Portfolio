@@ -6,6 +6,7 @@ import vue from "@astrojs/vue";
 import sitemap from "@astrojs/sitemap";
 import expressiveCode from "astro-expressive-code";
 
+import Icons from "unplugin-icons/vite";
 import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
@@ -30,6 +31,15 @@ export default defineConfig({
     vue(),
   ],
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [
+      tailwindcss(),
+      Icons({
+        compiler: "astro",
+        autoInstall: true,
+      }),
+      Icons({
+        compiler: "vue3",
+      }),
+    ],
   },
 });
