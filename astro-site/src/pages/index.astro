@@ -1,16 +1,11 @@
 ---
 import { getCollection } from "astro:content";
+
+import SnippetListView from "../components/SnippetListView.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { socialLinks } from "../utils/social-links";
-import FormattedDate from "../components/FormattedDate.astro";
 
-const snippetPosts = (await getCollection("snippet"))
-  .map((post) => ({
-    ...post,
-    url: `/snippets/${post.id.replace(/\.[^/.]+$/, "")}`,
-    displayDate: post.data.lastUpdated,
-  }))
-  .sort((a, b) => b.displayDate.valueOf() - a.displayDate.valueOf());
+const snippetPosts = await getCollection("snippet");
 ---
 
 <BaseLayout title="Tyson Suttle" description="Learn about Tyson Suttle">
@@ -43,38 +38,7 @@ const snippetPosts = (await getCollection("snippet"))
         <h2 class="text-3xl font-bold">Code Snippets</h2>
         <a href="/snippets" class="link text-xl">View All</a>
       </div>
-      <ul class="space-y-8">
-        {
-          snippetPosts.map((post) => (
-            <li class="group border-b border-base-200 pb-8 last:border-none">
-              <article>
-                <h3 class="mb-2">
-                  <a
-                    href={post.url}
-                    class="text-xl font-medium hover:text-primary"
-                  >
-                    {post.data.title}
-                  </a>
-                </h3>
-                <p class="mb-3 text-base-content/80">{post.data.description}</p>
-                <div class="flex items-center justify-between">
-                  <div class="flex flex-wrap gap-2">
-                    {post.data.tags.map((tag) => (
-                      <span class="text-sm badge badge-soft badge-primary">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <FormattedDate
-                    date={post.displayDate}
-                    className="text-sm text-base-content/60"
-                  />
-                </div>
-              </article>
-            </li>
-          ))
-        }
-      </ul>
+      <SnippetListView snippets={snippetPosts} />
     </section>
   </main>
 </BaseLayout>
