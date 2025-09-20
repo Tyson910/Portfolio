@@ -6,6 +6,7 @@ description: "Quick helper to create a responsive layout"
 author: 'Tyson Suttle'
 dateCreated: '2024-06-26'
 lastUpdated: '2024-06-26'
+language: "CSS"
 tags: ['Set Up', "HTML", "CSS", "How To"]
 draft: false
 isFeaturedPost: false

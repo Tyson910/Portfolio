@@ -5,7 +5,8 @@ description: "How to convert a json object to a comma seperated value string"
 author: 'Tyson Suttle'
 dateCreated: '2024-06-26'
 lastUpdated: '2024-06-26'
-tags: ['Typescript', "Utility Function", "String Manipulation"]
+language: "Typescript"
+tags: ["Utility Function", "String Manipulation"]
 draft: false
 isFeaturedPost: true
 ---

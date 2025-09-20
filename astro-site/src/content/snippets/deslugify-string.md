@@ -3,7 +3,8 @@ title: 'Slugify & Deslugify'
 description: "Quick helpers to create a slugified or deslugified string"
 dateCreated: '2024-06-26'
 lastUpdated: '2025-09-19'
-tags: ['Typescript', "Utility Function", "String Manipulation"]
+language: "Typescript"
+tags: ["Utility Function", "String Manipulation"]
 draft: false
 isFeaturedPost: true
 ---

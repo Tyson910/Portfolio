@@ -13,11 +13,7 @@ const snippet = defineCollection({
       tags: z.string().array(),
       draft: z.boolean(),
       isFeaturedPost: z.boolean(),
-
-      // // Transform string to Date object
-      // pubDate: z.coerce.date(),
-      // updatedDate: z.coerce.date().optional(),
-      // heroImage: image().optional(),
+      language: z.enum(["Typescript", "CSS"]),
     }),
 });
 

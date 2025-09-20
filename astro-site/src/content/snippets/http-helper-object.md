@@ -5,7 +5,8 @@ description: "HTTP Server Error Codes helper object I use in NodeJS projects"
 author: 'Tyson Suttle'
 dateCreated: '2025-04-26'
 lastUpdated: '2025-04-26'
-tags: ['Web', 'Typescript']
+language: "Typescript"
+tags: ['Web']
 draft: false
 isFeaturedPost: true
 ---
