@@ -1,9 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 
-import SnippetListView from "../components/SnippetListView.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { socialLinks } from "../utils/social-links";
+import SnippetListView from "@components/SnippetListView.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { socialLinks } from "@utils/social-links";
 
 const snippetPosts = await getCollection("snippet");
 ---
