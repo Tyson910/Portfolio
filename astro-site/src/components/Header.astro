@@ -3,7 +3,7 @@ import { socialLinks } from "@utils/social-links";
 import HeaderLink from "@components/HeaderLink.astro";
 ---
 
-<header class="bg-white shadow-md">
+<header class="bg-base-200 shadow-sm">
   <nav class="flex items-center justify-between px-4 container">
     <div class="flex items-center gap-4">
       <HeaderLink href="/">Home</HeaderLink>
@@ -15,7 +15,7 @@ import HeaderLink from "@components/HeaderLink.astro";
           <a
             href={link.href}
             target="_blank"
-            class="text-gray-600 hover:text-gray-900"
+            class="text-base-content/80 hover:text-base-content"
           >
             <span class="sr-only">{link.ariaLabel}</span>
             <link.Icon />

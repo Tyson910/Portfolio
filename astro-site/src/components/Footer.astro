@@ -3,12 +3,12 @@ import { socialLinks } from "@utils/social-links.ts";
 const today = new Date();
 ---
 
-<footer class="border-t border-zinc-100 dark:border-zinc-700/40">
+<footer class="border-t border-base-200">
   <div
     class="py-12 container md:flex md:items-center md:justify-between"
   >
     <p
-      class="mt-8 text-center text-sm/6 text-gray-600 dark:text-gray-400 md:mt-0"
+      class="mt-8 text-center text-sm/6 text-base-content/80 md:mt-0"
     >
       &copy; {today.getFullYear()} Tyson Suttle. All rights reserved.
     </p>
@@ -18,7 +18,7 @@ const today = new Date();
           <div class="flex justify-center gap-x-6 md:order-2">
             <a
               href={href}
-              class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300"
+              class="text-base-content/80 hover:text-base-content"
             >
               <span class="sr-only">{ariaLabel}</span>
               <Icon />
