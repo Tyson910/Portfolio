@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 
-import FormattedDate from "@components/FormattedDate.astro";
+import ChevronUpIcon from "~icons/ri/arrow-up-s-line";
 
 interface Props {
   snippets: CollectionEntry<"snippet">[];
@@ -16,31 +16,26 @@ const snippetPosts = Astro.props.snippets
   .sort((a, b) => b.displayDate.valueOf() - a.displayDate.valueOf());
 ---
 
-<ul class="space-y-8">
+<ul>
   {
     snippetPosts.map((post) => (
-      <li class="group border-b border-base-200 pb-8 last:border-none">
-        <article>
-          <h3 class="mb-2">
-            <a href={post.url} class="text-xl font-medium hover:text-primary">
+      <li class="last:border-none border-b border-base-200 p-5 hover:bg-base-200">
+        <a
+          href={post.url}
+          class="list-row flex flex-row items-center justify-between "
+        >
+          <div>
+            <div>
               {post.data.title}
-            </a>
-          </h3>
-          <p class="mb-3 text-base-content/80">{post.data.description}</p>
-          <div class="flex items-center justify-between">
-            <div class="flex flex-wrap gap-2">
-              {post.data.tags.map((tag) => (
-                <span class="badge badge-primary badge-outline badge-sm">
-                  {tag}
-                </span>
-              ))}
+
+              <span class="text-sm ml-3 font-semibold opacity-60">
+                {post.data.language}
+              </span>
             </div>
-            <FormattedDate
-              date={post.displayDate}
-              className="text-sm text-base-content/60"
-            />
+            <p class="text-xs">{post.data.description}</p>
           </div>
-        </article>
+          <ChevronUpIcon class="rotate-90" />
+        </a>
       </li>
     ))
   }
