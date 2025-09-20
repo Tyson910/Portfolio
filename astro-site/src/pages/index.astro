@@ -15,7 +15,10 @@ const snippetPosts = (await getCollection("snippet"))
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <main class="mx-auto container px-4 py-16">
     <section>
-      <h2 class="mb-8 text-2xl font-light">Code Snippets</h2>
+			<div class="flex flex-row justify-between items-center border-b border-accented pb-4 mb-8">
+				<h2 class="text-3xl font-bold">Code Snippets</h2>
+				<a href="/snippets" class="link text-xl">View All</a>
+			</div>
       <ul class="space-y-8">
         {
           snippetPosts.map((post) => (
