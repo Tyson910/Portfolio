@@ -1,83 +1,88 @@
 ---
-import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
-import Header from "../components/Header.astro";
+import BaseLayout from "./BaseLayout.astro";
 
 type Props = CollectionEntry<"snippet">["data"];
 
-const { title, description, dateCreated, lastUpdated } = Astro.props;
+const props = Astro.props;
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description} />
-    <style>
-      main {
-        width: calc(100% - 2em);
-        max-width: 100%;
-        margin: 0;
-      }
-      .hero-image {
-        width: 100%;
-      }
-      .hero-image img {
-        display: block;
-        margin: 0 auto;
-        border-radius: 12px;
-        box-shadow: var(--box-shadow);
-      }
-      .prose {
-        width: 720px;
-        max-width: calc(100% - 2em);
-        margin: auto;
-        padding: 1em;
-        color: rgb(var(--gray-dark));
-      }
-      .title {
-        margin-bottom: 1em;
-        padding: 1em 0;
-        text-align: center;
-        line-height: 1;
-      }
-      .title h1 {
-        margin: 0 0 0.5em 0;
-      }
-      .date {
-        margin-bottom: 0.5em;
-        color: rgb(var(--gray));
-      }
-      .last-updated-on {
-        font-style: italic;
-      }
-    </style>
-  </head>
-
-  <body>
-    <Header />
-    <main>
-      <article>
-        <div class="prose">
-          <div class="title">
-            <div class="date">
-              <FormattedDate date={dateCreated} />
-              {
-                lastUpdated && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={lastUpdated} />
-                  </div>
-                )
-              }
-            </div>
-            <h1>{title}</h1>
-            <hr />
-          </div>
-          <slot />
+<BaseLayout title={props.title} description={props.description}>
+  <article class="mx-auto container px-4">
+    <header class="mb-8 mt-16 text-center">
+      <h1 class="mb-4 text-4xl font-bold leading-tight text-base-content">
+        {props.title}
+      </h1>
+      <p class="mb-6 text-xl text-base-content/80">{props.description}</p>
+      <div
+        class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-base-content/60"
+      >
+        <div class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            ></path>
+          </svg>
+          <FormattedDate date={props.dateCreated} />
         </div>
-      </article>
-    </main>
-    <Footer />
-  </body>
-</html>
+        <div class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+            ></path>
+          </svg>
+          <span>
+            Updated: <FormattedDate date={props.lastUpdated} />
+          </span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a4 4 0 014-4z"
+            ></path>
+          </svg>
+          <div class="flex flex-wrap gap-2">
+            {props.tags.map((tag) => <span class="text-primary">{tag}</span>)}
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="divider mb-12"></div>
+
+    <div
+      class="prose prose-lg mx-auto max-w-none pb-16 prose-headings:font-medium prose-a:text-primary prose-pre:rounded-lg prose-pre:border prose-pre:border-base-200 prose-pre:bg-base-200"
+    >
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
