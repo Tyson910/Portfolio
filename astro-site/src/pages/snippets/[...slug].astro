@@ -3,7 +3,10 @@ import { type CollectionEntry, getCollection, render } from "astro:content";
 import BlogPost from "@layouts/SnippetPost.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("snippet");
+  const posts = await getCollection("snippet", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  });
+
   return posts.map((post) => ({
     params: { slug: post.id },
     props: post,

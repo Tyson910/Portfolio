@@ -3,7 +3,9 @@ import { getCollection } from "astro:content";
 import SnippetListView from "@components/SnippetListView.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 
-const snippetPosts = await getCollection("snippet");
+const snippetPosts = await getCollection("snippet", ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
+});
 ---
 
 <BaseLayout
