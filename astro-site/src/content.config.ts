@@ -17,4 +17,16 @@ const snippet = defineCollection({
     }),
 });
 
+const project = defineCollection({
+  loader: glob({ base: "./src/content/projects", pattern: "**/*.yml" }),
+  schema: z.object({
+    name: z.string(),
+    imageURL: z.string().url(),
+    description: z.string(),
+    techUsed: z.array(z.string()),
+    deployURL: z.string().url(),
+    sourceCodeURL: z.string().url().nullable(),
+  }),
+});
+
 export const collections = { snippet };
