@@ -1,16 +1,20 @@
 # Portfolio
 
-I'm an Undergraduate student in my Senior year studying Information Technology at Missouri State University. I will be graduating Spring of 2021 with a Bachelor's degree in Information Technology and an emphasis in Application Development.
+This is a portfolio website built with [Astro](https://astro.build/).
 
-This website was built using Nuxt & Vue.
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Project Structure
+
+The Astro project is located in the `astro-site/` directory.
 
 ## Setup
 
-Make sure to install dependencies:
+This project uses `pnpm` as the package manager. Make sure to install the dependencies:
 
 ```bash
-# pnpm
+# Navigate to the project directory
+cd astro-site
+
+# Install dependencies
 pnpm install
 ```
 
@@ -23,6 +27,8 @@ Start the development server on `http://localhost:3000`:
 pnpm dev
 ```
 
+This command will start a local development server and you can view your website at `http://localhost:3000`.
+
 ## Production
 
 Build the application for production:
@@ -32,11 +38,14 @@ Build the application for production:
 pnpm build
 ```
 
+This command will generate a `dist/` directory with all the static assets of your website.
+
 Locally preview production build:
 
 ```bash
 # pnpm
 pnpm preview
-
 ```
+
+This command will start a local server to preview the production build.
 
