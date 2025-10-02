@@ -17,7 +17,7 @@ const { title, description } = Astro.props;
   <head>
     <BaseHead title={title} description={description} />
   </head>
-  <body class="min-h-full flex flex-col scroll-smooth">
+  <body class="min-h-[100vh] flex flex-col scroll-smooth">
     <Header />
     <div class="flex-grow selection:bg-primary selection:text-primary-content">
       <slot />
