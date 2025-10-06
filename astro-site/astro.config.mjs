@@ -5,7 +5,7 @@ import mdx from "@astrojs/mdx";
 import vue from "@astrojs/vue";
 import sitemap from "@astrojs/sitemap";
 import expressiveCode from "astro-expressive-code";
-
+import ecTwoSlash from "expressive-code-twoslash";
 import Icons from "unplugin-icons/vite";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -27,6 +27,11 @@ export default defineConfig({
           "bash,ps,sh": { preserveIndent: false },
         },
       },
+      plugins: [
+        ecTwoSlash({
+          explicitTrigger: true,
+        }),
+      ],
     }),
     mdx(),
     sitemap(),
