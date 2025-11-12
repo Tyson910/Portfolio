@@ -9,14 +9,12 @@ import ecTwoSlash from "expressive-code-twoslash";
 import Icons from "unplugin-icons/vite";
 import tailwindcss from "@tailwindcss/vite";
 
-import vercel from "@astrojs/vercel";
-
 // https://astro.build/config
 export default defineConfig({
   server: {
     port: 3000,
   },
-  site: "https://tyson-suttle.com",
+  site: "https://tyson-suttle.github.io",
   integrations: [
     expressiveCode({
       defaultProps: {
@@ -49,5 +47,4 @@ export default defineConfig({
       }),
     ],
   },
-  adapter: vercel(),
 });
