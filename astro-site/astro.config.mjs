@@ -14,7 +14,13 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  site: "https://tyson-suttle.github.io",
+  redirects: {
+    "/photos": {
+      status: 301,
+      destination: "https://photos.tyson-suttle.com",
+    },
+  },
+  site: "https://tyson-suttle.com",
   integrations: [
     expressiveCode({
       defaultProps: {
