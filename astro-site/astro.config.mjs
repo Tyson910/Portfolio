@@ -19,6 +19,10 @@ export default defineConfig({
       status: 301,
       destination: "https://photos.tyson-suttle.com",
     },
+    "/photos/*": {
+      status: 301,
+      destination: "https://photos.tyson-suttle.com",
+    },
   },
   site: "https://tyson-suttle.com",
   integrations: [
