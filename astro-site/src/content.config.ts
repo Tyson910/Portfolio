@@ -6,7 +6,7 @@ import { z } from "astro/zod";
 const snippet = defineCollection({
   loader: glob({ base: "./src/content/snippets", pattern: "**/*.{md,mdx}" }),
   // Type-check frontmatter using a schema
-  schema: ({ image }) =>
+  schema: () =>
     z.object({
       title: z.string(),
       description: z.string(),
@@ -23,7 +23,7 @@ const project = defineCollection({
   loader: glob({ base: "./src/content/projects", pattern: "**/*.yml" }),
   schema: z.object({
     name: z.string(),
-    imageURL: z.string().url(),
+    imageURL: z.string().nullable(),
     description: z.string(),
     techUsed: z.array(z.string()),
     deployURL: z.string().url(),
@@ -31,4 +31,4 @@ const project = defineCollection({
   }),
 });
 
-export const collections = { snippet };
+export const collections = { snippet, project };
