@@ -202,9 +202,9 @@ describe("Utility Functions", () => {
     });
 
     it("should create nested structures if they do not exist", () => {
-      // @ts-expect-error should only accept existent paths
       const updatedUser = setValue(
         user,
+        // @ts-expect-error should only accept existent paths
         "newProperty.subProperty",
         "test value"
       );
@@ -265,10 +265,10 @@ describe("Utility Functions", () => {
         },
       };
 
-      // @ts-expect-error should only accept existent paths
       const updatedUser = setValue(
         complexUser,
         "info.personal.details.hobbies[1]",
+        // @ts-expect-error should only accept existent paths
         "gaming"
       );
 
