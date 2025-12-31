@@ -22,10 +22,12 @@
     "zod": "^4.1.11"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.6",
     "@iconify-json/ri": "^1.2.5",
     "@tailwindcss/vite": "^4.1.13",
     "tailwindcss": "^4.1.13",
     "unplugin-icons": "^22.3.0",
+    "typescript": "^5.9.3",
     "vitest": "^3.2.4"
   }
 }
