@@ -1,0 +1,43 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import ChevronUpIcon from "~icons/ri/arrow-up-s-line";
+import FormattedDate from "./FormattedDate.astro";
+
+interface Props {
+  posts: CollectionEntry<"blog">[];
+}
+
+const posts = Astro.props.posts
+  .map((post) => ({
+    ...post,
+    url: `/blog/${post.id.replace(/\.[^/.]+$/, "")}`,
+    displayDate: post.data.dateCreated,
+  }))
+  .sort((a, b) => b.displayDate.valueOf() - a.displayDate.valueOf());
+---
+
+<ul>
+  {
+    posts.map((post) => (
+      <li class="last:border-none border-b border-base-200 py-5 px-2 hover:bg-base-200">
+        <a
+          href={post.url}
+          class="list-row flex flex-row items-center justify-between"
+        >
+          <div>
+            <div>
+              {post.data.title}
+
+              <span class="text-sm ml-3 font-semibold opacity-60">
+                <FormattedDate date={post.data.dateCreated} />
+              </span>
+            </div>
+            <p class="text-xs">{post.data.description}</p>
+          </div>
+          <ChevronUpIcon class="rotate-90" />
+        </a>
+      </li>
+    ))
+  }
+</ul>
