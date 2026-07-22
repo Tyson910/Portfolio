@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+
+import BlogListView from "@components/BlogListView.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const posts = await getCollection("blog", ({ data }) => {
+  return import.meta.env.PROD ? data.isDraft !== true : true;
+});
+---
+
+<BaseLayout
+  title="Blog"
+  description="Writing about TypeScript, full-stack architecture, and lessons learned in production."
+>
+  <main class="container py-16">
+    <div class="border-b border-accent pb-4">
+      <h1 class="text-3xl font-bold">Blog</h1>
+      <p class="mt-2 max-w-2xl text-base-content/80">
+        Writing about TypeScript, full-stack architecture, and lessons learned
+        in production.
+      </p>
+    </div>
+    <BlogListView posts={posts} />
+  </main>
+</BaseLayout>

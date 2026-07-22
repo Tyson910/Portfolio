@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+
+import BlogListView from "@components/BlogListView.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const posts = await getCollection("blog", ({ data }) => {
+  return (
+    data.tags.includes("TypeScript University") &&
+    (import.meta.env.PROD ? data.isDraft !== true : true)
+  );
+});
+---
+
+<BaseLayout
+  title="TypeScript University"
+  description="Master TypeScript through structured lessons and tutorials."
+>
+  <main class="container py-16">
+    <div class="border-b border-accent pb-4">
+      <h1 class="text-3xl font-bold">TypeScript University</h1>
+      <p class="mt-2 max-w-2xl text-base-content/80">
+        Master TypeScript through structured lessons. From foundational concepts
+        to advanced patterns, build your expertise step by step.
+      </p>
+    </div>
+    <BlogListView posts={posts} />
+  </main>
+</BaseLayout>
