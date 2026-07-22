@@ -1,0 +1,102 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+import BaseLayout from "./BaseLayout.astro";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const props = Astro.props;
+---
+
+<BaseLayout title={props.title} description={props.description}>
+  <article class="container px-4 pt-4">
+    <header class="mb-8 mt-16 text-center">
+      <h1 class="mb-4 text-4xl font-bold leading-tight text-base-content">
+        {props.title}
+      </h1>
+      <p class="mb-6 text-xl text-base-content/80">{props.description}</p>
+      <div
+        class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-base-content/60"
+      >
+        <div class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            ></path>
+          </svg>
+          <FormattedDate date={props.dateCreated} />
+        </div>
+        <div class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+            ></path>
+          </svg>
+          <span>
+            Updated: <FormattedDate date={props.lastUpdated} />
+          </span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a4 4 0 014-4z"
+            ></path>
+          </svg>
+          <div class="flex flex-wrap gap-2">
+            {props.tags.map((tag) => <span class="text-primary">{tag}</span>)}
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="divider mb-6"></div>
+
+    <div
+      class="article-content prose prose-lg mx-auto max-w-none pb-16 prose-headings:font-medium prose-a:text-primary prose-pre:rounded-lg prose-pre:border prose-pre:border-base-200 prose-pre:bg-base-200"
+    >
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-content :global(.expressive-code) {
+    margin-block: calc(var(--spacing) * 4);
+  }
+
+  .article-content :global(p:has(+ .expressive-code)) {
+    margin-block-end: calc(var(--spacing) * 3);
+  }
+
+  .article-content :global(.expressive-code + p) {
+    margin-block-start: calc(var(--spacing) * 3);
+  }
+</style>
