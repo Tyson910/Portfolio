@@ -19,6 +19,23 @@ const snippet = defineCollection({
     }),
 });
 
+const blog = defineCollection({
+  loader: glob({ base: "./src/content/blog", pattern: "**/*.{md,mdx}" }),
+  schema: () =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      dateCreated: z.coerce.date(),
+      lastUpdated: z.coerce.date(),
+      tags: z.string().array(),
+      isDraft: z.boolean(),
+      isFeaturedPost: z.boolean(),
+      difficulty: z.enum(["Foundational", "Advanced"]).optional(),
+      lessonType: z.enum(["tutorial", "reference", "exercise"]).optional(),
+      topicCategory: z.string().optional(),
+    }),
+});
+
 const project = defineCollection({
   loader: glob({ base: "./src/content/projects", pattern: "**/*.yml" }),
   schema: z.object({
@@ -31,4 +48,4 @@ const project = defineCollection({
   }),
 });
 
-export const collections = { snippet, project };
+export const collections = { snippet, blog, project };
