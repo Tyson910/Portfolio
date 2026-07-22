@@ -1,6 +1,7 @@
 // @ts-check
 
 import { defineConfig } from "astro/config";
+import { unified } from "@astrojs/markdown-remark";
 import mdx from "@astrojs/mdx";
 import vue from "@astrojs/vue";
 import sitemap from "@astrojs/sitemap";
@@ -21,6 +22,9 @@ export default defineConfig({
     },
   },
   site: "https://tyson-suttle.com",
+  markdown: {
+    processor: unified(),
+  },
   integrations: [
     expressiveCode({
       defaultProps: {
@@ -33,10 +37,9 @@ export default defineConfig({
       },
       plugins: [
         ecTwoSlash({
-          explicitTrigger: true,
-          twoslashOptions: {
-            compilerOptions: {
-              lib: ["es2022", "dom", "dom.iterable"],
+          instanceConfigs: {
+            twoslash: {
+              explicitTrigger: true,
             },
           },
         }),
