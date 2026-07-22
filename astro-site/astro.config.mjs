@@ -34,6 +34,11 @@ export default defineConfig({
       plugins: [
         ecTwoSlash({
           explicitTrigger: true,
+          twoslashOptions: {
+            compilerOptions: {
+              lib: ["es2022", "dom", "dom.iterable"],
+            },
+          },
         }),
       ],
     }),
