@@ -1,15 +1,32 @@
 ---
 import { getCollection } from "astro:content";
 
+import BlogListView from "@components/BlogListView.astro";
 import SnippetListView from "@components/SnippetListView.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { socialLinks } from "@utils/social-links";
+
+const allBlogPosts = await getCollection("blog", ({ data }) => {
+  return import.meta.env.PROD ? data.isDraft !== true : true;
+});
+
+const blogPosts = await getCollection("blog", ({ data }) => {
+  return (
+    data.isFeaturedPost &&
+    !data.tags.includes("TypeScript University") &&
+    (import.meta.env.PROD ? data.isDraft !== true : true)
+  );
+});
 
 const snippetPosts = await getCollection("snippet", ({ data }) => {
   return (
     data.isFeaturedPost && (import.meta.env.PROD ? data.draft !== true : true)
   );
 });
+
+const typeScriptUniversityPosts = allBlogPosts.filter((post) =>
+  post.data.tags.includes("TypeScript University")
+);
 ---
 
 <BaseLayout title="Homepage" description="Learn about Tyson Suttle">
@@ -35,6 +52,24 @@ const snippetPosts = await getCollection("snippet", ({ data }) => {
         </div>
       </div>
     </div>
+    <section class="mb-16">
+      <div
+        class="flex flex-row justify-between items-center border-b border-accent pb-4"
+      >
+        <h2 class="text-3xl font-bold">Blog</h2>
+        <a href="/blog" class="link text-xl">View All</a>
+      </div>
+      <BlogListView posts={blogPosts} />
+    </section>
+    <section class="mb-16">
+      <div
+        class="flex flex-row justify-between items-center border-b border-accent pb-4"
+      >
+        <h2 class="text-3xl font-bold">TypeScript University</h2>
+        <a href="/ts-university" class="link text-xl">View All</a>
+      </div>
+      <BlogListView posts={typeScriptUniversityPosts} />
+    </section>
     <section>
       <div
         class="flex flex-row justify-between items-center border-b border-accent pb-4"
