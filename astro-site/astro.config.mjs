@@ -1,6 +1,7 @@
 // @ts-check
 
 import { defineConfig } from "astro/config";
+import cloudflare from "@astrojs/cloudflare";
 import { unified } from "@astrojs/markdown-remark";
 import mdx from "@astrojs/mdx";
 import vue from "@astrojs/vue";
@@ -12,8 +13,19 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
+  adapter: cloudflare(),
   server: {
     port: 3000,
+  },
+  redirects: {
+    "/photos": {
+      status: 301,
+      destination: "https://photos.tyson-suttle.com",
+    },
+    "/photos/*": {
+      status: 301,
+      destination: "https://photos.tyson-suttle.com",
+    },
   },
   site: "https://tyson-suttle.com",
   markdown: {
