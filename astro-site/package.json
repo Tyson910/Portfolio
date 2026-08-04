@@ -8,7 +8,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "type-check": "astro check",
-    "deploy": "wrangler deploy"
+    "deploy:cf": "wrangler deploy"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^14.1.7",
