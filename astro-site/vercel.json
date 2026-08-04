@@ -1,3 +1,16 @@
 {
-  "cleanUrls": true
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/photos",
+      "destination": "https://photos.tyson-suttle.com/",
+      "permanent": true
+    },
+    {
+      "source": "/photos/:path*",
+      "destination": "https://photos.tyson-suttle.com/",
+      "permanent": true
+    }
+  ]
 }
