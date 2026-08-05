@@ -1,15 +1,15 @@
 // @ts-check
 
-import { defineConfig } from "astro/config";
 import cloudflare from "@astrojs/cloudflare";
 import { unified } from "@astrojs/markdown-remark";
 import mdx from "@astrojs/mdx";
-import vue from "@astrojs/vue";
 import sitemap from "@astrojs/sitemap";
+import vue from "@astrojs/vue";
+import tailwindcss from "@tailwindcss/vite";
 import expressiveCode from "astro-expressive-code";
+import { defineConfig } from "astro/config";
 import ecTwoSlash from "expressive-code-twoslash";
 import Icons from "unplugin-icons/vite";
-import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({

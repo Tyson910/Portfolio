@@ -1,6 +1,4 @@
-export function pathToString(
-  input: PropertyKey[] | readonly PropertyKey[]
-): string {
+export function pathToString(input: PropertyKey[] | readonly PropertyKey[]): string {
   // Map path segments, wrapping numeric segments in square brackets
   // and handling different types of property keys
   return input
@@ -43,10 +41,10 @@ export function stringToPath(input: string): string[] {
 }
 
 // Example usage with a properly typed getValue function:
-export function getValue<
-  T extends object,
-  Path extends NestedKeyOf<T> & string,
->(obj: T, path: Path): GetValueType<T, Path> {
+export function getValue<T extends object, Path extends NestedKeyOf<T> & string>(
+  obj: T,
+  path: Path,
+): GetValueType<T, Path> {
   const keys = stringToPath(path);
   let result: any = obj;
 
@@ -84,10 +82,11 @@ export function getValue<
  * // updatedUser.address.city is 'San Francisco'
  * // user.address.city remains 'New York'
  */
-export function setValue<
-  T extends object,
-  Path extends NestedKeyOf<T> & string,
->(obj: T, path: Path, value: GetValueType<T, Path>): T {
+export function setValue<T extends object, Path extends NestedKeyOf<T> & string>(
+  obj: T,
+  path: Path,
+  value: GetValueType<T, Path>,
+): T {
   const keys = stringToPath(path);
   const clonedObj: any = structuredClone(obj);
   let current: any = clonedObj;
@@ -123,12 +122,10 @@ export type NestedKeyOf<T> = T extends readonly any[]
         [K in keyof T]: K extends string | number
           ? T[K] extends readonly any[]
             ? // Array property - allow any number as index
-              | `${K}`
-                | `${K}[${number}]`
-                | `${K}[${number}].${NestedKeyOf<T[K][number]>}`
+                `${K}` | `${K}[${number}]` | `${K}[${number}].${NestedKeyOf<T[K][number]>}`
             : T[K] extends object
               ? // Object property - always convert to string
-                `${K}` | `${K}.${NestedKeyOf<T[K]>}`
+                  `${K}` | `${K}.${NestedKeyOf<T[K]>}`
               : // Primitive property - always convert to string
                 `${K}`
           : never;

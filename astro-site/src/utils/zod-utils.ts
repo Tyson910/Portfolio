@@ -5,7 +5,7 @@ export function createDefaultValuesForZodSchema(
   overrides?: Partial<{
     defaultStringValue: null | undefined | "";
     defaultNumberValue: null | undefined | 0;
-  }>
+  }>,
 ): unknown {
   const schema = _schema as z.$ZodTypes;
   const def = schema._zod.def;
@@ -24,14 +24,10 @@ export function createDefaultValuesForZodSchema(
     }
     // Base cases
     case "prefault": {
-      return typeof def.defaultValue == "function"
-        ? def.defaultValue()
-        : def.defaultValue;
+      return typeof def.defaultValue == "function" ? def.defaultValue() : def.defaultValue;
     }
     case "default": {
-      return typeof def.defaultValue == "function"
-        ? def.defaultValue()
-        : def.defaultValue;
+      return typeof def.defaultValue == "function" ? def.defaultValue() : def.defaultValue;
     }
     case "string": {
       return overrides?.defaultStringValue;

@@ -1,16 +1,15 @@
 ---
-title: 'HTTP Server Error Codes'
-meta_title: 'Snippets | HTTP Server Error Codes'
+title: "HTTP Server Error Codes"
+meta_title: "Snippets | HTTP Server Error Codes"
 description: "HTTP Server Error Codes helper object I use in NodeJS projects"
-author: 'Tyson Suttle'
-dateCreated: '2025-04-26'
-lastUpdated: '2025-04-26'
+author: "Tyson Suttle"
+dateCreated: "2025-04-26"
+lastUpdated: "2025-04-26"
 language: "Typescript"
-tags: ['Web']
+tags: ["Web"]
 draft: false
 isFeaturedPost: true
 ---
-
 
 This is the HTTP Server Error Codes helper object I use in NodeJS projects.
 
@@ -19,14 +18,12 @@ export const HTTP_SERVER_ERROR_CODES = {
   BAD_REQUEST: {
     statusCode: 400,
     statusText: "Bad Request",
-    message:
-      "The request could not be understood by the server. Please check your input.",
+    message: "The request could not be understood by the server. Please check your input.",
   },
   UNAUTHORIZED: {
     statusCode: 401,
     statusText: "Unauthorized",
-    message:
-      "You need to log in or provide valid credentials to access this resource.",
+    message: "You need to log in or provide valid credentials to access this resource.",
   },
   PAYMENT_REQUIRED: {
     statusCode: 402,
@@ -51,14 +48,12 @@ export const HTTP_SERVER_ERROR_CODES = {
   NOT_ACCEPTABLE: {
     statusCode: 406,
     statusText: "Not Acceptable",
-    message:
-      "The server cannot produce a response matching the request's criteria.",
+    message: "The server cannot produce a response matching the request's criteria.",
   },
   PROXY_AUTHENTICATION_REQUIRED: {
     statusCode: 407,
     statusText: "Proxy Authentication Required",
-    message:
-      "You need to authenticate with a proxy server before accessing this resource.",
+    message: "You need to authenticate with a proxy server before accessing this resource.",
   },
   REQUEST_TIMEOUT: {
     statusCode: 408,
@@ -98,8 +93,7 @@ export const HTTP_SERVER_ERROR_CODES = {
   UNSUPPORTED_MEDIA_TYPE: {
     statusCode: 415,
     statusText: "Unsupported Media Type",
-    message:
-      "The server does not support the media format of the requested data.",
+    message: "The server does not support the media format of the requested data.",
   },
   RANGE_NOT_SATISFIABLE: {
     statusCode: 416,
@@ -109,8 +103,7 @@ export const HTTP_SERVER_ERROR_CODES = {
   EXPECTATION_FAILED: {
     statusCode: 417,
     statusText: "Expectation Failed",
-    message:
-      "The server cannot meet the expectations given in the request headers.",
+    message: "The server cannot meet the expectations given in the request headers.",
   },
   IM_A_TEAPOT: {
     statusCode: 418,
@@ -125,8 +118,7 @@ export const HTTP_SERVER_ERROR_CODES = {
   UNPROCESSABLE_ENTITY: {
     statusCode: 422,
     statusText: "Unprocessable Entity",
-    message:
-      "The request was well-formed but could not be processed due to semantic errors.",
+    message: "The request was well-formed but could not be processed due to semantic errors.",
   },
   LOCKED: {
     statusCode: 423,
@@ -136,8 +128,7 @@ export const HTTP_SERVER_ERROR_CODES = {
   FAILED_DEPENDENCY: {
     statusCode: 424,
     statusText: "Failed Dependency",
-    message:
-      "A dependency for the request failed, so the request could not be completed.",
+    message: "A dependency for the request failed, so the request could not be completed.",
   },
   TOO_EARLY: {
     statusCode: 425,
@@ -152,14 +143,12 @@ export const HTTP_SERVER_ERROR_CODES = {
   PRECONDITION_REQUIRED: {
     statusCode: 428,
     statusText: "Precondition Required",
-    message:
-      "The request requires certain conditions to be met before proceeding.",
+    message: "The request requires certain conditions to be met before proceeding.",
   },
   TOO_MANY_REQUESTS: {
     statusCode: 429,
     statusText: "Too Many Requests",
-    message:
-      "You have made too many requests in a short period. Please slow down.",
+    message: "You have made too many requests in a short period. Please slow down.",
   },
   REQUEST_HEADER_FIELDS_TOO_LARGE: {
     statusCode: 431,
@@ -199,14 +188,12 @@ export const HTTP_SERVER_ERROR_CODES = {
   HTTP_VERSION_NOT_SUPPORTED: {
     statusCode: 505,
     statusText: "HTTP Version Not Supported",
-    message:
-      "The server does not support the HTTP version used in the request.",
+    message: "The server does not support the HTTP version used in the request.",
   },
   VARIANT_ALSO_NEGOTIATES: {
     statusCode: 506,
     statusText: "Variant Also Negotiates",
-    message:
-      "There was an internal configuration error while processing your request.",
+    message: "There was an internal configuration error while processing your request.",
   },
   INSUFFICIENT_STORAGE: {
     statusCode: 507,
@@ -216,14 +203,12 @@ export const HTTP_SERVER_ERROR_CODES = {
   LOOP_DETECTED: {
     statusCode: 508,
     statusText: "Loop Detected",
-    message:
-      "The server detected an infinite loop while processing your request.",
+    message: "The server detected an infinite loop while processing your request.",
   },
   NOT_EXTENDED: {
     statusCode: 510,
     statusText: "Not Extended",
-    message:
-      "Further extensions to the request are required for it to be processed.",
+    message: "Further extensions to the request are required for it to be processed.",
   },
   NETWORK_AUTHENTICATION_REQUIRED: {
     statusCode: 511,

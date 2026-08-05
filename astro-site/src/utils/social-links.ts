@@ -1,8 +1,8 @@
 import type { FunctionalComponent } from "vue";
 
-import LinkedInIcon from "~icons/ri/linkedin-fill";
 import BlueSkyIcon from "~icons/ri/bluesky-line";
 import GithubIcon from "~icons/ri/github-fill";
+import LinkedInIcon from "~icons/ri/linkedin-fill";
 
 export const socialLinks = [
   {

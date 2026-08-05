@@ -1,28 +1,24 @@
 ---
-slug: 'full-screen-height-page-layout'
-title: 'How to make a page layout take up entire screen vertically'
-meta_title: 'Snippets | Full Screen Layout'
+slug: "full-screen-height-page-layout"
+title: "How to make a page layout take up entire screen vertically"
+meta_title: "Snippets | Full Screen Layout"
 description: "Quick helper to create a responsive layout"
-author: 'Tyson Suttle'
-dateCreated: '2024-06-26'
-lastUpdated: '2024-06-26'
+author: "Tyson Suttle"
+dateCreated: "2024-06-26"
+lastUpdated: "2024-06-26"
 language: "CSS"
-tags: ['Set Up', "HTML", "CSS", "How To"]
+tags: ["Set Up", "HTML", "CSS", "How To"]
 draft: false
 isFeaturedPost: false
 ---
 
-
 ```html
 <html>
-  <head> 
+  <head>
     <meta charset="utf-8" />
     <link rel="icon" href="favicon.svg" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>...</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>...</title>
     <meta name="description" content="..." />
     <!-- Used by Googe -->
     <meta itemprop="description" content="..." />

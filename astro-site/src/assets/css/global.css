@@ -1,7 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-   themes: lofi --default, forest --prefersdark;
- }
+  themes:
+    lofi --default,
+    forest --prefersdark;
+}
 
 @utility container {
   margin-left: auto;
