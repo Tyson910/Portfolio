@@ -4,6 +4,7 @@
     "respectEslintDisableDirectives": false,
     "reportUnusedDisableDirectives": "error"
   },
+  "plugins": ["vue", "promise"],
   "jsPlugins": [
     {
       "name": "@tanstack/query",
