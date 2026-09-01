@@ -1,0 +1,48 @@
+{
+  "name": "portfolio",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev --port 3000",
+    "build": "nuxt build",
+    "preview": "wrangler dev",
+    "type-check": "nuxt typecheck",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint . && pnpm format:check",
+    "deploy:cf": "wrangler deploy",
+    "deploy:preview:cf": "wrangler versions upload"
+  },
+  "dependencies": {
+    "@expressive-code/core": "0.41.7",
+    "@iconify-json/lucide": "^1.2.80",
+    "@nuxt/content": "^3.15.2",
+    "@nuxt/ui": "^4.10.0",
+    "@nuxtjs/sitemap": "^8.3.4",
+    "@tanstack/vue-query": "^5.102.8",
+    "expressive-code": "0.41.7",
+    "expressive-code-twoslash": "^0.6.1",
+    "nuxt": "^4.5.2",
+    "rehype-expressive-code": "0.41.7",
+    "vue": "^3.5.41",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@iconify-json/ri": "^1.2.5",
+    "@nuxt/kit": "^4.5.2",
+    "@nuxtjs/mdc": "0.22.2",
+    "@tanstack/eslint-plugin-query": "^5.101.4",
+    "@types/node": "^24.0.0",
+    "@vueuse/nuxt": "^13.0.0",
+    "oxfmt": "^0.62.0",
+    "oxlint": "^1.77.0",
+    "oxlint-tsgolint": "^7.0.2001",
+    "serve": "^14.2.4",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4",
+    "vue-tsc": "^3.1.0",
+    "wrangler": "^4.127.1",
+    "yaml": "^2.9.0"
+  }
+}

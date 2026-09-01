@@ -1,0 +1,34 @@
+# Nuxt build output and generated files
+.nuxt/
+.output/
+.data/
+.nitro/
+.cache/
+dist/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.*
+!.env.example
+
+# Cloudflare local secrets
+.dev.vars
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
+# Cloudflare state
+.wrangler/

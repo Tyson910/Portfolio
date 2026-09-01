@@ -1,0 +1,13 @@
+name = "portfolio"
+compatibility_date = "2026-08-01"
+compatibility_flags = ["nodejs_compat"]
+preview_urls = false
+
+# Nitro overrides `assets.binding`/`assets.directory` (hence its startup warning),
+# but these routing keys only exist here and do reach the deploy config.
+[assets]
+not_found_handling = "404-page"
+run_worker_first = ["/", "/api/*"]
+
+# d1_databases and secrets.required live in nuxt.config.ts (nitro.cloudflare.wrangler)
+# and win the merge — declared there so the app config stays the single source.
