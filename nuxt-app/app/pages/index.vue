@@ -54,7 +54,9 @@ const snippetPosts = computed(() => snippetsQuery.data.value ?? []);
     </div>
 
     <section>
-      <h2 class="font-display text-3xl"><span class="squiggle">01 · TypeScript University</span></h2>
+      <h2 class="font-display text-3xl">
+        <span class="squiggle">01 · TypeScript University</span>
+      </h2>
       <BlogList :posts="universityPosts" />
     </section>
     <section class="mt-16">

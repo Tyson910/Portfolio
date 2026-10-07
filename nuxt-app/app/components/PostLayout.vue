@@ -13,9 +13,7 @@ defineProps<{
     <header class="mb-10 mt-16">
       <h1 class="font-display text-5xl leading-tight text-highlighted">{{ title }}</h1>
       <p class="mt-4 text-xl text-muted">{{ description }}</p>
-      <div
-        class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-dimmed"
-      >
+      <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-dimmed">
         <div class="flex items-center gap-2">
           <UIcon name="ri:calendar-line" mode="svg" class="size-4" />
           <FormattedDate :date="dateCreated" />

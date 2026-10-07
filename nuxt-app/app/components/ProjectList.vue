@@ -16,11 +16,7 @@ const { data: projects, error: projectsError, isPending } = projectsQuery;
     class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2"
     aria-label="Loading projects"
   >
-    <li
-      v-for="index in 4"
-      :key="index"
-      class="wobbly flex min-h-40 flex-col p-5"
-    >
+    <li v-for="index in 4" :key="index" class="wobbly flex min-h-40 flex-col p-5">
       <div class="flex items-start justify-between gap-4">
         <USkeleton class="h-5 w-2/5" />
         <div class="flex gap-2">
