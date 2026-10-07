@@ -48,6 +48,9 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   experimental: {
     payloadExtraction: false,
+    early404: true,
+    routeTypedFetch: true,
+    strictRouteTypes: true,
   },
   icon: {
     provider: "none",

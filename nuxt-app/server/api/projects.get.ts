@@ -1,5 +1,6 @@
 import type { Project } from "~~/shared/types/project";
 
+import { createError, defineEventHandler, useRuntimeConfig } from "nuxt/server";
 import { z } from "zod";
 
 const PORTFOLIO_TOPIC = "portfolio-project";
@@ -37,7 +38,7 @@ function normalizeWebURL(value: string | null | undefined) {
 }
 
 export default defineEventHandler(async (event): Promise<Project[]> => {
-  const { githubToken } = useRuntimeConfig(event);
+  const { githubToken } = useRuntimeConfig();
   if (!githubToken) {
     throw createError({ statusCode: 500, statusMessage: "NUXT_GITHUB_TOKEN is not configured" });
   }

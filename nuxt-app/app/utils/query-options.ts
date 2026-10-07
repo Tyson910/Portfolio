@@ -1,5 +1,3 @@
-import type { Project } from "~~/shared/types/project";
-
 import { queryOptions } from "@tanstack/vue-query";
 
 import { queryCollection } from "#imports";
@@ -40,7 +38,10 @@ export function homeSnippetsQueryOptions(includeDrafts: boolean) {
 export function projectsQueryOptions() {
   return queryOptions({
     queryKey: ["/api/projects"] as const,
-    queryFn: (): Promise<Project[]> => $fetch<Project[]>("/api/projects"),
+    queryFn: async () => {
+      const projects = await $fetch("/api/projects");
+      return projects;
+    },
     select: (projects) =>
       projects.map((project) => ({
         ...project,
