@@ -24,6 +24,9 @@ const wranglerConfig = {
 };
 
 export default defineNuxtConfig({
+  future: {
+    compatibilityVersion: 5,
+  },
   devtools: {
     enabled: true,
   },
