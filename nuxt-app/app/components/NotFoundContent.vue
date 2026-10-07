@@ -10,7 +10,7 @@ const image = month === 9 || month === 10 ? "/images/scarecrow404.svg" : "/image
     </div>
     <div class="flex flex-col gap-y-10">
       <h1
-        class="font-hand mx-auto flex max-w-max flex-col text-center text-4xl text-highlighted sm:text-6xl"
+        class="font-display mx-auto flex max-w-max flex-col text-center text-4xl text-highlighted sm:text-6xl"
       >
         This page could not be found.
       </h1>

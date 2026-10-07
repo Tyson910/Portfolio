@@ -8,7 +8,7 @@ const snippets = import.meta.dev ? allSnippets : allSnippets.filter((snippet) =>
 <template>
   <UContainer as="main" class="py-12">
     <div>
-      <h1 class="font-hand text-4xl mb-8"><span class="squiggle">Code Snippets</span></h1>
+      <h1 class="font-display text-4xl mb-8"><span class="squiggle">Code Snippets</span></h1>
     </div>
     <SnippetList :snippets="snippets" />
   </UContainer>

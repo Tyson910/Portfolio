@@ -14,14 +14,14 @@ function isActive(href: string) {
 </script>
 
 <template>
-  <header class="border-b-2 border-dashed border-default">
+  <header class="dash-rule-b">
     <UContainer as="nav" class="flex items-center justify-between" aria-label="Main navigation">
       <div class="flex items-center gap-5">
         <NuxtLink
           v-for="item in navItems"
           :key="item.href"
           :to="item.href"
-          class="px-1 py-4 font-hand text-xl text-muted transition-colors hover:text-highlighted"
+          class="px-1 py-4 font-display text-xl text-muted transition-colors hover:text-highlighted"
           active-class="text-highlighted"
           :aria-current="isActive(item.href) ? 'page' : undefined"
         >
@@ -29,6 +29,7 @@ function isActive(href: string) {
         </NuxtLink>
       </div>
       <div class="hidden items-center gap-4 md:flex">
+        <ThemePicker />
         <a
           v-for="link in socialLinks"
           :key="link.href"

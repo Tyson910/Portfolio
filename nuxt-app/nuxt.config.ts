@@ -41,7 +41,10 @@ export default defineNuxtConfig({
     experimental: { componentDetection: true },
   },
   compatibilityDate: "2026-08-01",
-  modules: ["@nuxt/content", "@nuxt/ui", "@nuxtjs/sitemap"],
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
+  modules: ["@nuxt/content", "@nuxt/ui", "@nuxtjs/sitemap", "@vueuse/nuxt"],
   css: ["~/assets/css/main.css"],
   experimental: {
     payloadExtraction: false,
@@ -62,6 +65,7 @@ export default defineNuxtConfig({
         "ri:linkedin-fill",
         "ri:price-tag-3-line",
         "ri:refresh-line",
+        "ri:palette-line",
       ],
     },
   },

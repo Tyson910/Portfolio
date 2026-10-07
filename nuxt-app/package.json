@@ -33,6 +33,7 @@
     "@nuxtjs/mdc": "0.22.2",
     "@tanstack/eslint-plugin-query": "^5.101.4",
     "@types/node": "^24.0.0",
+    "@vueuse/core": "^14.4.0",
     "@vueuse/nuxt": "^13.0.0",
     "oxfmt": "^0.62.0",
     "oxlint": "^1.77.0",

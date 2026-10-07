@@ -46,8 +46,8 @@ const { data: projects, error: projectsError, isPending } = projectsQuery;
     <li
       v-for="(project, index) in projects"
       :key="project.name"
-      class="wobbly flex flex-col p-5 transition-transform duration-200 hover:rotate-0"
-      :class="index % 2 === 0 ? '-rotate-1' : 'rotate-1'"
+      class="wobbly flex flex-col p-5"
+      :class="index % 2 === 0 ? 'tilt-l' : 'tilt-r'"
     >
       <div class="flex flex-1 flex-col gap-3">
         <div class="flex items-start justify-between gap-2">

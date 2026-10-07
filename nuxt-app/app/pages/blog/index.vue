@@ -11,7 +11,7 @@ const posts = import.meta.dev ? allPosts : allPosts.filter((post) => !post.isDra
 <template>
   <UContainer as="main" class="py-16">
     <div>
-      <h1 class="font-hand text-4xl"><span class="squiggle">Blog</span></h1>
+      <h1 class="font-display text-4xl"><span class="squiggle">Blog</span></h1>
       <p class="mt-4 max-w-2xl text-muted">
         Writing about TypeScript, full-stack architecture, and lessons learned in production.
       </p>

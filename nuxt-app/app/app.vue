@@ -44,3 +44,27 @@ useHead({
     <SiteFooter />
   </UApp>
 </template>
+
+<style>
+/*
+ * Page navigation fade — near-imperceptible by design (core navigation is a
+ * tens-per-day action, so it gets the subtlest motion tier). Opacity only:
+ * no movement, no filters. Disables entirely under reduced motion.
+ */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.12s ease-out;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter-active,
+  .page-leave-active {
+    transition: none;
+  }
+}
+</style>

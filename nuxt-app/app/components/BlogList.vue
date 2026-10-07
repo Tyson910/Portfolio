@@ -19,8 +19,8 @@ const sortedPosts = computed(() =>
     <li
       v-for="(post, index) in sortedPosts"
       :key="post.path"
-      class="wobbly group p-4 transition-transform duration-200 hover:rotate-0"
-      :class="index % 2 === 0 ? '-rotate-1' : 'rotate-1'"
+      class="wobbly group p-4"
+      :class="index % 2 === 0 ? 'tilt-l' : 'tilt-r'"
     >
       <NuxtLink :to="post.path" class="flex flex-row items-center justify-between gap-4">
         <div>

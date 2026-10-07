@@ -11,7 +11,7 @@ defineProps<{
 <template>
   <UContainer as="article" class="pt-4">
     <header class="mb-10 mt-16">
-      <h1 class="font-hand text-5xl leading-tight text-highlighted">{{ title }}</h1>
+      <h1 class="font-display text-5xl leading-tight text-highlighted">{{ title }}</h1>
       <p class="mt-4 text-xl text-muted">{{ description }}</p>
       <div
         class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-dimmed"
@@ -52,8 +52,10 @@ defineProps<{
 
 .article-content :deep(:where(h2, h3, h4)) {
   color: var(--ui-text-highlighted);
-  font-family: var(--font-hand);
-  font-weight: var(--font-weight-normal);
+  font-family: var(--font-display);
+  font-weight: var(--heading-weight);
+  text-transform: var(--heading-transform);
+  letter-spacing: var(--heading-tracking);
   line-height: 1.25;
   margin-block: 1.75em 0.75em;
 }
@@ -83,7 +85,7 @@ defineProps<{
 }
 
 .article-content :deep(ul > li)::before {
-  content: "✎ ";
+  content: var(--list-marker);
   color: var(--ui-text-dimmed);
   margin-inline-start: -1.5em;
   padding-inline-end: 0.25em;
@@ -96,7 +98,7 @@ defineProps<{
 .article-content :deep(a) {
   color: var(--ui-primary);
   text-decoration: underline;
-  text-decoration-style: wavy;
+  text-decoration-style: var(--link-decoration);
   text-decoration-thickness: 1.5px;
   text-underline-offset: 4px;
 }
@@ -107,17 +109,17 @@ defineProps<{
 }
 
 .article-content :deep(blockquote) {
-  border: 2px solid var(--ui-border-inverted);
-  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  border: var(--frame-border);
+  border-radius: var(--frame-radius);
   padding: 0.5rem 1.25rem;
 }
 
 .article-content :deep(:not(pre) > code) {
-  border: 1px dashed var(--ui-border-accented);
-  border-radius: 8px 4px 10px 5px / 5px 10px 4px 8px;
+  border: var(--inline-code-border);
+  border-radius: var(--inline-code-radius);
   background: var(--ui-bg-elevated);
   color: var(--ui-text-highlighted);
-  font-family: var(--font-code);
+  font-family: var(--code-font);
   padding: 0.125em 0.35em;
 }
 
@@ -135,9 +137,9 @@ defineProps<{
   inset-block-start: 100%;
   inset-inline-start: 0;
   max-width: min(600px, calc(100vw - 2rem));
-  border: 2px solid var(--ui-border-inverted);
-  border-radius: var(--wobbly-radius-alt);
-  font-family: var(--font-code);
+  border: var(--frame-border);
+  border-radius: var(--frame-radius-alt);
+  font-family: var(--code-font);
 }
 
 .article-content :deep(.twoslash-hover:hover > .twoslash-popup-container),

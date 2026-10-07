@@ -3,7 +3,7 @@ import { socialLinks } from "~/utils/social-links";
 </script>
 
 <template>
-  <footer class="border-t-2 border-dashed border-default">
+  <footer class="dash-rule-t">
     <UContainer class="py-8">
       <div class="flex flex-col items-center gap-6 md:flex-row md:justify-between">
         <p class="text-sm/6 text-muted">
@@ -21,7 +21,7 @@ import { socialLinks } from "~/utils/social-links";
           </a>
         </div>
       </div>
-      <p class="font-hand mt-6 text-center text-lg text-dimmed">~ thanks for scrolling ~</p>
+      <p class="font-display mt-6 text-center text-lg text-dimmed">~ thanks for scrolling ~</p>
     </UContainer>
   </footer>
 </template>

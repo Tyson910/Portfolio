@@ -40,7 +40,7 @@ const upcomingLessons = [
 <template>
   <UContainer as="main" class="py-16">
     <div>
-      <h1 class="font-hand text-4xl"><span class="squiggle">TypeScript University</span></h1>
+      <h1 class="font-display text-4xl"><span class="squiggle">TypeScript University</span></h1>
       <p class="mt-4 max-w-2xl text-muted">
         Master TypeScript through structured lessons. From foundational concepts to advanced
         patterns, build your expertise step by step.
@@ -50,8 +50,8 @@ const upcomingLessons = [
 
     <section class="mt-16">
       <div>
-        <h2 class="font-hand text-3xl"><span class="squiggle">Coming Soon</span></h2>
-        <p class="font-hand mt-3 text-lg text-dimmed">~ lessons in progress ~</p>
+        <h2 class="font-display text-3xl"><span class="squiggle">Coming Soon</span></h2>
+        <p class="font-display mt-3 text-lg text-dimmed">~ lessons in progress ~</p>
       </div>
       <div class="grid grid-cols-1 gap-4 pt-6 md:grid-cols-2">
         <article
