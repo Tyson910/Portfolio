@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ProgressGroupItem } from "@nuxt/ui";
+
 import { useQuery } from "@tanstack/vue-query";
 
 import { projectsQueryOptions } from "~/utils/query-options";
@@ -8,6 +10,14 @@ const projectsQuery = useQuery(projectsQueryOptions());
 onServerPrefetch(projectsQuery.suspense);
 
 const { data: projects, error: projectsError, isPending } = projectsQuery;
+
+function languageItems(languages: { name: string; percentage: number }[]): ProgressGroupItem[] {
+  return languages.map((language) => ({
+    label: language.name,
+    value: language.percentage,
+    color: getLanguageColor(language.name),
+  }));
+}
 </script>
 
 <template>
@@ -78,24 +88,15 @@ const { data: projects, error: projectsError, isPending } = projectsQuery;
 
         <p class="line-clamp-2 text-sm text-muted">{{ project.description }}</p>
 
-        <ul
+        <UProgressGroup
           v-if="project.languages.length"
-          class="mt-auto flex flex-wrap gap-x-4 gap-y-1 pt-2 text-xs text-muted"
+          :items="languageItems(project.languages)"
+          :max="100"
+          size="sm"
+          class="mt-auto pt-4"
         >
-          <li
-            v-for="language in project.languages"
-            :key="language.name"
-            class="flex items-center gap-1.5"
-          >
-            <span
-              aria-hidden="true"
-              class="inline-block size-2.5 shrink-0 rounded-full"
-              :style="{ backgroundColor: getLanguageColor(language.name) }"
-            />
-            <span>{{ language.name }}</span>
-            <span class="text-dimmed">{{ language.percentage }}%</span>
-          </li>
-        </ul>
+          <template #item-trailing="{ item }">{{ item.value }}%</template>
+        </UProgressGroup>
       </div>
     </li>
   </ul>
