@@ -54,6 +54,9 @@ export default defineNuxtConfig({
     early404: true,
     routeTypedFetch: true,
     strictRouteTypes: true,
+    // Wires vite:preloadError to the app:chunkError hook so Nuxt's built-in
+    // chunk-reload plugins can recover tabs that outlive a deploy.
+    emitRouteChunkError: true,
   },
   icon: {
     provider: "none",
