@@ -5,8 +5,13 @@ preview_urls = false
 
 # Nitro overrides `assets.binding`/`assets.directory` (hence its startup warning),
 # but these routing keys only exist here and do reach the deploy config.
+#
+# "none" (the Cloudflare default) sends asset misses to the SSR worker instead
+# of serving the static 404.html through the assets layer — that path applies
+# the /_nuxt/* immutable _headers rule to 404s, so a post-deploy race can pin a
+# year-long cached 404 at the edge (see 2026-10-09 incident).
 [assets]
-not_found_handling = "404-page"
+not_found_handling = "none"
 run_worker_first = ["/", "/api/*"]
 
 # d1_databases and secrets.required live in nuxt.config.ts (nitro.cloudflare.wrangler)
