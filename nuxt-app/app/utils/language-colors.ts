@@ -1,19 +1,25 @@
+/*
+ * GitHub linguist hues, tuned in OKLch so every color clears 3:1 contrast
+ * against the white card background AND stays >= 0.12 ΔE from every other
+ * language color (the raw linguist palette had near-collisions like
+ * Python/TypeScript at 0.05 ΔE that blurred adjacent bar segments).
+ */
 const languageColors: Record<string, string> = {
-  astro: "#ff5a03",
-  css: "#563d7c",
-  dockerfile: "#384d54",
-  go: "#00add8",
-  html: "#e34c26",
-  javascript: "#f1e05a",
-  mdx: "#fcb32c",
-  python: "#3572a5",
-  rust: "#dea584",
-  scss: "#c6538c",
-  shell: "#89e051",
-  typescript: "#3178c6",
-  vue: "#41b883",
+  astro: "#ec310e",
+  css: "#8049aa",
+  dockerfile: "#1d3138",
+  go: "#007aa1",
+  html: "#af1519",
+  javascript: "#878400",
+  mdx: "#d67c00",
+  python: "#004394",
+  rust: "#89604e",
+  scss: "#ee59ba",
+  shell: "#007a00",
+  typescript: "#5190ff",
+  vue: "#00a67a",
 };
 
 export function getLanguageColor(name: string): string {
-  return languageColors[name.toLowerCase()] ?? "#8b8b8b";
+  return languageColors[name.toLowerCase()] ?? "#929292";
 }
